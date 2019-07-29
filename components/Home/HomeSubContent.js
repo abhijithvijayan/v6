@@ -25,9 +25,8 @@ const HomeSubContent = () => {
             <Col md={6}>
                 <p>
                     I'm a software engineering student based in Kerala, India specializing in developing exceptional,
-                    high quality webapps and tools. Currently on the
-                    <strong>6th Semester</strong> of
-                    <strong>B.Tech Degree.</strong>
+                    high quality webapps and tools. Currently on the <strong>7th Semester</strong> of{' '}
+                    <strong> B.Tech Degree.</strong>
                 </p>
             </Col>
         </SubContentWrapper>
