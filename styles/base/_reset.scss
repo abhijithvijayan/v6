@@ -1,21 +1,27 @@
-html,
 body {
+  counter-reset: section;
+  border: 0;
   margin: 0;
   padding: 0;
-  border: 0;
-}
-
-html {
-  height: 100%;
-}
-
-body {
   min-height: 100%;
   overflow-x: hidden;
+  background: $purple;
+  color: $lightBlue;
   line-height: 1.3;
+  font-size: 1.25em;
+  font-family: $calibre;
   width: 100%;
-  background: $white;
-  font-family: $opensans;
+
+  @media screen and (max-width: $screenSmMin) {
+    font-size: 1.125em;
+  }
+}
+
+.btn:focus,
+.btn:active,
+button:focus {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 ol,
@@ -26,13 +32,12 @@ ul {
 }
 
 a {
+  display: inline-block;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+
   &:hover {
     text-decoration: none;
   }
-}
-
-textarea {
-  resize: none;
 }
 
 h1,
@@ -40,22 +45,28 @@ h2,
 h3,
 h4,
 h5 {
-  font-weight: 600;
   font-weight: $semibold;
   margin: 0px 0px 10px;
 }
 
-.btn:focus,
-.btn:active,
-button:focus,
-input:active,
-input:focus,
-textarea:focus,
-textarea:active {
-  outline: none !important;
-  box-shadow: none !important;
-}
-
 p {
   margin: 0px 0px 15px;
+}
+
+#content__holder {
+  width: 100%;
+  margin: 0px auto;
+  padding: 0px 130px;
+  @media screen and (min-width: $screenSmMin) and (max-width: $screenSmMax) {
+    // 768 - 1024
+    padding: 0px 100px;
+  }
+  @media screen and (min-width: $screenXsMin) and (max-width: $screenXsMax) {
+    // 481 - 767
+    padding: 0px 30px;
+  }
+  @media screen and (min-width: $screenXxsMin) and (max-width: $screenXxsMax) {
+    // 320 - 480
+    padding: 0px 25px;
+  }
 }

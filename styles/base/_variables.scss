@@ -15,25 +15,35 @@ $screenMdMin: 1025px;
 $screenMdMax: 1280px;
 
 /* Device = Desktops */
-$screen-lgMin: 1281px;
-$screen-lgMax: 1440px;
+$screenLgMin: 1281px;
+$screenLgMax: 1440px;
 
 /* Higher Resolution Screens */
 $screenXlgMin: 1441px;
 $screenXlgMax: 2560px;
 
 // other variables here
+$purple: #0a192f;
+$lightPurple: rgba(
+  $color: #293d5a,
+  $alpha: 0.9
+);
 $black: #0d0d0d;
-$white: #fff;
-$grayWhite: #f3f3f3;
-$pink: #0c101a;
-$lightPink: #3a426d;
-$lightBlue: #566dfb;
+$darkShade: #2d3952;
+$darkredPurple: #020c1b;
+$shadow: rgba(2, 12, 27, 0.9);
+$darkPurple: #172a45;
+$skyBlue: #8892b0;
+$lightBlue: #a8b2d1;
+$blueWhite: #ccd6f6;
+$whiteYellow: #64ffda;
+$headWhite: #e6f1ff;
+$blueLight: #333f58;
+$navyBlue: #606a86;
 
 // fonts
-$opensans: "Open Sans", sans-serif;
-$roboto: "Roboto", sans-serif;
-$nunito: "Nunito", sans-serif;
+$sfmono: "SF Mono", Fallback, monospace;
+$calibre: "Calibre", Fallback, sans-serif;
 
 // font weight
 $thin: 100;
