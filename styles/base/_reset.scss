@@ -1,0 +1,61 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  overflow-x: hidden;
+  line-height: 1.3;
+  width: 100%;
+  background: $white;
+  font-family: $opensans;
+}
+
+ol,
+ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 600;
+  font-weight: $semibold;
+  margin: 0px 0px 10px;
+}
+
+.btn:focus,
+.btn:active,
+button:focus,
+input:active,
+input:focus,
+textarea:focus,
+textarea:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+p {
+  margin: 0px 0px 15px;
+}

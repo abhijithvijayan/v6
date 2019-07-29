@@ -1,0 +1,14 @@
+# Build Output
+dist
+.next
+.vscode
+.DS_Store
+
+# Dependencies
+node_modules/
+
+# Logs
+yarn-error.log*
+
+# Production
+out
