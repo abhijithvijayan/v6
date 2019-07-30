@@ -33,6 +33,17 @@ const TitlesWrapper = styled(Nav)`
         }
     }
 
+    .nav-link.active {
+        background-color: ${props => {
+            return props.theme.lightPurple;
+        }} !important;
+        color: ${props => {
+            return props.theme.whiteYellow;
+        }} !important;
+        border: none !important;
+        border-radius: 0 !important;
+    }
+
     a {
         color: ${props => {
             return props.theme.navyBlue;
@@ -50,7 +61,7 @@ const TitlesWrapper = styled(Nav)`
         border-left: 2px solid
             ${props => {
                 return props.theme.blueLight;
-            }};
+            }} !important;
         white-space: nowrap;
         height: 42px;
         display: flex;
@@ -62,8 +73,8 @@ const TitlesWrapper = styled(Nav)`
             border-bottom: 2px solid
                 ${props => {
                     return props.theme.blueLight;
-                }};
-            border-left: 0px;
+                }} !important;
+            border-left: 0px !important;
             min-width: 120px;
         }
 
@@ -75,19 +86,12 @@ const TitlesWrapper = styled(Nav)`
                 return props.theme.whiteYellow;
             }} !important;
             border: none !important;
+            border-left: 2px solid
+                ${props => {
+                    return props.theme.blueLight;
+                }} !important;
             border-radius: 0 !important;
         }
-    }
-
-    .nav-link.active {
-        background-color: ${props => {
-            return props.theme.lightPurple;
-        }} !important;
-        color: ${props => {
-            return props.theme.whiteYellow;
-        }} !important;
-        border: none !important;
-        border-radius: 0 !important;
     }
 `;
 
