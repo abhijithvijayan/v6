@@ -11,10 +11,12 @@ const AboutWrapper = styled.div`
 
 const About = () => {
     return (
-        <AboutWrapper className="wrapper">
-            <AboutHeader />
-            <AboutContentHolder />
-        </AboutWrapper>
+        <section id="about">
+            <AboutWrapper className="wrapper">
+                <AboutHeader />
+                <AboutContentHolder />
+            </AboutWrapper>
+        </section>
     );
 };
 

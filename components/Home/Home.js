@@ -22,11 +22,13 @@ const HomeWrapper = styled.div`
 
 const Home = () => {
     return (
-        <HomeWrapper className="wrapper">
-            <HomeMainContent />
-            <HomeSubContent />
-            <GetInTouch />
-        </HomeWrapper>
+        <section id="home">
+            <HomeWrapper className="wrapper">
+                <HomeMainContent />
+                <HomeSubContent />
+                <GetInTouch />
+            </HomeWrapper>
+        </section>
     );
 };
 
