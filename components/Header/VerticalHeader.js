@@ -7,18 +7,17 @@ import SidebarContent from './SidebarContent';
 const SidebarWrapper = styled(Sidebar)``;
 
 class VerticalHeader extends Component {
-    toggleSidebar = toggle => {
-        console.log(toggle);
-    };
-
     render() {
+        const { isSidebarOpen } = this.props;
         return (
             <SidebarWrapper
                 sidebar={<SidebarContent />}
-                open
+                open={isSidebarOpen}
                 pullRight
                 touch={false}
-                onSetOpen={this.toggleSidebar}
+                onSetOpen={() => {
+                    return this.props.toggleSidebar(!isSidebarOpen);
+                }}
                 rootClassName="vertical__header"
                 sidebarClassName="vertical__header--menu"
                 styles={{ sidebar: { background: 'white', color: 'black', width: '100%' } }}

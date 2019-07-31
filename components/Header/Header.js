@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Navbar } from 'react-bootstrap';
 
@@ -30,16 +30,29 @@ const NavbarWrapper = styled(Navbar)`
     justify-content: flex-start;
 `;
 
-const Header = () => {
-    return (
-        <StyledHeader className="d-flex align-items-center justify-content-end pr-0 pr-sm-5">
-            <NavbarWrapper collapseOnSelect expand="sm">
-                <HamburgerIcon />
-                <HorizontalHeader />
-                <VerticalHeader />
-            </NavbarWrapper>
-        </StyledHeader>
-    );
-};
+class Header extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { isSidebarOpen: false };
+    }
+
+    toggleSidebar = toggle => {
+        this.setState({ isSidebarOpen: toggle });
+    };
+
+    render() {
+        const { isSidebarOpen } = this.state;
+
+        return (
+            <StyledHeader className="d-flex align-items-center justify-content-end pr-0 pr-sm-5">
+                <NavbarWrapper collapseOnSelect expand="sm">
+                    <HamburgerIcon toggleSidebar={this.toggleSidebar} isSidebarOpen={isSidebarOpen} />
+                    <HorizontalHeader />
+                    <VerticalHeader toggleSidebar={this.toggleSidebar} isSidebarOpen={isSidebarOpen} />
+                </NavbarWrapper>
+            </StyledHeader>
+        );
+    }
+}
 
 export default Header;
