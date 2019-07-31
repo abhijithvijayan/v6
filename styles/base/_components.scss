@@ -13,7 +13,7 @@
 
 .fade-link {
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-  color: $lightBlue;
+  color: $lightBlue !important;
 
   &:hover {
     color: $whiteYellow !important;
@@ -145,22 +145,6 @@
 
 .display-none {
   display: none;
-}
-
-.hamburger__arrow {
-  &::before,
-  &::after {
-    left: auto;
-    right: 0px;
-  }
-
-  &::before {
-    width: 120% !important;
-  }
-
-  &::after {
-    width: 80% !important;
-  }
 }
 
 // .bl-line {

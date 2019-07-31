@@ -739,7 +739,7 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
-"@babel/runtime@^7.1.2", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.5":
+"@babel/runtime@>=7.0.0-beta.56", "@babel/runtime@^7.1.2", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.5":
   version "7.5.5"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.5.5.tgz#74fba56d35efbeca444091c7850ccd494fd2f132"
   integrity sha512-28QvEGyQyNkB0/m2B4FU7IEZGK2NUrcMtT6BZEFALTguLk+AUT6ofsHtPk5QyjAdUkpMJ+/Em+quwz4HOt30AQ==
@@ -3167,6 +3167,11 @@ gud@^1.0.0:
   resolved "https://registry.yarnpkg.com/gud/-/gud-1.0.0.tgz#a489581b17e6a70beca9abe3ae57de7a499852c0"
   integrity sha512-zGEOVKFM5sVPPrYs7J5/hYEw2Pof8KCyOwyhG8sAF26mCAeUFAcYPu1mwB7hhpIP29zOIBaDqwuHdLp0jvZXjw==
 
+hamburgers@^1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/hamburgers/-/hamburgers-1.1.3.tgz#eb583ede269d3a774aa5f613442b17ea13952b84"
+  integrity sha512-qpfnJwZq6ATAGJEriwuyfVNgT++GG+o+3bBfPYF7F3WY452cYKbaYGUuqwhp+3kHLI6CL4VIBfj8bfbp90Lp1A==
+
 har-schema@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/har-schema/-/har-schema-2.0.0.tgz#a94c2224ebcac04782a0d9035521f24735b7ec92"
@@ -5335,6 +5340,14 @@ react-popper@^1.3.2:
     prop-types "^15.6.1"
     typed-styles "^0.0.7"
     warning "^4.0.2"
+
+react-sidebar@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/react-sidebar/-/react-sidebar-3.0.2.tgz#cf695b5a78098e70460c847fb0c6c81cfd896c37"
+  integrity sha512-LG/JO1cJvdRqSmUT+DOhJrml/b45/UqM9nm8emcgbJb5EKNegKCObZcrRqyzVix42VfFf0odytviAAFEYYTu1Q==
+  dependencies:
+    "@babel/runtime" ">=7.0.0-beta.56"
+    prop-types "^15.6.2"
 
 react-transition-group@^4.0.0:
   version "4.2.1"
