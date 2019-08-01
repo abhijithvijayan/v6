@@ -7,10 +7,12 @@ const IconButton = styled.button`
     @media screen and (max-width: 575px) {
         display: flex !important;
     }
+
     .hamburger-inner {
         background-color: ${props => {
             return props.theme.whiteYellow;
         }} !important;
+
         width: 30px;
         height: 2px;
 
@@ -21,6 +23,12 @@ const IconButton = styled.button`
             }} !important;
             width: 30px;
             height: 2px;
+        }
+    }
+
+    .arrow {
+        &::before,
+        &::after {
             left: auto;
             right: 0px;
         }
@@ -37,29 +45,23 @@ const IconButton = styled.button`
 
 class HamburgerIcon extends Component {
     shouldComponentUpdate(nextProps, nextState) {
-        if (nextProps.isSidebarOpen) {
-            // add is-active class to button
-        } else {
-            // remove is-active class from button
-        }
+        return true;
     }
 
-    handleClick = e => {
-        console.log(e);
-        this.props.toggleSidebar(!this.props.isSidebarOpen);
-    };
-
     render() {
+        const { isSidebarOpen } = this.props;
         return (
             <IconButton
-                onClick={e => {
-                    this.handleClick(e);
+                onClick={() => {
+                    return this.props.toggleSidebar(!isSidebarOpen);
                 }}
-                className="d-none hamburger hamburger--spin"
+                className={
+                    isSidebarOpen ? 'd-none hamburger hamburger--spin is-active' : 'd-none hamburger hamburger--spin'
+                }
                 type="button"
             >
                 <span className="hamburger-box">
-                    <span className="hamburger-inner hamburger__arrow"></span>
+                    <span className={isSidebarOpen ? 'hamburger-inner' : 'hamburger-inner arrow'}></span>
                 </span>
             </IconButton>
         );
