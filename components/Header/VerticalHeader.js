@@ -1,11 +1,25 @@
 import React, { Component } from 'react';
 import Sidebar from 'react-sidebar';
+import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 
 import SidebarContent from './SidebarContent';
 
 class VerticalHeader extends Component {
-    render() {
+    toggleBodyScroll = status => {
+        if (status) {
+            document.body.classList.add('blur');
+            disableBodyScroll(null);
+        } else {
+            if (typeof window !== 'undefined') {
+                document.body.classList.remove('blur');
+            }
+            clearAllBodyScrollLocks();
+        }
+    };
+
+    renderSiderbar = () => {
         const { isSidebarOpen } = this.props;
+        this.toggleBodyScroll(isSidebarOpen);
         return (
             <Sidebar
                 sidebar={<SidebarContent />}
@@ -22,6 +36,10 @@ class VerticalHeader extends Component {
                 <div />
             </Sidebar>
         );
+    };
+
+    render() {
+        return this.renderSiderbar();
     }
 }
 

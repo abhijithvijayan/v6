@@ -58,22 +58,22 @@ const SidebarContent = () => {
         <SidebarWrapper>
             <ol>
                 <li>
-                    <a className="nav-link section__link header__navlink fade-link" href="#about">
+                    <a className="nav-link fade-link" href="#about">
                         About
                     </a>
                 </li>
                 <li>
-                    <a className="nav-link section__link header__navlink fade-link" href="#experience">
+                    <a className="nav-link fade-link" href="#experience">
                         Experience
                     </a>
                 </li>
                 <li>
-                    <a className="nav-link section__link header__navlink fade-link" href="#projects">
+                    <a className="nav-link fade-link" href="#projects">
                         Work
                     </a>
                 </li>
                 <li>
-                    <a className="nav-link section__link header__navlink fade-link" href="#contact">
+                    <a className="nav-link fade-link" href="#contact">
                         Contact
                     </a>
                 </li>
