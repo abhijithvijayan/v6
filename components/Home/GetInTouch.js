@@ -10,7 +10,9 @@ const GetInTouch = () => {
     return (
         <Row className="pb-4">
             <GetInTouchWrapper md={12}>
-                <a href="#contact">Get in Touch</a>
+                <a href="#contact" className="button__main">
+                    Get in Touch
+                </a>
             </GetInTouchWrapper>
         </Row>
     );
