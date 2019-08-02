@@ -167,6 +167,7 @@
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 
   .vertical__header--menu {
+    z-index: 10;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -180,8 +181,14 @@
     box-shadow: rgba(2, 12, 27, 0.7) -10px 0px 30px -15px;
     padding: 50px;
 
+    @media screen and (max-width: 37.5em) {
+      padding: 25px;
+    }
     @media screen and (max-width: 30em) {
       width: 75vw !important;
+    }
+    @media screen and (max-width: 20.625em) {
+      padding: 10px;
     }
   }
 }

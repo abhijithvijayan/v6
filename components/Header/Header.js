@@ -7,11 +7,15 @@ import VerticalHeader from './VerticalHeader';
 import HorizontalHeader from './HorizontalHeader';
 
 const StyledHeader = styled.header`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0px;
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
     width: 100%;
     height: 100px;
     transform: translateY(0px);
-    position: fixed;
     padding: 0px 50px;
     background-color: ${props => {
         return props.theme.purple;
@@ -23,6 +27,9 @@ const StyledHeader = styled.header`
         return props.theme.semibold;
     }};
     z-index: 11;
+    @media screen and (max-width: 48em) {
+        display: block;
+    }
 `;
 
 const NavbarWrapper = styled(Navbar)`

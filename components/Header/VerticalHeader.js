@@ -31,7 +31,18 @@ class VerticalHeader extends Component {
                 }}
                 rootClassName="vertical__header"
                 sidebarClassName="vertical__header--menu"
-                styles={{ sidebar: { background: 'white', color: 'black', width: '100%' } }}
+                contentClassName="vertical__header--content"
+                overlayClassName="vertical__header--overlay"
+                styles={{
+                    root: {},
+                    sidebar: {
+                        background: 'white',
+                        color: 'black',
+                        width: '100%',
+                    },
+                    content: {},
+                    overlay: {},
+                }}
             >
                 <div />
             </Sidebar>
