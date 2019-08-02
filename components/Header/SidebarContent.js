@@ -38,13 +38,18 @@ const SidebarWrapper = styled.nav`
                     return props.theme.whiteYellow;
                 }};
             }
+
+            a {
+                padding: 3px 20px 20px !important;
+            }
         }
     }
 
-    a {
+    .button__resume {
         display: block;
         text-align: center;
-        margin-top: 20px;
+        padding: 18px 50px;
+        margin: 10% auto 0px;
     }
 `;
 

@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
 import Sidebar from 'react-sidebar';
 
 import SidebarContent from './SidebarContent';
-
-const SidebarWrapper = styled(Sidebar)``;
 
 class VerticalHeader extends Component {
     render() {
         const { isSidebarOpen } = this.props;
         return (
-            <SidebarWrapper
+            <Sidebar
                 sidebar={<SidebarContent />}
                 open={isSidebarOpen}
                 pullRight
@@ -23,7 +20,7 @@ class VerticalHeader extends Component {
                 styles={{ sidebar: { background: 'white', color: 'black', width: '100%' } }}
             >
                 <div />
-            </SidebarWrapper>
+            </Sidebar>
         );
     }
 }
