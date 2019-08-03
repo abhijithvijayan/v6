@@ -12,6 +12,12 @@ const SocialIconsWrapper = styled.div`
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        li:last-child {
+            a {
+                margin-bottom: 20px;
+            }
+        }
     }
 `;
 
@@ -36,12 +42,7 @@ const LeftSidebar = () => {
                     href="https://www.behance.net/abhijithvijayan"
                 />
                 <SocialListItem title="Medium" icon="fab fa-medium-m" href="https://medium.com/@abhijithvijayan" />
-                <SocialListItem
-                    className="social__element--link fade-link mb-20"
-                    title="Twitter"
-                    icon="fab fa-twitter"
-                    href="https://twitter.com/_abhijithv"
-                />
+                <SocialListItem title="Twitter" icon="fab fa-twitter" href="https://twitter.com/_abhijithv" />
             </ul>
         </SocialIconsWrapper>
     );
