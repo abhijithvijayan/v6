@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Col } from 'react-bootstrap';
+import { Col, Image } from 'react-bootstrap';
 
 const ProfileWrapper = styled(Col)`
     @media screen and (max-width: ${props => {
@@ -53,7 +53,7 @@ const ProfileHolder = () => {
         <ProfileWrapper md={4}>
             <div className="image__holder">
                 <picture>
-                    <img alt="profile" className="img-fluid profile__picture" src="/static/images/profile.jpg" />
+                    <Image alt="profile" fluid className="profile__picture" src="/static/images/profile.jpg" />
                 </picture>
             </div>
         </ProfileWrapper>

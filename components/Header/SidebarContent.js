@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Nav } from 'react-bootstrap';
 
 const SidebarWrapper = styled.nav`
     display: flex;
@@ -22,7 +23,9 @@ const SidebarWrapper = styled.nav`
 
     ol {
         width: 100%;
-        color: $color-head-white;
+        color: ${props => {
+            return props.theme.headWhite;
+        }};
 
         li {
             font-size: 17px;
@@ -56,28 +59,28 @@ const SidebarWrapper = styled.nav`
 const SidebarContent = () => {
     return (
         <SidebarWrapper>
-            <ol>
-                <li>
-                    <a className="nav-link fade-link" href="#about">
+            <Nav as="ol">
+                <Nav.Item as="li">
+                    <Nav.Link href="#about" className="fade-link">
                         About
-                    </a>
-                </li>
-                <li>
-                    <a className="nav-link fade-link" href="#experience">
+                    </Nav.Link>
+                </Nav.Item>
+                <Nav.Item as="li">
+                    <Nav.Link href="/experience" className="fade-link">
                         Experience
-                    </a>
-                </li>
-                <li>
-                    <a className="nav-link fade-link" href="#projects">
+                    </Nav.Link>
+                </Nav.Item>
+                <Nav.Item as="li">
+                    <Nav.Link href="/work" className="fade-link">
                         Work
-                    </a>
-                </li>
-                <li>
-                    <a className="nav-link fade-link" href="#contact">
+                    </Nav.Link>
+                </Nav.Item>
+                <Nav.Item as="li">
+                    <Nav.Link href="/contact" className="fade-link">
                         Contact
-                    </a>
-                </li>
-            </ol>
+                    </Nav.Link>
+                </Nav.Item>
+            </Nav>
             <a href="/" className="button__main button__resume">
                 Resume
             </a>

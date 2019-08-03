@@ -15,15 +15,21 @@ const SkillsWrapper = styled(Col)`
             position: relative;
             margin-bottom: 10px;
             padding-left: 20px;
-            font-family: $font-family-sfmono;
+            font-family: ${props => {
+                return props.theme.sfmono;
+            }};
             font-size: 14px;
-            color: $color-sky-blue;
+            color: ${props => {
+                return props.theme.skyBlue;
+            }};
 
             &::before {
                 content: '▹';
                 position: absolute;
                 left: 0px;
-                color: $color-white-yellow;
+                color: ${props => {
+                    return props.theme.whiteYellow;
+                }};
                 font-size: 14px;
                 line-height: 12px;
             }

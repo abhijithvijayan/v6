@@ -44,10 +44,6 @@ const IconButton = styled.button`
 `;
 
 class HamburgerIcon extends Component {
-    shouldComponentUpdate(nextProps, nextState) {
-        return true;
-    }
-
     render() {
         const { isSidebarOpen } = this.props;
         return (

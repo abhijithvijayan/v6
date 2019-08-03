@@ -5,7 +5,7 @@ const ExperienceHeader = () => {
     return (
         <Row>
             <Col md={12}>
-                <h2 className="d-flex align-items-center line-title">What I'm doing.</h2>
+                <h2 className="d-flex align-items-center line__title">What I'm doing.</h2>
             </Col>
         </Row>
     );
