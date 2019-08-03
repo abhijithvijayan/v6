@@ -1,7 +1,36 @@
 import React from 'react';
+import styled from 'styled-components';
+import { Col, Row } from 'react-bootstrap';
+
+import SocialIcons from './SocialIcons';
+import RepoLink from './RepoLink';
+
+const FooterWrapper = styled.footer`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: ${props => {
+        return props.theme.darkredPurple;
+    }};
+    color: ${props => {
+        return props.theme.skyBlue;
+    }};
+    height: auto;
+    padding: 15px;
+`;
 
 const Footer = () => {
-    return <div>Footer</div>;
+    return (
+        <FooterWrapper>
+            <Row className="w-100">
+                <Col md={12} className="text-center">
+                    <SocialIcons />
+                    <RepoLink />
+                </Col>
+            </Row>
+        </FooterWrapper>
+    );
 };
 
 export default Footer;

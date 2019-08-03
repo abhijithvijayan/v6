@@ -23,8 +23,8 @@ const HomePage = () => {
                 <Projects />
                 <OtherProjects />
                 <Contact />
-                <Footer />
             </main>
+            <Footer />
         </Layout>
     );
 };
