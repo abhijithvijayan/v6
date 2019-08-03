@@ -17,6 +17,7 @@ const FooterWrapper = styled.footer`
         return props.theme.skyBlue;
     }};
     height: auto;
+    min-height: 90px !important;
     padding: 15px;
 `;
 

@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const FooterText = styled.p`
+import FooterText from './FooterText';
+import RepoStats from './RepoStats';
+
+const FooterInfoWrapper = styled.p`
     margin: 5px 0px 3px;
 
     a {
@@ -17,16 +20,17 @@ const FooterText = styled.p`
 
 const RepoLink = () => {
     return (
-        <FooterText>
+        <FooterInfoWrapper>
             <a
                 className="fade-link"
                 href="https://github.com/abhijithvijayan/abhijithvijayan.in"
                 target="_blank"
                 rel="nofollow noopener noreferrer"
             >
-                Developed by abhijithvijayan
+                <FooterText />
+                <RepoStats />
             </a>
-        </FooterText>
+        </FooterInfoWrapper>
     );
 };
 
