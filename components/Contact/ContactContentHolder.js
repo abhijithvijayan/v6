@@ -43,7 +43,12 @@ const ContactContentHolder = () => {
                     answer your email!
                 </p>
             </div>
-            <a href="mailto:iam@abhijithvijayan.in" target="_blank" rel="noopener noreferrer" className="button__main">
+            <a
+                href="mailto:iam@abhijithvijayan.in"
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+                className="button__main"
+            >
                 Say Hello
             </a>
         </ContentWrapper>

@@ -126,7 +126,7 @@ const DetailsHolder = () => {
                                 data-toggle="tooltip"
                                 data-placement="bottom"
                                 target="_blank"
-                                rel="noopener noreferrer"
+                                rel="nofollow noopener noreferrer"
                             >
                                 Behance
                             </a>
@@ -145,7 +145,7 @@ const DetailsHolder = () => {
                                 data-toggle="tooltip"
                                 data-placement="top"
                                 target="_blank"
-                                rel="noopener noreferrer"
+                                rel="nofollow noopener noreferrer"
                             >
                                 tracecea
                             </a>
@@ -165,7 +165,7 @@ const DetailsHolder = () => {
                                 data-toggle="tooltip"
                                 data-placement="bottom"
                                 target="_blank"
-                                rel="noopener noreferrer"
+                                rel="nofollow noopener noreferrer"
                             >
                                 ceadoor
                             </a>

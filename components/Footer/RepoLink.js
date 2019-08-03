@@ -22,7 +22,7 @@ const RepoLink = () => {
                 className="fade-link"
                 href="https://github.com/abhijithvijayan/abhijithvijayan.in"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="nofollow noopener noreferrer"
             >
                 Developed by abhijithvijayan
             </a>

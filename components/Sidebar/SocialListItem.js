@@ -32,7 +32,7 @@ const SocialListItem = props => {
                 data-toggle="tooltip"
                 data-placement="right"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="nofollow noopener noreferrer"
             >
                 <i className={icon}></i>
             </a>
