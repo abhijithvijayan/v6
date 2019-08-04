@@ -55,7 +55,7 @@ const TitlesWrapper = styled(Nav)`
             return props.theme.medium;
         }};
         letter-spacing: 0.5px;
-        font-size: 14px;
+        font-size: 13px;
         padding: 0px 18px 2px;
         transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
         border-left: 2px solid

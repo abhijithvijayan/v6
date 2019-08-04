@@ -56,16 +56,16 @@ p {
 #content__holder {
   width: 100%;
   margin: 0px auto;
-  padding: 0px 130px;
+  padding: 0px 100px;
   @media screen and (min-width: $screenSmMin) and (max-width: $screenSmMax) {
     // 768 - 1024
-    padding: 0px 100px;
+    padding: 0px 90px;
   }
   @media screen and (min-width: $screenXsMin) and (max-width: $screenXsMax) {
     // 481 - 767
-    padding: 0px 30px;
+    padding: 0px 15px;
   }
-  @media screen and (min-width: $screenXxsMin) and (max-width: $screenXxsMax) {
+  @media screen and (max-width: $screenXxsMax) {
     // 320 - 480
     padding: 0px 25px;
   }

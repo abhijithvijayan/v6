@@ -51,7 +51,7 @@ class Header extends Component {
         const { isSidebarOpen } = this.state;
 
         return (
-            <StyledHeader className="d-flex justify-content-end pr-0 pr-sm-5">
+            <StyledHeader className="d-flex justify-content-end pr-0 pr-sm-3 pr-md-4 pr-lg-5">
                 <NavbarWrapper collapseOnSelect expand="sm">
                     <HamburgerIcon toggleSidebar={this.toggleSidebar} isSidebarOpen={isSidebarOpen} />
                     <HorizontalHeader />
