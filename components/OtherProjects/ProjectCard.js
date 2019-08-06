@@ -13,12 +13,12 @@ const CardWrapper = styled.div`
     align-items: flex-start;
     position: relative;
     height: 100%;
-    background-color: ${({ theme }) => {
-        return theme.darkPurple;
-    }};
     padding: 25px;
     border-radius: 2px;
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    background-color: ${({ theme }) => {
+        return theme.darkPurple;
+    }};
 
     @media screen and (min-width: ${({ theme }) => {
             return theme.screenXsMin;
@@ -40,11 +40,11 @@ const CardWrapper = styled.div`
 const ProjectCard = () => {
     return (
         <CardWrapper>
-            <div>
+            <header>
                 <CardHeader />
                 <CardTitle title="AR-TreasureHunt" />
                 <CardSubtitleHolder />
-            </div>
+            </header>
             <CardFooter />
         </CardWrapper>
     );

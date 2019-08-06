@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import FooterTag from './FooterTag';
 
-const FooterWrapper = styled.div`
+const FooterWrapper = styled.footer`
     ul {
         flex-grow: 1;
         display: flex;

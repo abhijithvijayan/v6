@@ -8,16 +8,17 @@ const ProjectsWrapper = styled.div`
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     position: relative;
     gap: 15px;
-    grid-auto-rows: 10px;
 `;
 
 const OtherProjectsWrapper = () => {
     return (
-        <ProjectsWrapper>
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
-        </ProjectsWrapper>
+        <div>
+            <ProjectsWrapper>
+                <ProjectCard />
+                <ProjectCard />
+                <ProjectCard />
+            </ProjectsWrapper>
+        </div>
     );
 };
 
