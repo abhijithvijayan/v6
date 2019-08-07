@@ -10,13 +10,17 @@ const ProjectsWrapper = styled.div`
     gap: 15px;
 `;
 
-const OtherProjectsWrapper = () => {
+const OtherProjectsWrapper = props => {
+    const { hasExpanded } = props;
     return (
         <div>
             <ProjectsWrapper>
                 <ProjectCard />
                 <ProjectCard />
                 <ProjectCard />
+                <ProjectCard style={hasExpanded ? { animationDelay: `${125 * 1}ms` } : { display: 'none' }} />
+                <ProjectCard style={hasExpanded ? { animationDelay: `${125 * 2}ms` } : { display: 'none' }} />
+                <ProjectCard style={hasExpanded ? { animationDelay: `${125 * 3}ms` } : { display: 'none' }} />
             </ProjectsWrapper>
         </div>
     );

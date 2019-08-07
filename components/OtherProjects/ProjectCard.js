@@ -37,9 +37,9 @@ const CardWrapper = styled.div`
     }
 `;
 
-const ProjectCard = () => {
+const ProjectCard = props => {
     return (
-        <CardWrapper>
+        <CardWrapper {...props}>
             <header>
                 <CardHeader />
                 <CardTitle title="AR-TreasureHunt" />
