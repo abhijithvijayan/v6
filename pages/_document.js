@@ -24,8 +24,14 @@ class OnePassDocument extends Document {
             <html lang="en">
                 <Head>
                     <meta charSet="utf-8" />
-                    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-                    <meta name="theme-color" content="#000000" />
+                    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+                    <meta
+                        name="viewport"
+                        content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no"
+                    />
+                    <meta name="msapplication-TileColor" content="#0a192f" />
+                    <meta name="theme-color" content="#0a192f" />
+                    <link rel="shortcut icon" href="/static/images/technologist.png" />
                     {/* for styled-components */}
                     {this.props.styleTags}
                 </Head>
