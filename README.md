@@ -1,41 +1,33 @@
-# abhijithvijayan.in
+<h1 align="center">⚡️  abhijithvijayan.in</h1>
+<p align="center">The latest iteration of my personal site built with <a target="_blank" rel="nofollow noopener noreferrer" href="https://nextjs.org/">Next.js</a> and hosted with <a href="https://www.netlify.com/" rel="nofollow noopener noreferrer">Netlify</a>.</p>
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/3df0faa6-696c-4738-8802-45cdceb85716/deploy-status)](https://app.netlify.com/sites/abhijithvijayan/deploys)
+<div align="center">
+  <a href="https://app.netlify.com/sites/abhijithvijayan/deploys">
+    <img src="https://api.netlify.com/api/v1/badges/3df0faa6-696c-4738-8802-45cdceb85716/deploy-status" alt="Netlify Build" />
+  </a>
 
-https://abhijithvijayan.in
+</div>
 
-The latest iteration of my personal site built with [Next.js](https://nextjs.org/) and hosted with [Netlify](https://www.netlify.com/).
+<br>
+<p align="center">https://abhijithvijayan.in</p>
+<br>
 
 ## 🚀 Quick Start
 
-1. **Install dependencies**
+- `yarn install` to install dependencies.
+- `yarn run dev` to start the development server.
+- `yarn run build` build the files for production.
+- `yarn run export` to use Next.js static exports.
+- `yarn run serve` runs `build` and `export` at once.
 
-   ```sh
-   yarn install
-   ```
-
-2. **Start the development server**
-
-   ```sh
-   yarn run dev
-   ```
-
-## 🛠 Building and Running for Production
-
-In addition to the development server started with `yarn run dev`, you can also generate a full static production build with next.js static exports and serve that to preview the site as it will appear once deployed:
-
-```sh
-yarn serve
-```
-
-## Show your support
+## 🖤 Show your support
 
 Give a ⭐ if this you find this project helpful!
 
-## Licence
+## 🗞 Licence
 
 Code released under the [MIT License](LICENSE).
 
-## Credits
+## 👩🏾‍🔬 Credits
 
 Design inspired from [Brittany Chiang](https://github.com/bchiang7)
