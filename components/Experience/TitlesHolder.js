@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Col, Nav } from 'react-bootstrap';
 
@@ -12,7 +12,7 @@ const TitlesWrapper = styled(Nav)`
         overflow-x: scroll;
     }
 
-    .active__highlighter {
+    #active__highlighter {
         display: block;
         width: 2px;
         height: 42px;
@@ -58,16 +58,18 @@ const TitlesWrapper = styled(Nav)`
         font-size: 13px;
         padding: 0px 18px 2px;
         transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-        border-left: 2px solid
-            ${props => {
-                return props.theme.blueLight;
-            }} !important;
         white-space: nowrap;
         height: 42px;
         display: flex;
         align-items: center;
         justify-content: center;
         position: relative;
+        border: none !important;
+        border-radius: 0 !important;
+        border-left: 2px solid
+            ${props => {
+                return props.theme.blueLight;
+            }} !important;
 
         @media screen and (max-width: 37.5em) {
             border-bottom: 2px solid
@@ -95,26 +97,46 @@ const TitlesWrapper = styled(Nav)`
     }
 `;
 
-const TitlesHolder = () => {
-    return (
-        <Col sm={3} className="pl-0">
-            <TitlesWrapper variant="tabs" className="flex-row flex-sm-column">
-                <Nav.Item>
-                    <Nav.Link eventKey="first">Full Stack Dev</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link eventKey="second">Front-end Dev</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link eventKey="third">Designer</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link eventKey="forth">Tech Lead</Nav.Link>
-                </Nav.Item>
-                <span className="active__highlighter d-none d-sm-block"></span>
-            </TitlesWrapper>
-        </Col>
-    );
-};
+class TitlesHolder extends Component {
+    /* eslint-disable class-methods-use-this */
+    handleClick(e) {
+        const { target } = e;
+        const highLighter = document.getElementById('active__highlighter');
+        if (!target.classList.contains('active')) {
+            const trimmedId = target.id.slice(8);
+            highLighter.style = `transform: translateY(${41 * (trimmedId - 1)}px)`;
+        }
+    }
+
+    render() {
+        return (
+            <Col sm={3} className="pl-0">
+                <TitlesWrapper variant="tabs" className="flex-row flex-sm-column">
+                    <Nav.Item>
+                        <Nav.Link onClick={this.handleClick} eventKey="1">
+                            Full Stack Dev
+                        </Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link onClick={this.handleClick} eventKey="2">
+                            Front-end Dev
+                        </Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link onClick={this.handleClick} eventKey="3">
+                            Designer
+                        </Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link onClick={this.handleClick} eventKey="4">
+                            Tech Lead
+                        </Nav.Link>
+                    </Nav.Item>
+                    <span id="active__highlighter" className="d-none d-sm-block"></span>
+                </TitlesWrapper>
+            </Col>
+        );
+    }
+}
 
 export default TitlesHolder;

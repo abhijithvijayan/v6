@@ -67,7 +67,7 @@ const DetailsWrapper = styled(Col)`
                 line-height: 20px;
             }
 
-            .list__item--Link {
+            .list__item--link {
                 color: ${props => {
                     return props.theme.whiteYellow;
                 }};
@@ -80,7 +80,7 @@ const DetailsHolder = () => {
     return (
         <DetailsWrapper sm={9}>
             <Tab.Content>
-                <Tab.Pane eventKey="first">
+                <Tab.Pane eventKey="1">
                     <h2>
                         Full Stack Developer
                         <span className="company__at">
@@ -99,7 +99,7 @@ const DetailsHolder = () => {
                         </li>
                     </ul>
                 </Tab.Pane>
-                <Tab.Pane eventKey="second">
+                <Tab.Pane eventKey="2">
                     <h2>Front-End Developer</h2>
                     <h5>Jan 2018 - Feb 2019</h5>
                     <ul>
@@ -108,7 +108,7 @@ const DetailsHolder = () => {
                         <li>Wrote modern, performant, maintainable code for internal projects</li>
                     </ul>
                 </Tab.Pane>
-                <Tab.Pane eventKey="third">
+                <Tab.Pane eventKey="3">
                     <h2>Designer</h2>
                     <h5>Aug 2018 - Present</h5>
                     <ul>
@@ -120,7 +120,7 @@ const DetailsHolder = () => {
                         <li>
                             Check out some designs at{' '}
                             <a
-                                className="list__item--Link"
+                                className="list__item--link"
                                 title="View"
                                 href="https://www.behance.net/abhijithvijayan"
                                 data-toggle="tooltip"
@@ -133,7 +133,7 @@ const DetailsHolder = () => {
                         </li>
                     </ul>
                 </Tab.Pane>
-                <Tab.Pane eventKey="forth">
+                <Tab.Pane eventKey="4">
                     <h2>
                         Tech Lead
                         <span className="company__at">
@@ -159,7 +159,7 @@ const DetailsHolder = () => {
                             Collaborated with a small team of designers and developers to spearhead new designs and
                             projects for student-led organisation at{' '}
                             <a
-                                className="list__item--Link"
+                                className="list__item--link"
                                 title="Visit"
                                 href="https://github.com/ceadoor"
                                 data-toggle="tooltip"

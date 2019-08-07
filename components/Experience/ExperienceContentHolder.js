@@ -11,7 +11,7 @@ const ContentWrapper = styled(Row)`
 
 const ExperienceContentHolder = () => {
     return (
-        <Tab.Container id="experience__tabs" defaultActiveKey="first">
+        <Tab.Container id="exp" defaultActiveKey="1">
             <ContentWrapper>
                 <TitlesHolder />
                 <DetailsHolder />
