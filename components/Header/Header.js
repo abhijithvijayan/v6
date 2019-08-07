@@ -55,7 +55,7 @@ class Header extends Component {
                 <NavbarWrapper collapseOnSelect expand="sm">
                     <HamburgerIcon toggleSidebar={this.toggleSidebar} isSidebarOpen={isSidebarOpen} />
                     <HorizontalHeader />
-                    <VerticalHeader toggleSidebar={this.toggleSidebar} isSidebarOpen={isSidebarOpen} />
+                    {/* <VerticalHeader toggleSidebar={this.toggleSidebar} isSidebarOpen={isSidebarOpen} /> */}
                 </NavbarWrapper>
             </StyledHeader>
         );

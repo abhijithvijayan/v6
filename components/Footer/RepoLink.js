@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import FooterText from './FooterText';
 import RepoStats from './RepoStats';
 
-const FooterInfoWrapper = styled.p`
+const FooterInfoWrapper = styled.div`
     margin: 5px 0px 3px;
 
     a {
