@@ -66,7 +66,6 @@ class Header extends Component {
             return this.setState({ isMounted: true });
         }, 100);
 
-        // if (typeof window !== 'undefined') {}
         window.addEventListener('scroll', () => {
             return throttle(this.handleScroll());
         });
@@ -75,7 +74,6 @@ class Header extends Component {
     componentWillUnmount() {
         this.setState({ isMounted: false });
 
-        // if (typeof window !== 'undefined') {}
         window.removeEventListener('scroll', () => {
             return this.handleScroll();
         });

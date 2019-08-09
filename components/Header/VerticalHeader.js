@@ -17,12 +17,16 @@ class VerticalHeader extends Component {
         }
     };
 
+    renderSidebarContent = () => {
+        return <SidebarContent toggleSidebar={this.props.toggleSidebar} isSidebarOpen={this.props.isSidebarOpen} />;
+    };
+
     renderSiderbar = () => {
         const { isSidebarOpen } = this.props;
         this.toggleBodyScroll(isSidebarOpen);
         return (
             <Sidebar
-                sidebar={<SidebarContent />}
+                sidebar={this.renderSidebarContent()}
                 open={isSidebarOpen}
                 pullRight
                 touch={false}

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Nav } from 'react-bootstrap';
+import { clearAllBodyScrollLocks } from 'body-scroll-lock';
 
 const SidebarWrapper = styled.nav`
     display: flex;
@@ -56,27 +57,32 @@ const SidebarWrapper = styled.nav`
     }
 `;
 
-const SidebarContent = () => {
+const SidebarContent = props => {
+    const handleClick = () => {
+        clearAllBodyScrollLocks();
+        props.toggleSidebar(!props.isSidebarOpen);
+    };
+
     return (
         <SidebarWrapper>
             <Nav as="ol">
                 <Nav.Item as="li">
-                    <Nav.Link href="#about" className="fade-link">
+                    <Nav.Link onClick={handleClick} href="#about" className="fade-link">
                         About
                     </Nav.Link>
                 </Nav.Item>
                 <Nav.Item as="li">
-                    <Nav.Link href="#experience" className="fade-link">
+                    <Nav.Link onClick={handleClick} href="#experience" className="fade-link">
                         Experience
                     </Nav.Link>
                 </Nav.Item>
                 <Nav.Item as="li">
-                    <Nav.Link href="#work" className="fade-link">
+                    <Nav.Link onClick={handleClick} href="#work" className="fade-link">
                         Work
                     </Nav.Link>
                 </Nav.Item>
                 <Nav.Item as="li">
-                    <Nav.Link href="#contact" className="fade-link">
+                    <Nav.Link onClick={handleClick} href="#contact" className="fade-link">
                         Contact
                     </Nav.Link>
                 </Nav.Item>
