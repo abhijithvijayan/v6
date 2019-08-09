@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { Col, Tab } from 'react-bootstrap';
 
+import InlineLink from './InlineLink';
+
 const DetailsWrapper = styled(Col)`
     padding-top: 7px;
     padding-left: 30px;
@@ -74,6 +76,10 @@ const DetailsWrapper = styled(Col)`
             }
         }
     }
+
+    .disabled {
+        pointer-events: none !important;
+    }
 `;
 
 const DetailsHolder = () => {
@@ -85,9 +91,13 @@ const DetailsHolder = () => {
                         Full Stack Developer
                         <span className="company__at">
                             &nbsp;@&nbsp;
-                            <a href="/" title="theBlueDoor" className="company__name" target="_blank" rel="noopener">
-                                theBlueDoor
-                            </a>
+                            <InlineLink
+                                url="/"
+                                title="theBlueDoor"
+                                text="Visit"
+                                customClass="disabled company__name"
+                                placement="top"
+                            />
                         </span>
                     </h2>
                     <h5>Feb 2019 - Present</h5>
@@ -119,17 +129,12 @@ const DetailsHolder = () => {
                         </li>
                         <li>
                             Check out some designs at{' '}
-                            <a
-                                className="list__item--link"
-                                title="View"
-                                href="https://www.behance.net/abhijithvijayan"
-                                data-toggle="tooltip"
-                                data-placement="bottom"
-                                target="_blank"
-                                rel="nofollow noopener noreferrer"
-                            >
-                                Behance
-                            </a>
+                            <InlineLink
+                                url="https://www.behance.net/abhijithvijayan"
+                                title="Behance"
+                                text="View Designs"
+                                customClass="list__item--link"
+                            />
                         </li>
                     </ul>
                 </Tab.Pane>
@@ -138,17 +143,13 @@ const DetailsHolder = () => {
                         Tech Lead
                         <span className="company__at">
                             &nbsp;@&nbsp;
-                            <a
-                                href="https://github.com/ceadoor"
-                                title="Visit"
-                                className="company__name"
-                                data-toggle="tooltip"
-                                data-placement="top"
-                                target="_blank"
-                                rel="nofollow noopener noreferrer"
-                            >
-                                tracecea
-                            </a>
+                            <InlineLink
+                                url="https://github.com/ceadoor"
+                                title="tracecea"
+                                text="Visit"
+                                customClass="company__name"
+                                placement="top"
+                            />
                         </span>
                     </h2>
                     <h5>Aug 2016 - Present</h5>
@@ -158,17 +159,12 @@ const DetailsHolder = () => {
                         <li>
                             Collaborated with a small team of designers and developers to spearhead new designs and
                             projects for student-led organisation at{' '}
-                            <a
-                                className="list__item--link"
-                                title="Visit"
-                                href="https://github.com/ceadoor"
-                                data-toggle="tooltip"
-                                data-placement="bottom"
-                                target="_blank"
-                                rel="nofollow noopener noreferrer"
-                            >
-                                ceadoor
-                            </a>
+                            <InlineLink
+                                url="https://github.com/ceadoor"
+                                title="ceadoor"
+                                text="Visit"
+                                customClass="list__item--link"
+                            />
                         </li>
                     </ul>
                 </Tab.Pane>
