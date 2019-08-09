@@ -1,7 +1,15 @@
 import React from 'react';
 
+import ProjectsHeader from './ProjectsHeader';
+
 const Projects = () => {
-    return <div>Projects</div>;
+    return (
+        <section id="projects">
+            <div className="wrapper">
+                <ProjectsHeader />
+            </div>
+        </section>
+    );
 };
 
 export default Projects;
