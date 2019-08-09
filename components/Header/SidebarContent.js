@@ -66,17 +66,17 @@ const SidebarContent = () => {
                     </Nav.Link>
                 </Nav.Item>
                 <Nav.Item as="li">
-                    <Nav.Link href="/experience" className="fade-link">
+                    <Nav.Link href="#experience" className="fade-link">
                         Experience
                     </Nav.Link>
                 </Nav.Item>
                 <Nav.Item as="li">
-                    <Nav.Link href="/work" className="fade-link">
+                    <Nav.Link href="#work" className="fade-link">
                         Work
                     </Nav.Link>
                 </Nav.Item>
                 <Nav.Item as="li">
-                    <Nav.Link href="/contact" className="fade-link">
+                    <Nav.Link href="#contact" className="fade-link">
                         Contact
                     </Nav.Link>
                 </Nav.Item>
