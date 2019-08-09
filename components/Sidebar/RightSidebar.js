@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 
 const EmailWrapper = styled.div`
     font-family: ${props => {
@@ -44,15 +45,11 @@ const RightSidebar = () => {
     return (
         <EmailWrapper className="d-md-block d-none">
             <div>
-                <a
-                    className="fade-link"
-                    href="mailto:iam@abhijithvijayan.in"
-                    title="Email"
-                    data-toggle="tooltip"
-                    data-placement="left"
-                >
-                    iam@abhijithvijayan.in
-                </a>
+                <OverlayTrigger placement="left" overlay={<Tooltip id="tooltip-right">Email</Tooltip>}>
+                    <a className="fade-link" href="mailto:iam@abhijithvijayan.in">
+                        iam@abhijithvijayan.in
+                    </a>
+                </OverlayTrigger>
             </div>
         </EmailWrapper>
     );

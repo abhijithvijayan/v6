@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 
 const SocialListItemWrapper = styled.li`
     position: relative;
@@ -23,19 +24,14 @@ const SocialListItemWrapper = styled.li`
 `;
 
 const SocialListItem = props => {
-    const { icon, ...other } = props;
+    const { icon, title, ...other } = props;
     return (
         <SocialListItemWrapper>
-            <a
-                {...other}
-                className="fade-link"
-                data-toggle="tooltip"
-                data-placement="right"
-                target="_blank"
-                rel="nofollow noopener noreferrer"
-            >
-                <i className={icon}></i>
-            </a>
+            <OverlayTrigger placement="right" overlay={<Tooltip id="tooltip-right">{title}</Tooltip>}>
+                <a {...other} className="fade-link" target="_blank" rel="nofollow noopener noreferrer">
+                    <i className={icon}></i>
+                </a>
+            </OverlayTrigger>
         </SocialListItemWrapper>
     );
 };
