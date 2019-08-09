@@ -15,6 +15,11 @@ const FooterInfoWrapper = styled.div`
         font-family: ${props => {
             return props.theme.sfmono;
         }};
+        &:hover span i {
+            color: ${props => {
+                return props.theme.whiteYellow;
+            }} !important;
+        }
     }
 `;
 
