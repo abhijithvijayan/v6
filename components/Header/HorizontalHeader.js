@@ -60,7 +60,7 @@ const HorizontalHeader = () => {
                     </Nav.Link>
                 </Nav.Item>
                 <Nav.Item as="li">
-                    <Nav.Link href="#work" className="fade-link">
+                    <Nav.Link href="#projects" className="fade-link">
                         Work
                     </Nav.Link>
                 </Nav.Item>

@@ -77,7 +77,7 @@ const SidebarContent = props => {
                     </Nav.Link>
                 </Nav.Item>
                 <Nav.Item as="li">
-                    <Nav.Link onClick={handleClick} href="#work" className="fade-link">
+                    <Nav.Link onClick={handleClick} href="#projects" className="fade-link">
                         Work
                     </Nav.Link>
                 </Nav.Item>
