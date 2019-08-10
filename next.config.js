@@ -10,4 +10,10 @@ module.exports = withPlugins([withCSS, withSass, withImages, withFonts], {
     webpack(config, options) {
         return config;
     },
+
+    exportPathMap() {
+        return {
+            '/': { page: '/' },
+        };
+    },
 });
