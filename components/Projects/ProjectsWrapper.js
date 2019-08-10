@@ -22,6 +22,7 @@ const ProjectsWrapper = () => {
         <React.Fragment>
             <LeftHighlighedProject content={sampleLeftContent} />
             <RightHighlightedProject content={sampleRightContent} />
+            <LeftHighlighedProject content={sampleLeftContent} />
         </React.Fragment>
     );
 };

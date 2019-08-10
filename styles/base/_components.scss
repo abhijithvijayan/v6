@@ -135,7 +135,13 @@
   }
 }
 
-// unused
+.align-right {
+  text-align: right;
+}
+
+.align-left {
+  text-align: left;
+}
 
 .tx-100 {
   transform: translateX(-100px);
@@ -145,13 +151,7 @@
   }
 }
 
-.align-right {
-  text-align: right;
-}
-
-.align-left {
-  text-align: left;
-}
+// unused
 
 // .bl-line {
 //     border-left: 2px solid $blueLight;

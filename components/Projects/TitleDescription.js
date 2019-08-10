@@ -32,14 +32,13 @@ const DescriptionWrapper = styled.div`
     }
 `;
 
-const TitleDescription = () => {
+const TitleDescription = props => {
+    const { customClass = '' } = props;
     return (
-        <DescriptionWrapper>
+        <DescriptionWrapper className={customClass}>
             <p>
                 Aliqua incididunt dolore in pariatur est reprehenderit excepteur. Nostrud officia non consequat nisi
-                sunt mollit. Aliqua culpa labore culpa duis ut laboris irure ut commodo. Incididunt ex deserunt elit ex
-                consectetur nostrud consequat ullamco sint proident irure. Incididunt cillum nostrud cupidatat ut
-                ullamco amet mollit commodo nisi culpa labore dolor duis esse. Do ea qui ut ut aute dolor.
+                sunt mollit.
             </p>
         </DescriptionWrapper>
     );
