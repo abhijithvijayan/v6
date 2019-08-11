@@ -8,6 +8,10 @@ const withPlugins = require('next-compose-plugins');
 
 module.exports = withPlugins([withCSS, withSass, withImages, withFonts], {
     webpack(config, options) {
+        config.module.rules.push({
+            test: /\.md$/,
+            use: 'raw-loader',
+        });
         return config;
     },
 

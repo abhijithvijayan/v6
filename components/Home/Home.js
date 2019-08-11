@@ -20,7 +20,7 @@ const HomeWrapper = styled.div`
     }
 `;
 
-const Home = () => {
+const Home = ({ content }) => {
     return (
         <section id="home">
             <HomeWrapper className="wrapper">
