@@ -1,5 +1,5 @@
 ---
-id: "1"
+date: "2019-08-01"
 title: "Kutt-Extension"
 cover: "/static/images/kutt.png"
 github: "https://github.com/abhijithvijayan/kutt-extension"

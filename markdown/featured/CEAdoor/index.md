@@ -1,5 +1,5 @@
 ---
-id: "3"
+date: "2019-08-03"
 title: "CEA Website"
 cover: "/static/images/cea.jpg"
 github: "https://github.com/ceadoor/cea.ac.in/"
