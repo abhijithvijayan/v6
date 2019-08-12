@@ -16,27 +16,52 @@ import Footer from '../components/Footer';
 
 class HomePage extends Component {
     static async getInitialProps({ req }) {
-        const homeContent = importAll(require.context('../markdown/home/', true, /\.md$/))
+        const types = ['home', 'about', 'experience', 'featured', 'projects', 'contact'];
+
+        const homeContent = await importAll(require.context('../markdown/home/', true, /\.md$/))
             .reverse() // ordering them from most recent to oldest
             .map(frontMatter);
 
-        // ToDo: return as key-pair
-        return { content: homeContent };
+        const aboutContent = await importAll(require.context('../markdown/about/', true, /\.md$/))
+            .reverse()
+            .map(frontMatter);
+
+        const experienceContent = await importAll(require.context('../markdown/experience/', true, /\.md$/))
+            .reverse()
+            .map(frontMatter);
+
+        const featuredContent = await importAll(require.context('../markdown/featured/', true, /\.md$/))
+            .reverse()
+            .map(frontMatter);
+
+        const projectsContent = await importAll(require.context('../markdown/projects/', true, /\.md$/))
+            .reverse()
+            .map(frontMatter);
+
+        const contactContent = await importAll(require.context('../markdown/contact/', true, /\.md$/))
+            .reverse()
+            .map(frontMatter);
+
+        return {
+            content: { homeContent, aboutContent, experienceContent, featuredContent, projectsContent, contactContent },
+        };
     }
 
     render() {
-        const { content } = this.props;
+        const {
+            content: { homeContent, aboutContent, experienceContent, featuredContent, projectsContent, contactContent },
+        } = this.props;
         return (
             <Layout>
                 <Header />
                 <Sidebar />
                 <main id="content__holder" className="container">
-                    <Home content={content} />
-                    <About />
-                    <Experience />
-                    <Projects />
-                    <OtherProjects />
-                    <Contact />
+                    <Home content={homeContent} />
+                    <About content={aboutContent} />
+                    <Experience content={experienceContent} />
+                    <Projects content={featuredContent} />
+                    <OtherProjects content={projectsContent} />
+                    <Contact content={contactContent} />
                 </main>
                 <Footer />
             </Layout>
