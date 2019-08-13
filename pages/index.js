@@ -27,16 +27,19 @@ class HomePage extends Component {
             .map(frontMatter)
             .map(withParsedHtml);
 
+        // ToDo: Add sorting
         const experienceContent = await importAll(require.context('../markdown/experience/', true, /\.md$/))
             .reverse()
             .map(frontMatter)
             .map(withParsedHtml);
 
+        // ToDo: Add sorting
         const featuredContent = await importAll(require.context('../markdown/featured/', true, /\.md$/))
             .reverse()
             .map(frontMatter)
             .map(withParsedHtml);
 
+        // ToDo: Add sorting
         const projectsContent = await importAll(require.context('../markdown/projects/', true, /\.md$/))
             .reverse()
             .map(frontMatter)

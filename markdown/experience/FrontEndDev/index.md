@@ -1,4 +1,5 @@
 ---
+date: "2018-01-01"
 title: "Front-End Developer"
 company: ""
 range: "Jan 2018 - Feb 2019"

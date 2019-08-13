@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import TitleItem from './TitleItem';
+import DetailItem from './DetailItem';
 import TitlesHolder from './TitlesHolder';
 import DetailsHolder from './DetailsHolder';
 import ExperienceHeader from './ExperienceHeader';
@@ -27,7 +28,11 @@ const Experience = ({ content }) => {
                             return <TitleItem title={title} id={index + 1} key={index} />;
                         })}
                     </TitlesHolder>
-                    <DetailsHolder />
+                    <DetailsHolder>
+                        {content.map((item, index) => {
+                            return <DetailItem data={item} id={index + 1} key={index} />;
+                        })}
+                    </DetailsHolder>
                 </ExperienceContentHolder>
             </ExperienceWrapper>
         </section>

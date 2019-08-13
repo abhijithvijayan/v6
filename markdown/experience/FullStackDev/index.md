@@ -1,4 +1,5 @@
 ---
+date: "2019-02-01"
 title: "Full Stack Developer"
 company: "theBlueDoor"
 range: "Feb 2019 - Present"
