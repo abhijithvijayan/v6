@@ -1,11 +1,11 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 
-const AboutHeader = () => {
+const AboutHeader = ({ title }) => {
     return (
         <Row>
             <Col md={12}>
-                <h2 className="d-flex align-items-center line__title">About Me</h2>
+                <h2 className="d-flex align-items-center line__title">{title}</h2>
             </Col>
         </Row>
     );

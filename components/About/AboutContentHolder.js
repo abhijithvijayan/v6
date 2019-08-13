@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { Row } from 'react-bootstrap';
 
+import TextContentWrapper from './TextContentWrapper';
+import AboutTextContent from './AboutTextContent';
 import SkillSetHolder from './SkillSetHolder';
 import ProfileHolder from './ProfileHolder';
 
@@ -11,11 +13,15 @@ const ContentWrapper = styled(Row)`
     align-items: flex-start;
 `;
 
-const AboutContentHolder = () => {
+const AboutContentHolder = ({ data: { attributes, body } }) => {
+    const { avatar, skills } = attributes;
     return (
         <ContentWrapper>
-            <SkillSetHolder />
-            <ProfileHolder />
+            <TextContentWrapper>
+                <AboutTextContent data={body} />
+                <SkillSetHolder data={skills} />
+            </TextContentWrapper>
+            <ProfileHolder image={avatar} />
         </ContentWrapper>
     );
 };

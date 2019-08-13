@@ -9,12 +9,15 @@ const AboutWrapper = styled.div`
     position: relative;
 `;
 
-const About = () => {
+const About = ({ content }) => {
+    const {
+        attributes: { title },
+    } = content[0];
     return (
         <section id="about">
             <AboutWrapper className="wrapper">
-                <AboutHeader />
-                <AboutContentHolder />
+                <AboutHeader title={title} />
+                <AboutContentHolder data={content[0]} />
             </AboutWrapper>
         </section>
     );

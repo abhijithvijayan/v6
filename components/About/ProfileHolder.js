@@ -3,13 +3,13 @@ import styled from 'styled-components';
 import { Col, Image } from 'react-bootstrap';
 
 const ProfileWrapper = styled(Col)`
-    @media screen and (max-width: ${props => {
-            return props.theme.screenXxsMax;
+    @media screen and (max-width: ${({ theme }) => {
+            return theme.screenXxsMax;
         }}) {
         width: 70%;
     }
-    @media screen and (max-width: ${props => {
-            return props.theme.screenSmMin;
+    @media screen and (max-width: ${({ theme }) => {
+            return theme.screenSmMin;
         }}) {
         width: 80%;
         margin: 60px auto 0px;
@@ -48,12 +48,12 @@ const ProfileWrapper = styled(Col)`
     }
 `;
 
-const ProfileHolder = () => {
+const ProfileHolder = ({ image }) => {
     return (
         <ProfileWrapper md={4}>
             <div className="image__holder">
                 <picture>
-                    <Image alt="profile" fluid className="profile__picture" src="/static/images/profile.jpg" />
+                    <Image alt="profile" fluid className="profile__picture" src={image} />
                 </picture>
             </div>
         </ProfileWrapper>
