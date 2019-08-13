@@ -62,9 +62,7 @@ class Header extends Component {
     }
 
     componentDidMount() {
-        setTimeout(() => {
-            return this.setState({ isMounted: true });
-        }, 100);
+        this.setState({ isMounted: true });
 
         window.addEventListener('scroll', () => {
             return throttle(this.handleScroll());
