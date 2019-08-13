@@ -13,12 +13,12 @@ const ContentWrapper = styled(Row)`
     align-items: flex-start;
 `;
 
-const AboutContentHolder = ({ data: { attributes, body } }) => {
+const AboutContentHolder = ({ data: { attributes, html } }) => {
     const { avatar, skills } = attributes;
     return (
         <ContentWrapper>
             <TextContentWrapper>
-                <AboutTextContent data={body} />
+                <AboutTextContent data={html} />
                 <SkillSetHolder data={skills} />
             </TextContentWrapper>
             <ProfileHolder image={avatar} />
