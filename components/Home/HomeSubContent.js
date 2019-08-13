@@ -23,9 +23,7 @@ const SubContentWrapper = styled(Row)`
 const HomeSubContent = ({ data }) => {
     return (
         <SubContentWrapper>
-            <Col md={6}>
-                <p>{parse(data)}</p>
-            </Col>
+            <Col md={6}>{parse(data)}</Col>
         </SubContentWrapper>
     );
 };
