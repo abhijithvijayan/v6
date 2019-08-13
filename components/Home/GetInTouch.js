@@ -6,12 +6,12 @@ const GetInTouchWrapper = styled(Col)`
     margin-top: 50px;
 `;
 
-const GetInTouch = () => {
+const GetInTouch = ({ data }) => {
     return (
         <Row className="pb-4">
             <GetInTouchWrapper md={12}>
                 <a href="#contact" className="button__main">
-                    Get in Touch
+                    {data}
                 </a>
             </GetInTouchWrapper>
         </Row>

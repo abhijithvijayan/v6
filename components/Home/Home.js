@@ -21,12 +21,13 @@ const HomeWrapper = styled.div`
 `;
 
 const Home = ({ content }) => {
+    const { attributes, body } = content[0];
     return (
         <section id="home">
             <HomeWrapper className="wrapper">
-                <HomeMainContent />
-                <HomeSubContent />
-                <GetInTouch />
+                <HomeMainContent data={attributes} />
+                <HomeSubContent data={body} />
+                <GetInTouch data={attributes.contactText} />
             </HomeWrapper>
         </section>
     );

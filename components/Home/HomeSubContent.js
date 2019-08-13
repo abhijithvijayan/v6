@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Col, Row } from 'react-bootstrap';
+import parse from 'html-react-parser';
 
 const SubContentWrapper = styled(Row)`
     margin-top: 25px;
@@ -19,15 +20,11 @@ const SubContentWrapper = styled(Row)`
     }
 `;
 
-const HomeSubContent = () => {
+const HomeSubContent = ({ data }) => {
     return (
         <SubContentWrapper>
             <Col md={6}>
-                <p>
-                    I'm a software engineering student based in Kerala, India specializing in developing exceptional,
-                    high quality webapps and tools. Currently on the <strong>7th Semester</strong> of{' '}
-                    <strong> B.Tech Degree.</strong>
-                </p>
+                <p>{parse(data)}</p>
             </Col>
         </SubContentWrapper>
     );

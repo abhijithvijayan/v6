@@ -58,13 +58,14 @@ const MainContentWrapper = styled(Row)`
     }
 `;
 
-const HomeMainContent = () => {
+const HomeMainContent = ({ data }) => {
+    const { title, name, subtitle } = data;
     return (
         <MainContentWrapper>
             <Col md={12}>
-                <h2 className="intro__text">Hi, I am</h2>
-                <h1 className="main__text">Abhijith Vijayan.</h1>
-                <h2 className="end__text">an Engineer in the making.</h2>
+                <h2 className="intro__text">{title}</h2>
+                <h1 className="main__text">{name}</h1>
+                <h2 className="end__text">{subtitle}</h2>
             </Col>
         </MainContentWrapper>
     );
