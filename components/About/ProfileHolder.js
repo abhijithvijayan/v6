@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { Col, Image } from 'react-bootstrap';
 
+import { trimQuotes } from '../../utils';
+
 const ProfileWrapper = styled(Col)`
     @media screen and (max-width: ${({ theme }) => {
             return theme.screenXxsMax;
@@ -53,7 +55,7 @@ const ProfileHolder = ({ image }) => {
         <ProfileWrapper md={4}>
             <div className="image__holder">
                 <picture>
-                    <Image alt="profile" fluid className="profile__picture" src={image} />
+                    <Image alt="profile" fluid className="profile__picture" src={trimQuotes(image)} />
                 </picture>
             </div>
         </ProfileWrapper>
