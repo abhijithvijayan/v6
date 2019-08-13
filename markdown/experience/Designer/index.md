@@ -1,6 +1,8 @@
 ---
 title: "Designer"
+company: ""
 range: "Aug 2018 - Present"
+url: ""
 ---
 
 - Designed various Logos, Posters, & UI for the clients

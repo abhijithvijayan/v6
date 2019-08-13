@@ -1,6 +1,8 @@
 ---
 title: "Front-End Developer"
+company: ""
 range: "Jan 2018 - Feb 2019"
+url: ""
 ---
 
 - Developed static websites for clients and internal projects.

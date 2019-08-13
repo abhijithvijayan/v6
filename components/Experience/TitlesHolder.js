@@ -97,27 +97,17 @@ const TitlesWrapper = styled(Nav)`
     }
 `;
 
-class TitlesHolder extends Component {
-    /* eslint-disable class-methods-use-this */
-    handleClick(e) {
-        const { target } = e;
-        const highLighter = document.getElementById('active__highlighter');
-        if (!target.classList.contains('active')) {
-            const trimmedId = target.id.slice(8);
-            highLighter.style = `transform: translateY(${41 * (trimmedId - 1)}px)`;
-        }
-    }
-
-    render() {
-        return (
-            <Col sm={3} className="pl-0">
-                <TitlesWrapper variant="tabs" className="flex-row flex-sm-column">
-                    <Nav.Item>
-                        <Nav.Link onClick={this.handleClick} eventKey="1">
-                            Full Stack Dev
-                        </Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
+const TitlesHolder = ({ children }) => {
+    return (
+        <Col sm={3} className="pl-0">
+            <TitlesWrapper variant="tabs" className="flex-row flex-sm-column">
+                {children}
+                {/* <Nav.Item>
+                    <Nav.Link onClick={this.handleClick} eventKey="1">
+                        Full Stack Dev
+                    </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
                         <Nav.Link onClick={this.handleClick} eventKey="2">
                             Front-end Dev
                         </Nav.Link>
@@ -131,12 +121,11 @@ class TitlesHolder extends Component {
                         <Nav.Link onClick={this.handleClick} eventKey="4">
                             Tech Lead
                         </Nav.Link>
-                    </Nav.Item>
-                    <span id="active__highlighter" className="d-none d-sm-block"></span>
-                </TitlesWrapper>
-            </Col>
-        );
-    }
-}
+                    </Nav.Item> */}
+                <span id="active__highlighter" className="d-none d-sm-block"></span>
+            </TitlesWrapper>
+        </Col>
+    );
+};
 
 export default TitlesHolder;

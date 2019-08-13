@@ -2,20 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import { Row, Tab } from 'react-bootstrap';
 
-import TitlesHolder from './TitlesHolder';
-import DetailsHolder from './DetailsHolder';
-
 const ContentWrapper = styled(Row)`
     padding-left: 15px;
 `;
 
-const ExperienceContentHolder = () => {
+const ExperienceContentHolder = ({ children }) => {
     return (
         <Tab.Container id="exp" defaultActiveKey="1">
-            <ContentWrapper>
-                <TitlesHolder />
-                <DetailsHolder />
-            </ContentWrapper>
+            <ContentWrapper>{children}</ContentWrapper>
         </Tab.Container>
     );
 };
