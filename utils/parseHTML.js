@@ -1,9 +1,13 @@
 import marked from 'marked';
 
-export function withParsedHtml(data) {
+export const withParsedHtml = data => {
     return { ...data, html: marked(data.body) };
-}
+};
 
-export function withNoBody(data) {
+export const withNoBody = data => {
     return { ...data, body: undefined };
-}
+};
+
+export const trimQuotes = str => {
+    return str.replace(/^"(.*)"$/, '$1');
+};

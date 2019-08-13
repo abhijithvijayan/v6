@@ -1,7 +1,6 @@
 /* eslint-disable global-require */
 import React, { Component } from 'react';
-import frontMatter from '../utils/frontMatter';
-import importAll from '../utils/importAll';
+import { frontMatter, importAll } from '../utils';
 
 import Layout from '../components/Layout';
 import Header from '../components/Header';
