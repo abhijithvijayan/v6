@@ -69,14 +69,6 @@ class Header extends Component {
         });
     }
 
-    componentWillUnmount() {
-        this.setState({ isMounted: false });
-
-        window.removeEventListener('scroll', () => {
-            return this.handleScroll();
-        });
-    }
-
     handleScroll = () => {
         const { isMounted, scrollDirection, lastScrollTop } = this.state;
         const fromTop = window.scrollY;
