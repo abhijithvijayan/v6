@@ -13,8 +13,8 @@ const HomeWrapper = styled.div`
     min-height: 100vh;
     margin: 0px auto;
 
-    @media screen and (max-width: ${props => {
-            return props.theme.screenSmMin;
+    @media screen and (max-width: ${({ theme }) => {
+            return theme.screenSmMin;
         }}) {
         padding-top: 150px;
     }

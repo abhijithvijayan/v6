@@ -6,15 +6,15 @@ import parse from 'html-react-parser';
 const SubContentWrapper = styled(Row)`
     margin-top: 25px;
     p {
-        color: ${props => {
-            return props.theme.skyBlue;
+        color: ${({ theme }) => {
+            return theme.skyBlue;
         }};
         font-size: 17px;
         line-height: 1.4;
         margin: 0px 0px 15px;
         strong {
-            color: ${props => {
-                return props.theme.whiteYellow;
+            color: ${({ theme }) => {
+                return theme.whiteYellow;
             }};
         }
     }

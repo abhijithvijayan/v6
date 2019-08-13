@@ -7,11 +7,11 @@ const MainContentWrapper = styled(Row)`
         font-size: 16px;
         font-weight: normal;
         margin: 0px 0px 15px 3px;
-        font-family: ${props => {
-            return props.theme.sfmono;
+        font-family: ${({ theme }) => {
+            return theme.sfmono;
         }};
-        color: ${props => {
-            return props.theme.whiteYellow;
+        color: ${({ theme }) => {
+            return theme.whiteYellow;
         }};
     }
 
@@ -19,22 +19,22 @@ const MainContentWrapper = styled(Row)`
         font-size: 70px;
         line-height: 1.1;
         margin: 0px;
-        color: ${props => {
-            return props.theme.headWhite;
+        color: ${({ theme }) => {
+            return theme.headWhite;
         }};
-        font-weight: ${props => {
-            return props.theme.semibold;
+        font-weight: ${({ theme }) => {
+            return theme.semibold;
         }};
     }
 
     .end__text {
         font-size: 70px;
         line-height: 1.1;
-        color: ${props => {
-            return props.theme.skyBlue;
+        color: ${({ theme }) => {
+            return theme.skyBlue;
         }};
-        font-weight: ${props => {
-            return props.theme.semibold;
+        font-weight: ${({ theme }) => {
+            return theme.semibold;
         }};
     }
 
@@ -44,14 +44,14 @@ const MainContentWrapper = styled(Row)`
             font-size: 63px;
         }
 
-        @media screen and (max-width: ${props => {
-                return props.theme.screenSmMin;
+        @media screen and (max-width: ${({ theme }) => {
+                return theme.screenSmMin;
             }}) {
             font-size: 53px;
         }
 
-        @media screen and (max-width: ${props => {
-                return props.theme.screenXxsMin;
+        @media screen and (max-width: ${({ theme }) => {
+                return theme.screenXxsMin;
             }}) {
             font-size: 43px;
         }
