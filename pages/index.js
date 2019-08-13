@@ -1,6 +1,6 @@
 /* eslint-disable global-require */
 import React, { Component } from 'react';
-import { frontMatter, importAll } from '../utils';
+import { frontMatter, importAll, withParsedHtml } from '../utils';
 
 import Layout from '../components/Layout';
 import Header from '../components/Header';
@@ -19,27 +19,33 @@ class HomePage extends Component {
 
         const homeContent = await importAll(require.context('../markdown/home/', true, /\.md$/))
             .reverse() // ordering them from most recent to oldest
-            .map(frontMatter);
+            .map(frontMatter)
+            .map(withParsedHtml);
 
         const aboutContent = await importAll(require.context('../markdown/about/', true, /\.md$/))
             .reverse()
-            .map(frontMatter);
+            .map(frontMatter)
+            .map(withParsedHtml);
 
         const experienceContent = await importAll(require.context('../markdown/experience/', true, /\.md$/))
             .reverse()
-            .map(frontMatter);
+            .map(frontMatter)
+            .map(withParsedHtml);
 
         const featuredContent = await importAll(require.context('../markdown/featured/', true, /\.md$/))
             .reverse()
-            .map(frontMatter);
+            .map(frontMatter)
+            .map(withParsedHtml);
 
         const projectsContent = await importAll(require.context('../markdown/projects/', true, /\.md$/))
             .reverse()
-            .map(frontMatter);
+            .map(frontMatter)
+            .map(withParsedHtml);
 
         const contactContent = await importAll(require.context('../markdown/contact/', true, /\.md$/))
             .reverse()
-            .map(frontMatter);
+            .map(frontMatter)
+            .map(withParsedHtml);
 
         return {
             content: { homeContent, aboutContent, experienceContent, featuredContent, projectsContent, contactContent },
