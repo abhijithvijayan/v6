@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import parse from 'html-react-parser';
 
 const DescriptionWrapper = styled.div`
     position: relative;
@@ -33,15 +34,8 @@ const DescriptionWrapper = styled.div`
 `;
 
 const TitleDescription = props => {
-    const { customClass = '' } = props;
-    return (
-        <DescriptionWrapper className={customClass}>
-            <p>
-                Aliqua incididunt dolore in pariatur est reprehenderit excepteur. Nostrud officia non consequat nisi
-                sunt mollit.
-            </p>
-        </DescriptionWrapper>
-    );
+    const { customClass = '', text = '' } = props;
+    return <DescriptionWrapper className={customClass}>{parse(text)}</DescriptionWrapper>;
 };
 
 export default TitleDescription;

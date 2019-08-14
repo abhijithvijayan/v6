@@ -1,6 +1,6 @@
 /* eslint-disable global-require */
 import React, { Component } from 'react';
-import { frontMatter, importAll, withParsedHtml, withNoBody } from '../utils';
+import { frontMatter, importAll, withParsedHtml, withNoBody, trimKeys } from '../utils';
 
 import Layout from '../components/Layout';
 import Header from '../components/Header';
@@ -39,7 +39,8 @@ class HomePage extends Component {
         const featuredContent = await importAll(require.context('../markdown/featured/', true, /\.md$/))
             .reverse()
             .map(frontMatter)
-            .map(withParsedHtml);
+            .map(withParsedHtml)
+            .map(trimKeys);
 
         // ToDo: Add sorting
         const projectsContent = await importAll(require.context('../markdown/projects/', true, /\.md$/))

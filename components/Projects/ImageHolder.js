@@ -28,13 +28,11 @@ const StyledImage = styled(Image)`
 `;
 
 const ImageHolder = props => {
-    const {
-        image: { source, text },
-    } = props;
+    const { image, title } = props;
     return (
         <ImageWrapper md={7} className="d-none d-sm-block">
             <picture>
-                <StyledImage src={source} alt={text} fluid />
+                <StyledImage src={image} alt={title} fluid />
             </picture>
         </ImageWrapper>
     );

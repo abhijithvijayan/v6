@@ -11,24 +11,27 @@ import FeaturedLinksWrapper from './FeaturedLinksWrapper';
 import FeaturedLink from './FeaturedLink';
 import ImageHolder from './ImageHolder';
 
-const RightHighlighedProject = ({ content }) => {
-    const { image } = content;
+const RightHighlighedProject = ({ item: { attributes, html } }) => {
+    const { cover, external, github, title, tech } = attributes;
     return (
         <ProjectItemWrapper>
             <ContentHolder customClass="align-left">
                 <TitleHeader />
-                <TitleLink url="/" title="ABC" />
-                <TitleDescription />
+                <TitleLink url={external} title={title} />
+                <TitleDescription text={html} />
                 <StackHolder>
-                    <StackItem title="React" />
-                    <StackItem title="JS" />
+                    {tech.map(item => {
+                        return <StackItem title={item} key={item} />;
+                    })}
                 </StackHolder>
                 <FeaturedLinksWrapper>
-                    <FeaturedLink url="/" title="GitHub" icon="fab fa-github" />
-                    <FeaturedLink url="/" title="Download" icon="fas fa-external-link-alt" />
+                    {github !== '""' ? <FeaturedLink url={github} title="GitHub" icon="fab fa-github" /> : null}
+                    {external !== '""' ? (
+                        <FeaturedLink url={external} title="Visit" icon="fas fa-external-link-alt" />
+                    ) : null}
                 </FeaturedLinksWrapper>
             </ContentHolder>
-            <ImageHolder image={image} />
+            <ImageHolder image={cover} title={title} />
         </ProjectItemWrapper>
     );
 };

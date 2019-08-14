@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { trimQuotes } from '../../utils';
+
 import ProjectItemWrapper from './ProjectItemWrapper';
 import ImageHolder from './ImageHolder';
 import ContentHolder from './ContentHolder';
@@ -11,22 +13,25 @@ import StackItem from './StackItem';
 import FeaturedLinksWrapper from './FeaturedLinksWrapper';
 import FeaturedLink from './FeaturedLink';
 
-const LeftHighlighedProject = ({ content }) => {
-    const { image } = content;
+const LeftHighlighedProject = ({ item: { attributes, html } }) => {
+    const { cover, external, github, title, tech } = attributes;
     return (
         <ProjectItemWrapper>
-            <ImageHolder image={image} />
+            <ImageHolder image={cover} title={title} />
             <ContentHolder customClass="align-right">
                 <TitleHeader />
-                <TitleLink url="/" title="ABC" />
-                <TitleDescription customClass="tx-100" />
+                <TitleLink url={external} title={title} />
+                <TitleDescription text={html} customClass="tx-100" />
                 <StackHolder>
-                    <StackItem title="React" />
-                    <StackItem title="JS" />
+                    {tech.map(item => {
+                        return <StackItem title={item} key={item} />;
+                    })}
                 </StackHolder>
                 <FeaturedLinksWrapper>
-                    <FeaturedLink url="/" title="GitHub" icon="fab fa-github" />
-                    <FeaturedLink url="/" title="Download" icon="fas fa-external-link-alt" />
+                    {github !== '""' ? <FeaturedLink url={github} title="GitHub" icon="fab fa-github" /> : null}
+                    {external !== '""' ? (
+                        <FeaturedLink url={external} title="Visit" icon="fas fa-external-link-alt" />
+                    ) : null}
                 </FeaturedLinksWrapper>
             </ContentHolder>
         </ProjectItemWrapper>
