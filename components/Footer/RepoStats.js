@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 
+import { repoAPIendpoint } from '../../config';
+
 const RepoStatsWrapper = styled.div`
     margin-top: 10px;
 `;
@@ -32,7 +34,7 @@ class RepoStats extends Component {
             data: { forks_count, stargazers_count },
         } = await axios({
             method: 'GET',
-            url: 'https://api.github.com/repos/abhijithvijayan/abhijithvijayan.in',
+            url: repoAPIendpoint,
         });
         this.setState({ forksCount: forks_count, stargazersCount: stargazers_count });
     }

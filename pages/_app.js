@@ -3,6 +3,8 @@ import Head from 'next/head';
 import App, { Container } from 'next/app';
 import { ThemeProvider } from 'styled-components';
 
+import { name, siteTitle, siteDescription, siteThumbnail, siteKeywords } from '../config';
+
 /* Common SASS styles */
 import 'normalize.css/normalize.css';
 import '../styles/main.scss';
@@ -17,27 +19,18 @@ class MyApp extends App {
         return (
             <Container>
                 <Head>
-                    <title>Abhijith Vijayan | Front-End Software Engineer</title>
-                    <meta
-                        name="description"
-                        content="I'm a Computer Enthusiast with experience in various software branches."
-                    />
-                    <meta name="author" content="Abhijith-Vijayan" />
-                    <meta
-                        name="keywords"
-                        content="Abhijith-Vijayan, Abhijith-V, abhijith-v, abhijithvijayan, abhijith-vijayan, abhijithv, _abhijithvijayan, _abhijithv, Abhijith-V-CEA, Abhijith-Vijayan-CEA, Abhijith-V-pathanamthitta, Abhijith-Vijayan-pathanamthitta, Abhijith-V-IHRD, Abhijith-Vijayan-IHRD, Abhijith-Vijayan-theBlueDoor, Abhijith-Vijayan-dev, abhijith-vijayan-developer, Abhijith-V-rose-dale-senior-secondary-school-chandanappally, web-developer-in-pathanamthitta, abhijithvijayan-ceadoor, abhijith-vijayan-web-developer"
-                    />
-                    <meta name="copyright" content="Abhijith-Vijayan" />
+                    <title>{siteTitle}</title>
+                    <meta name="description" content={siteDescription} />
+                    <meta name="author" content={name} />
+                    <meta name="keywords" content={siteKeywords} />
+                    <meta name="copyright" content={name} />
                     <meta name="rating" content="General" />
                     <meta name="coverage" content="Worldwide" />
-                    <meta name="creator" content="Abhijith-Vijayan" />
-                    <meta itemProp="name" content="Abhijith-Vijayan" />
-                    <meta itemProp="image" content="/static/images/profile.jpg" />
-                    <meta property="og:image" content="/static/images/profile.jpg" />
-                    <meta
-                        itemProp="keywords"
-                        content="Abhijith-Vijayan, Abhijith-V, abhijith-v, abhijithvijayan, abhijith-vijayan, abhijithv, _abhijithvijayan, _abhijithv, Abhijith-V-CEA, Abhijith-Vijayan-CEA, Abhijith-V-pathanamthitta, Abhijith-Vijayan-pathanamthitta, Abhijith-V-IHRD, Abhijith-Vijayan-IHRD, Abhijith-Vijayan-theBlueDoor, Abhijith-Vijayan-dev, abhijith-vijayan-developer, abhijith-vijayan-fullstack-developer, Abhijith-V-rose-dale-senior-secondary-school-chandanappally, web-developer-in-pathanamthitta, fullstack-developer, abhijithvijayan-ceadoor, abhijith-vijayan-web-developer"
-                    />
+                    <meta name="creator" content={name} />
+                    <meta itemProp="name" content={name} />
+                    <meta itemProp="image" content={siteThumbnail} />
+                    <meta property="og:image" content={siteThumbnail} />
+                    <meta itemProp="keywords" content={siteKeywords} />
                 </Head>
                 <ThemeProvider theme={theme}>
                     <Component {...pageProps} />

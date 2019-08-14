@@ -2,6 +2,8 @@ import React from 'react';
 import Document, { Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
+import { siteFavicon, siteLanguage, navyColor } from '../config';
+
 const style = {
     fontFamily: '"Nunito", sans-serif',
     backgroundColor: '#f3f3f3',
@@ -21,7 +23,7 @@ class OnePassDocument extends Document {
 
     render() {
         return (
-            <html lang="en">
+            <html lang={siteLanguage}>
                 <Head>
                     <meta charSet="utf-8" />
                     <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -29,9 +31,9 @@ class OnePassDocument extends Document {
                         name="viewport"
                         content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no"
                     />
-                    <meta name="msapplication-TileColor" content="#0a192f" />
-                    <meta name="theme-color" content="#0a192f" />
-                    <link rel="shortcut icon" href="/static/images/technologist.png" />
+                    <meta name="msapplication-TileColor" content={navyColor} />
+                    <meta name="theme-color" content={navyColor} />
+                    <link rel="shortcut icon" href={siteFavicon} />
                     {/* for styled-components */}
                     {this.props.styleTags}
                 </Head>

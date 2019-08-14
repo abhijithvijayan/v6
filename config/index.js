@@ -7,6 +7,8 @@ module.exports = {
         'Abhijith-Vijayan, Abhijith-V, abhijith-v, abhijithvijayan, abhijith-vijayan, abhijithv, _abhijithvijayan, _abhijithv, Abhijith-V-CEA, Abhijith-Vijayan-CEA, Abhijith-V-pathanamthitta, Abhijith-Vijayan-pathanamthitta, Abhijith-V-IHRD, Abhijith-Vijayan-IHRD, Abhijith-Vijayan-theBlueDoor, Abhijith-Vijayan-dev, abhijith-vijayan-developer, Abhijith-V-rose-dale-senior-secondary-school-chandanappally, web-developer-in-pathanamthitta, abhijithvijayan-ceadoor, abhijith-vijayan-web-developer',
     siteUrl: 'https://abhijithvijayan.in',
     siteLanguage: 'en_US',
+    siteThumbnail: '/static/images/profile.jpg',
+    siteFavicon: '/static/images/technologist.png',
 
     GRID_LIMIT: 6,
 
