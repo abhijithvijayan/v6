@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import { Row } from 'react-bootstrap';
 
 import TextContentWrapper from './TextContentWrapper';
@@ -7,22 +6,16 @@ import AboutTextContent from './AboutTextContent';
 import SkillSetHolder from './SkillSetHolder';
 import ProfileHolder from './ProfileHolder';
 
-const ContentWrapper = styled(Row)`
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-`;
-
 const AboutContentHolder = ({ data: { attributes, html } }) => {
     const { avatar, skills } = attributes;
     return (
-        <ContentWrapper>
+        <Row className="d-flex justify-content-between align-items-start">
             <TextContentWrapper>
                 <AboutTextContent data={html} />
                 <SkillSetHolder data={skills} />
             </TextContentWrapper>
             <ProfileHolder image={avatar} />
-        </ContentWrapper>
+        </Row>
     );
 };
 

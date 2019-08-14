@@ -2,8 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { Col, Row } from 'react-bootstrap';
 
-import { trimQuotes } from '../../utils';
-
 const MainContentWrapper = styled(Row)`
     .intro__text {
         font-size: 16px;
@@ -65,9 +63,9 @@ const HomeMainContent = ({ data }) => {
     return (
         <MainContentWrapper>
             <Col md={12}>
-                <h2 className="intro__text">{trimQuotes(title)}</h2>
-                <h1 className="main__text">{trimQuotes(name)}</h1>
-                <h2 className="end__text">{trimQuotes(subtitle)}</h2>
+                <h2 className="intro__text">{title}</h2>
+                <h1 className="main__text">{name}</h1>
+                <h2 className="end__text">{subtitle}</h2>
             </Col>
         </MainContentWrapper>
     );

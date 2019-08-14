@@ -3,23 +3,23 @@ import styled from 'styled-components';
 
 const StyledLink = styled.a`
     margin-bottom: 20px;
-    color: ${props => {
-        return props.theme.blueWhite;
+    color: ${({ theme }) => {
+        return theme.blueWhite;
     }};
     font-size: 28px;
-    font-weight: ${props => {
-        return props.theme.semibold;
+    font-weight: ${({ theme }) => {
+        return theme.semibold;
     }};
 
     &:hover {
-        color: ${props => {
-            return props.theme.whiteYellow;
+        color: ${({ theme }) => {
+            return theme.whiteYellow;
         }};
     }
 
-    @media screen and (max-width: ${props => {
-            return props.theme.screenSmMin;
-        }}) {
+    @media screen and (max-width: ${({ theme }) => {
+        return theme.screenSmMin;
+    }} {
         font-size: 24px;
     }
 `;

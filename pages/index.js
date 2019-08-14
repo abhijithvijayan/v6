@@ -15,24 +15,25 @@ import Footer from '../components/Footer';
 
 class HomePage extends Component {
     static async getInitialProps({ req }) {
-        const types = ['home', 'about', 'experience', 'featured', 'projects', 'contact'];
-
         const homeContent = await importAll(require.context('../markdown/home/', true, /\.md$/))
             .reverse()
             .map(frontMatter)
             .map(withParsedHtml)
+            .map(trimKeys)
             .map(withNoBody);
 
         const aboutContent = await importAll(require.context('../markdown/about/', true, /\.md$/))
             .reverse()
             .map(frontMatter)
             .map(withParsedHtml)
+            .map(trimKeys)
             .map(withNoBody);
 
         // ToDo: Add sorting
         const experienceContent = await importAll(require.context('../markdown/experience/', true, /\.md$/))
             .reverse()
             .map(frontMatter)
+            .map(trimKeys)
             .map(withParsedHtml);
 
         // ToDo: Add sorting

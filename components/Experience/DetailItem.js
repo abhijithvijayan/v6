@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { Tab } from 'react-bootstrap';
 import parse from 'html-react-parser';
 
-import { trimQuotes } from '../../utils';
 import InlineLink from './InlineLink';
 
 const StyledItemWrapper = styled(Tab.Pane)`
@@ -87,9 +86,8 @@ const StyledItemWrapper = styled(Tab.Pane)`
 
 const DetailItem = ({ data: { attributes, html }, id }) => {
     const { company, range, title, url } = attributes;
-
     const renderTitle = () => {
-        return trimQuotes(title);
+        return title;
     };
 
     const renderTitleWithCompany = () => {
@@ -98,13 +96,7 @@ const DetailItem = ({ data: { attributes, html }, id }) => {
                 {renderTitle()}
                 <span className="company__at">
                     &nbsp;@&nbsp;
-                    <InlineLink
-                        url={trimQuotes(url)}
-                        title={trimQuotes(company)}
-                        text="Visit"
-                        customClass="company__name"
-                        placement="top"
-                    />
+                    <InlineLink url={url} title={company} text="Visit" customClass="company__name" placement="top" />
                 </span>
             </React.Fragment>
         );
@@ -112,8 +104,8 @@ const DetailItem = ({ data: { attributes, html }, id }) => {
 
     return (
         <StyledItemWrapper eventKey={id}>
-            <h2>{company === '""' ? renderTitle() : renderTitleWithCompany()}</h2>
-            <h5>{trimQuotes(range)}</h5>
+            <h2>{company ? renderTitleWithCompany() : renderTitle()}</h2>
+            <h5>{range}</h5>
             {parse(html)}
         </StyledItemWrapper>
     );

@@ -16,13 +16,11 @@ const StyledImage = styled(Image)`
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 
     &:hover {
-        box-shadow: 0 20px 70px -10px ${props => {
-                    return props.theme.shadow;
-                }},
-            0 50px 100px 0
-                ${props => {
-                    return props.theme.shadow;
-                }};
+        box-shadow: 0 20px 70px -10px ${({ theme }) => {
+                return theme.shadow;
+            }} 0 50px 100px 0 ${({ theme }) => {
+                return theme.shadow;
+            }};
         filter: none;
     }
 `;

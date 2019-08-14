@@ -1,13 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import AboutHeader from './AboutHeader';
 import AboutContentHolder from './AboutContentHolder';
-
-const AboutWrapper = styled.div`
-    max-width: 1000px;
-    position: relative;
-`;
 
 const About = ({ content }) => {
     const {
@@ -15,10 +9,10 @@ const About = ({ content }) => {
     } = content[0];
     return (
         <section id="about">
-            <AboutWrapper className="wrapper">
+            <div style={{ maxWidth: '1000px', position: 'relative' }} className="wrapper">
                 <AboutHeader title={title} />
                 <AboutContentHolder data={content[0]} />
-            </AboutWrapper>
+            </div>
         </section>
     );
 };

@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { trimQuotes } from '../../utils';
-
 import ProjectsHeader from './ProjectsHeader';
 import ProjectsWrapper from './ProjectsWrapper';
 import LeftHighlighedProject from './LeftHighlighedProject';

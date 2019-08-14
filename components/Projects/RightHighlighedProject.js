@@ -25,10 +25,8 @@ const RightHighlighedProject = ({ item: { attributes, html } }) => {
                     })}
                 </StackHolder>
                 <FeaturedLinksWrapper>
-                    {github !== '""' ? <FeaturedLink url={github} title="GitHub" icon="fab fa-github" /> : null}
-                    {external !== '""' ? (
-                        <FeaturedLink url={external} title="Visit" icon="fas fa-external-link-alt" />
-                    ) : null}
+                    {github ? <FeaturedLink url={github} title="GitHub" icon="fab fa-github" /> : null}
+                    {external ? <FeaturedLink url={external} title="Visit" icon="fas fa-external-link-alt" /> : null}
                 </FeaturedLinksWrapper>
             </ContentHolder>
             <ImageHolder image={cover} title={title} />

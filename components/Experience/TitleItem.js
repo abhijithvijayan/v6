@@ -1,6 +1,5 @@
 import React from 'react';
 import { Nav } from 'react-bootstrap';
-import { trimQuotes } from '../../utils';
 
 const TitleItem = ({ title, id }) => {
     /* eslint-disable class-methods-use-this */
@@ -13,10 +12,6 @@ const TitleItem = ({ title, id }) => {
         }
     };
 
-    const trimmedTitle = str => {
-        return trimQuotes(str);
-    };
-
     return (
         <Nav.Item>
             <Nav.Link
@@ -25,7 +20,7 @@ const TitleItem = ({ title, id }) => {
                     return handleClick(e);
                 }}
             >
-                {trimmedTitle(title)}
+                {title}
             </Nav.Link>
         </Nav.Item>
     );
