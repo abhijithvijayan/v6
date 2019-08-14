@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import parse from 'html-react-parser';
 
 const ContentWrapper = styled.span`
     h2 {
@@ -33,23 +34,19 @@ const ContentWrapper = styled.span`
     }
 `;
 
-const ContactContentHolder = () => {
+const ContactContentHolder = ({ data: { attributes, html } }) => {
+    const { title, mailText } = attributes;
     return (
         <ContentWrapper>
-            <h2>Get In Touch</h2>
-            <div>
-                <p>
-                    My inbox is always open whether for a potential project or just to say hi, I'll try my best to
-                    answer your email!
-                </p>
-            </div>
+            <h2>{title}</h2>
+            <div>{parse(html)}</div>
             <a
                 href="mailto:iam@abhijithvijayan.in"
                 target="_blank"
                 rel="nofollow noopener noreferrer"
                 className="button__main"
             >
-                Say Hello
+                {mailText}
             </a>
         </ContentWrapper>
     );

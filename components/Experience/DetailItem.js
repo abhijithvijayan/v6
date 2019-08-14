@@ -86,6 +86,7 @@ const StyledItemWrapper = styled(Tab.Pane)`
 
 const DetailItem = ({ data: { attributes, html }, id }) => {
     const { company, range, title, url } = attributes;
+
     const renderTitle = () => {
         return title;
     };

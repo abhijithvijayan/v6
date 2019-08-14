@@ -10,14 +10,17 @@ const ContactWrapper = styled.div`
     margin: 0px auto 100px;
 `;
 
-const Contact = () => {
+const Contact = ({ content }) => {
+    const {
+        attributes: { title },
+    } = content[0];
     return (
         <section id="contact">
             <ContactWrapper className="wrapper">
                 <Row>
                     <Col md={12} className="text-center">
                         <ContactHeader />
-                        <ContactContentHolder />
+                        <ContactContentHolder data={content[0]} />
                     </Col>
                 </Row>
             </ContactWrapper>

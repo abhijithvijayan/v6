@@ -33,26 +33,32 @@ class HomePage extends Component {
         const experienceContent = await importAll(require.context('../markdown/experience/', true, /\.md$/))
             .reverse()
             .map(frontMatter)
+            .map(withParsedHtml)
             .map(trimKeys)
-            .map(withParsedHtml);
+            .map(withNoBody);
 
         // ToDo: Add sorting
         const featuredContent = await importAll(require.context('../markdown/featured/', true, /\.md$/))
             .reverse()
             .map(frontMatter)
             .map(withParsedHtml)
-            .map(trimKeys);
+            .map(trimKeys)
+            .map(withNoBody);
 
         // ToDo: Add sorting
         const projectsContent = await importAll(require.context('../markdown/projects/', true, /\.md$/))
             .reverse()
             .map(frontMatter)
-            .map(withParsedHtml);
+            .map(withParsedHtml)
+            .map(trimKeys)
+            .map(withNoBody);
 
         const contactContent = await importAll(require.context('../markdown/contact/', true, /\.md$/))
             .reverse()
             .map(frontMatter)
-            .map(withParsedHtml);
+            .map(withParsedHtml)
+            .map(trimKeys)
+            .map(withNoBody);
 
         return {
             content: { homeContent, aboutContent, experienceContent, featuredContent, projectsContent, contactContent },

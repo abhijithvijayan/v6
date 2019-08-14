@@ -18,8 +18,8 @@ const StyledLink = styled.a`
     }
 
     @media screen and (max-width: ${({ theme }) => {
-        return theme.screenSmMin;
-    }} {
+            return theme.screenSmMin;
+        }}) {
         font-size: 24px;
     }
 `;
