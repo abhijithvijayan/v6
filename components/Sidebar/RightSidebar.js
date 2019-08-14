@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 
+import { email } from '../../config';
+
 const EmailWrapper = styled.div`
     font-family: ${props => {
         return props.theme.sfmono;
@@ -46,8 +48,8 @@ const RightSidebar = () => {
         <EmailWrapper className="d-md-block d-none">
             <div>
                 <OverlayTrigger placement="left" overlay={<Tooltip id="tooltip-right">Email</Tooltip>}>
-                    <a className="fade-link" href="mailto:iam@abhijithvijayan.in">
-                        iam@abhijithvijayan.in
+                    <a className="fade-link" href={`mailto:${email}`}>
+                        {email}
                     </a>
                 </OverlayTrigger>
             </div>

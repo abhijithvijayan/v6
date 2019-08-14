@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { socialMedia } from '../../config';
+
 import SocialListItem from './SocialListItem';
 
 const SocialIconsWrapper = styled.div`
@@ -25,24 +27,10 @@ const LeftSidebar = () => {
     return (
         <SocialIconsWrapper className="d-md-block d-none">
             <ul>
-                <SocialListItem title="Github" icon="fab fa-github" href="https://github.com/abhijithvijayan" />
-                <SocialListItem
-                    title="LinkedIn"
-                    icon="fab fa-linkedin-in"
-                    href="https://in.linkedin.com/in/abhijith-vijayan/"
-                />
-                <SocialListItem
-                    title="Stack Overflow"
-                    icon="fab fa-stack-overflow"
-                    href="https://stackoverflow.com/users/9387542/abhijithvijayan?tab=profile"
-                />
-                <SocialListItem
-                    title="Behance"
-                    icon="fab fa-behance-square"
-                    href="https://www.behance.net/abhijithvijayan"
-                />
-                <SocialListItem title="Medium" icon="fab fa-medium-m" href="https://medium.com/@abhijithvijayan" />
-                <SocialListItem title="Twitter" icon="fab fa-twitter" href="https://twitter.com/_abhijithv" />
+                {socialMedia.map(item => {
+                    const { icon, url, name } = item;
+                    return <SocialListItem title={name} icon={icon} href={url} key={name} />;
+                })}
             </ul>
         </SocialIconsWrapper>
     );

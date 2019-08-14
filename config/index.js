@@ -1,5 +1,6 @@
 module.exports = {
     name: 'Abhijith Vijayan',
+    email: 'iam@abhijithvijayan.in',
 
     siteTitle: 'Abhijith Vijayan | Front-End Software Engineer',
     siteDescription: "I'm a Computer Enthusiast with experience in various software branches.",
@@ -12,7 +13,6 @@ module.exports = {
 
     GRID_LIMIT: 6,
 
-    email: 'iam@abhijithvijayan.in',
     repoAPIendpoint: 'https://api.github.com/repos/abhijithvijayan/abhijithvijayan.in',
 
     socialMedia: [
