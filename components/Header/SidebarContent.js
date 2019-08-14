@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { Nav } from 'react-bootstrap';
 import { clearAllBodyScrollLocks } from 'body-scroll-lock';
 
+import { navLinks } from '../../config';
+
 const SidebarWrapper = styled.nav`
     display: flex;
     justify-content: space-between;
@@ -63,29 +65,22 @@ const SidebarContent = props => {
         props.toggleSidebar(!props.isSidebarOpen);
     };
 
+    const renderItem = ({ name, url }) => {
+        return (
+            <Nav.Item as="li" key={name}>
+                <Nav.Link onClick={handleClick} href={url} className="fade-link">
+                    {name}
+                </Nav.Link>
+            </Nav.Item>
+        );
+    };
+
     return (
         <SidebarWrapper>
             <Nav as="ol">
-                <Nav.Item as="li">
-                    <Nav.Link onClick={handleClick} href="#about" className="fade-link">
-                        About
-                    </Nav.Link>
-                </Nav.Item>
-                <Nav.Item as="li">
-                    <Nav.Link onClick={handleClick} href="#experience" className="fade-link">
-                        Experience
-                    </Nav.Link>
-                </Nav.Item>
-                <Nav.Item as="li">
-                    <Nav.Link onClick={handleClick} href="#projects" className="fade-link">
-                        Work
-                    </Nav.Link>
-                </Nav.Item>
-                <Nav.Item as="li">
-                    <Nav.Link onClick={handleClick} href="#contact" className="fade-link">
-                        Contact
-                    </Nav.Link>
-                </Nav.Item>
+                {navLinks.map(item => {
+                    return renderItem(item);
+                })}
             </Nav>
             <a href="/" className="button__main button__resume">
                 Resume
