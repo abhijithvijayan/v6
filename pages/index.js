@@ -1,6 +1,6 @@
 /* eslint-disable global-require */
 import React, { Component } from 'react';
-import { frontMatter, importAll, withParsedHtml } from '../utils';
+import { frontMatter, importAll, withParsedHtml, withNoBody } from '../utils';
 
 import Layout from '../components/Layout';
 import Header from '../components/Header';
@@ -18,14 +18,16 @@ class HomePage extends Component {
         const types = ['home', 'about', 'experience', 'featured', 'projects', 'contact'];
 
         const homeContent = await importAll(require.context('../markdown/home/', true, /\.md$/))
-            .reverse() // ordering them from most recent to oldest
+            .reverse()
             .map(frontMatter)
-            .map(withParsedHtml);
+            .map(withParsedHtml)
+            .map(withNoBody);
 
         const aboutContent = await importAll(require.context('../markdown/about/', true, /\.md$/))
             .reverse()
             .map(frontMatter)
-            .map(withParsedHtml);
+            .map(withParsedHtml)
+            .map(withNoBody);
 
         // ToDo: Add sorting
         const experienceContent = await importAll(require.context('../markdown/experience/', true, /\.md$/))
