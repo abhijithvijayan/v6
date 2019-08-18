@@ -20,7 +20,7 @@ const OtherProjectsWrapper = props => {
                         attributes: { title, show },
                     } = item;
 
-                    if (show) {
+                    if (show !== 'false') {
                         return <ProjectCard data={item} key={title} />;
                     }
                     return null;

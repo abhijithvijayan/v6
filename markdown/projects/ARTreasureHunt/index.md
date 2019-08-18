@@ -3,11 +3,7 @@ date: "2019-08-01"
 title: "AR-TreasureHunt"
 github: "https://github.com/ceadoor/AR-TreasureHunt-2.0"
 external: ""
-tech:
-  - AR
-  - Unity
-  - Vuforia
-  - Android App
+tech: [AR, Unity, Vuforia, Android App]
 show: "true"
 ---
 

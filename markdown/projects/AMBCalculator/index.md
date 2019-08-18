@@ -3,10 +3,7 @@ date: "2019-08-05"
 title: "AMB-Calculator"
 github: "https://github.com/abhijithvijayan/AMB-Calculator"
 external: "https://abhijithvijayan.github.io/AMB-Calculator/"
-tech:
-  - JavaScript
-  - Gulp.JS
-  - Github Pages
+tech: [JavaScript, Gulp.JS, Github Pages]
 show: "true"
 ---
 

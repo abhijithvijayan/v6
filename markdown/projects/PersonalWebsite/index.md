@@ -3,11 +3,7 @@ date: "2017-12-04"
 title: "abhijithvijayan.in"
 github: "https://github.com/abhijithvijayan/abhijithvijayan.in"
 external: ""
-tech:
-  - Next.js
-  - Styled Components
-  - SCSS
-  - Netlify
+tech: [Next.js, Styled Components, SCSS, Netlify]
 show: "true"
 ---
 
