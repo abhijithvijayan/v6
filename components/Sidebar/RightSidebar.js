@@ -5,11 +5,11 @@ import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { email } from '../../config';
 
 const EmailWrapper = styled.div`
-    font-family: ${props => {
-        return props.theme.sfmono;
+    font-family: ${({ theme }) => {
+        return theme.sfmono;
     }};
-    font-weight: ${props => {
-        return props.theme.medium;
+    font-weight: ${({ theme }) => {
+        return theme.medium;
     }};
     width: 40px;
     position: fixed;
@@ -27,8 +27,8 @@ const EmailWrapper = styled.div`
             display: block;
             width: 1px;
             height: 90px;
-            background-color: ${props => {
-                return props.theme.lightBlue;
+            background-color: ${({ theme }) => {
+                return theme.lightBlue;
             }};
             margin: 0px auto;
         }

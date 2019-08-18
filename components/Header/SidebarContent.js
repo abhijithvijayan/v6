@@ -12,13 +12,13 @@ const SidebarWrapper = styled.nav`
     width: 100%;
     flex-direction: column;
     text-align: center;
-    background-color: ${props => {
-        return props.theme.darkPurple;
+    background-color: ${({ theme }) => {
+        return theme.darkPurple;
     }};
     box-shadow: rgba(
             $color:
-                ${props => {
-                    return props.theme.purple;
+                ${({ theme }) => {
+                    return theme.purple;
                 }},
             $alpha: 0.7
         ) -2px 0px 4px;
@@ -26,8 +26,8 @@ const SidebarWrapper = styled.nav`
 
     ol {
         width: 100%;
-        color: ${props => {
-            return props.theme.headWhite;
+        color: ${({ theme }) => {
+            return theme.headWhite;
         }};
 
         li {
@@ -40,8 +40,8 @@ const SidebarWrapper = styled.nav`
                 content: '0' counter(item) '.';
                 text-align: right;
                 font-size: 12px;
-                color: ${props => {
-                    return props.theme.whiteYellow;
+                color: ${({ theme }) => {
+                    return theme.whiteYellow;
                 }};
             }
 

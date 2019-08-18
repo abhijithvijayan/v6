@@ -9,12 +9,12 @@ const MainHeading = styled.h3`
     width: 100%;
     margin: 10px 0px 20px;
     white-space: nowrap;
-    color: ${props => {
-        return props.theme.whiteYellow;
+    color: ${({ theme }) => {
+        return theme.whiteYellow;
     }};
     font-size: 16px;
-    font-family: ${props => {
-        return props.theme.sfmono;
+    font-family: ${({ theme }) => {
+        return theme.sfmono;
     }};
     font-weight: normal;
 

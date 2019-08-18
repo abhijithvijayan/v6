@@ -10,11 +10,11 @@ const FooterWrapper = styled.footer`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: ${props => {
-        return props.theme.darkredPurple;
+    background-color: ${({ theme }) => {
+        return theme.darkredPurple;
     }};
-    color: ${props => {
-        return props.theme.skyBlue;
+    color: ${({ theme }) => {
+        return theme.skyBlue;
     }};
     height: auto;
     min-height: 90px !important;

@@ -9,8 +9,8 @@ const IconButton = styled.button`
     }
 
     .hamburger-inner {
-        background-color: ${props => {
-            return props.theme.whiteYellow;
+        background-color: ${({ theme }) => {
+            return theme.whiteYellow;
         }} !important;
 
         width: 30px;
@@ -18,8 +18,8 @@ const IconButton = styled.button`
 
         &::before,
         &::after {
-            background-color: ${props => {
-                return props.theme.whiteYellow;
+            background-color: ${({ theme }) => {
+                return theme.whiteYellow;
             }} !important;
             width: 30px;
             height: 2px;

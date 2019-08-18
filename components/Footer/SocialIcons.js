@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import ListIcon from './ListIcon';
 
 const IconsWrapper = styled.div`
-    color: ${props => {
-        return props.theme.lightBlue;
+    color: ${({ theme }) => {
+        return theme.lightBlue;
     }};
     width: 100%;
     max-width: 270px;

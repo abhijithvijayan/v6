@@ -27,14 +27,14 @@ const StyledHeader = styled.header`
         }}
     );
     padding: 0px 50px;
-    background-color: ${props => {
-        return props.theme.purple;
+    background-color: ${({ theme }) => {
+        return theme.purple;
     }} !important;
-    font-family: ${props => {
-        return props.theme.sfmono;
+    font-family: ${({ theme }) => {
+        return theme.sfmono;
     }};
-    font-weight: ${props => {
-        return props.theme.semibold;
+    font-weight: ${({ theme }) => {
+        return theme.semibold;
     }};
     z-index: 11;
     @media screen and (max-width: 48em) {

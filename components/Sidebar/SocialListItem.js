@@ -10,8 +10,8 @@ const SocialListItemWrapper = styled.li`
         display: block;
         width: 1px;
         height: 90px;
-        background-color: ${props => {
-            return props.theme.lightBlue;
+        background-color: ${({ theme }) => {
+            return theme.lightBlue;
         }};
         margin: 0px auto;
     }

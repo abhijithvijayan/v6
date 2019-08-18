@@ -8,16 +8,16 @@ const FooterInfoWrapper = styled.div`
     margin: 5px 0px 3px;
 
     a {
-        color: ${props => {
-            return props.theme.skyBlue;
+        color: ${({ theme }) => {
+            return theme.skyBlue;
         }};
         font-size: 13px;
-        font-family: ${props => {
-            return props.theme.sfmono;
+        font-family: ${({ theme }) => {
+            return theme.sfmono;
         }};
         &:hover span i {
-            color: ${props => {
-                return props.theme.whiteYellow;
+            color: ${({ theme }) => {
+                return theme.whiteYellow;
             }} !important;
         }
     }

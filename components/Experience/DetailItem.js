@@ -16,8 +16,8 @@ const StyledItemWrapper = styled(Tab.Pane)`
         }};
 
         .company__at {
-            color: ${props => {
-                return props.theme.whiteYellow;
+            color: ${({ theme }) => {
+                return theme.whiteYellow;
             }};
 
             .company__name {

@@ -5,17 +5,17 @@ import { Col, Row } from 'react-bootstrap';
 const StyledHeading = styled.h2`
     text-align: center;
     font-size: 30px;
-    font-weight: ${props => {
-        return props.theme.semibold;
+    font-weight: ${({ theme }) => {
+        return theme.semibold;
     }};
-    color: ${props => {
-        return props.theme.headWhite;
+    color: ${({ theme }) => {
+        return theme.headWhite;
     }};
     margin: 10px 0px 40px;
     white-space: nowrap;
 
-    @media screen and (max-width: ${props => {
-            return props.theme.screenSmMin;
+    @media screen and (max-width: ${({ theme }) => {
+            return theme.screenSmMin;
         }}) {
         font-size: 24px;
     }

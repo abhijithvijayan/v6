@@ -15,8 +15,8 @@ const StatGroup = styled.span`
     margin: 0px 7px;
     i {
         transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-        color: ${props => {
-            return props.theme.skyBlue;
+        color: ${({ theme }) => {
+            return theme.skyBlue;
         }};
         font-size: 13px;
         margin-right: 5px;

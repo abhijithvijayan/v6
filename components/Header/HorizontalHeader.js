@@ -5,8 +5,8 @@ import { Nav, Navbar } from 'react-bootstrap';
 import { navLinks } from '../../config';
 
 const CollapsedNavbar = styled(Navbar.Collapse)`
-    @media screen and (max-width: ${props => {
-            return props.theme.screenXsMax;
+    @media screen and (max-width: ${({ theme }) => {
+            return theme.screenXsMax;
         }}) {
         // 767px
         display: none !important;
@@ -15,8 +15,8 @@ const CollapsedNavbar = styled(Navbar.Collapse)`
     ul {
         font-size: 13px;
         margin: 0px 10px;
-        color: ${props => {
-            return props.theme.lightBlue;
+        color: ${({ theme }) => {
+            return theme.lightBlue;
         }} !important;
 
         li {
@@ -27,8 +27,8 @@ const CollapsedNavbar = styled(Navbar.Collapse)`
             &::before {
                 content: '0' counter(item) '.';
                 text-align: right;
-                color: ${props => {
-                    return props.theme.whiteYellow;
+                color: ${({ theme }) => {
+                    return theme.whiteYellow;
                 }};
                 font-size: 12px;
             }

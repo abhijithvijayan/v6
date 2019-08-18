@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const IconWrapper = styled.div`
-    color: ${props => {
-        return props.theme.whiteYellow;
+    color: ${({ theme }) => {
+        return theme.whiteYellow;
     }};
     font-size: 40px;
 `;

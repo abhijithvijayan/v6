@@ -34,25 +34,25 @@ const TitlesWrapper = styled(Nav)`
     }
 
     .nav-link.active {
-        background-color: ${props => {
-            return props.theme.lightPurple;
+        background-color: ${({ theme }) => {
+            return theme.lightPurple;
         }} !important;
-        color: ${props => {
-            return props.theme.whiteYellow;
+        color: ${({ theme }) => {
+            return theme.whiteYellow;
         }} !important;
         border: none !important;
         border-radius: 0 !important;
     }
 
     a {
-        color: ${props => {
-            return props.theme.navyBlue;
+        color: ${({ theme }) => {
+            return theme.navyBlue;
         }};
-        font-family: ${props => {
-            return props.theme.sfmono;
+        font-family: ${({ theme }) => {
+            return theme.sfmono;
         }};
-        font-weight: ${props => {
-            return props.theme.medium;
+        font-weight: ${({ theme }) => {
+            return theme.medium;
         }};
         letter-spacing: 0.5px;
         font-size: 13px;
@@ -67,30 +67,30 @@ const TitlesWrapper = styled(Nav)`
         border: none !important;
         border-radius: 0 !important;
         border-left: 2px solid
-            ${props => {
-                return props.theme.blueLight;
+            ${({ theme }) => {
+                return theme.blueLight;
             }} !important;
 
         @media screen and (max-width: 37.5em) {
             border-bottom: 2px solid
-                ${props => {
-                    return props.theme.blueLight;
+                ${({ theme }) => {
+                    return theme.blueLight;
                 }} !important;
             border-left: 0px !important;
             min-width: 120px;
         }
 
         &:hover {
-            background-color: ${props => {
-                return props.theme.lightPurple;
+            background-color: ${({ theme }) => {
+                return theme.lightPurple;
             }} !important;
-            color: ${props => {
-                return props.theme.whiteYellow;
+            color: ${({ theme }) => {
+                return theme.whiteYellow;
             }} !important;
             border: none !important;
             border-left: 2px solid
-                ${props => {
-                    return props.theme.blueLight;
+                ${({ theme }) => {
+                    return theme.blueLight;
                 }} !important;
             border-radius: 0 !important;
         }

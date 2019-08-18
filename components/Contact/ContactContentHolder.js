@@ -6,14 +6,14 @@ const ContentWrapper = styled.span`
     h2 {
         font-size: 50px;
         margin: 0px 0px 30px;
-        font-family: ${props => {
-            return props.theme.calibre;
+        font-family: ${({ theme }) => {
+            return theme.calibre;
         }};
-        font-weight: ${props => {
-            return props.theme.semibold;
+        font-weight: ${({ theme }) => {
+            return theme.semibold;
         }};
-        color: ${props => {
-            return props.theme.headWhite;
+        color: ${({ theme }) => {
+            return theme.headWhite;
         }};
     }
 
@@ -23,8 +23,8 @@ const ContentWrapper = styled.span`
             font-size: 17px;
             line-height: 1.5;
             font-weight: medium;
-            color: ${props => {
-                return props.theme.skyBlue;
+            color: ${({ theme }) => {
+                return theme.skyBlue;
             }};
         }
     }
