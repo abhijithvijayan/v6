@@ -11,7 +11,7 @@ module.exports = {
     siteThumbnail: '/static/images/profile.jpg',
     siteFavicon: '/static/images/technologist.png',
 
-    GRID_LIMIT: 6,
+    GRID_LIMIT: 3,
 
     repoAPIendpoint: 'https://api.github.com/repos/abhijithvijayan/abhijithvijayan.in',
 

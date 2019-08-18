@@ -2,10 +2,11 @@ import React from 'react';
 
 import HeaderLink from './HeaderLink';
 
-const HeaderLinksHolder = () => {
+const HeaderLinksHolder = ({ links: { github, external } }) => {
     return (
         <div>
-            <HeaderLink url="https://github.com/ceadoor/AR-TreasureHunt-2.0" title="Github" icon="fab fa-github" />
+            {github ? <HeaderLink url={github} title="Github" icon="fab fa-github" /> : null}
+            {external ? <HeaderLink url={external} title="External" icon="fas fa-external-link-alt" /> : null}
         </div>
     );
 };

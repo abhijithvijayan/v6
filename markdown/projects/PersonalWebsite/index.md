@@ -1,7 +1,8 @@
 ---
 date: "2017-12-04"
 title: "abhijithvijayan.in"
-external: "https://github.com/abhijithvijayan/abhijithvijayan.in"
+github: "https://github.com/abhijithvijayan/abhijithvijayan.in"
+external: ""
 tech:
   - Next.js
   - Styled Components

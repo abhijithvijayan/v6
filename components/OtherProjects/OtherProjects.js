@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import { GRID_LIMIT } from '../../config';
+
 import OtherProjectsHeader from './OtherProjectsHeader';
 import OtherProjectsWrapper from './OtherProjectsWrapper';
 import MoreProjectsButton from './MoreProjectsButton';
@@ -15,12 +17,16 @@ class OtherProjects extends Component {
     };
 
     render() {
+        const { content } = this.props;
         const { hasOtherProjectsExpanded } = this.state;
+        const shownGrid = content.slice(0, GRID_LIMIT);
+        const projectsToShow = hasOtherProjectsExpanded ? content : shownGrid;
+
         return (
             <section id="otherProjects">
                 <div className="wrapper">
                     <OtherProjectsHeader />
-                    <OtherProjectsWrapper hasExpanded={hasOtherProjectsExpanded} />
+                    <OtherProjectsWrapper projects={projectsToShow} />
                     <MoreProjectsButton expandProjects={this.expandProjects} hasExpanded={hasOtherProjectsExpanded} />
                 </div>
             </section>

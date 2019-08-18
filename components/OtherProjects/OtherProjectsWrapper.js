@@ -11,16 +11,20 @@ const ProjectsWrapper = styled.div`
 `;
 
 const OtherProjectsWrapper = props => {
-    const { hasExpanded } = props;
+    const { projects } = props;
     return (
         <div>
             <ProjectsWrapper>
-                <ProjectCard />
-                <ProjectCard />
-                <ProjectCard />
-                <ProjectCard style={hasExpanded ? { animationDelay: `${125 * 1}ms` } : { display: 'none' }} />
-                <ProjectCard style={hasExpanded ? { animationDelay: `${125 * 2}ms` } : { display: 'none' }} />
-                <ProjectCard style={hasExpanded ? { animationDelay: `${125 * 3}ms` } : { display: 'none' }} />
+                {projects.map(item => {
+                    const {
+                        attributes: { title, show },
+                    } = item;
+
+                    if (show) {
+                        return <ProjectCard data={item} key={title} />;
+                    }
+                    return null;
+                })}
             </ProjectsWrapper>
         </div>
     );

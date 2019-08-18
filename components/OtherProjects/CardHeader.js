@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 import HeaderIcon from './HeaderIcon';
-import HeaderLinksHolder from './HeaderLinksHolder';
 
 const HeaderWrapper = styled.div`
     display: flex;
@@ -11,11 +10,11 @@ const HeaderWrapper = styled.div`
     margin-bottom: 30px;
 `;
 
-const CardHeader = () => {
+const CardHeader = ({ children }) => {
     return (
         <HeaderWrapper>
             <HeaderIcon />
-            <HeaderLinksHolder />
+            {children}
         </HeaderWrapper>
     );
 };

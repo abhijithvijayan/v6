@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import CardHeader from './CardHeader';
 import CardTitle from './CardTitle';
 import CardFooter from './CardFooter';
+import HeaderLinksHolder from './HeaderLinksHolder';
 import CardSubtitleHolder from './CardSubtitleHolder';
 
 const CardWrapper = styled.div`
@@ -37,12 +38,19 @@ const CardWrapper = styled.div`
     }
 `;
 
-const ProjectCard = props => {
+const ProjectCard = ({ data: { attributes, html } }) => {
+    const { title, github, external } = attributes;
+    console.log(github, external);
+
+    const links = { github: github !== '""' ? github : null, external: external !== '""' ? external : null };
+    // console.log(attributes);
     return (
-        <CardWrapper {...props}>
+        <CardWrapper>
             <header>
-                <CardHeader />
-                <CardTitle title="AR-TreasureHunt" />
+                <CardHeader>
+                    <HeaderLinksHolder links={links} />
+                </CardHeader>
+                <CardTitle title={title} />
                 <CardSubtitleHolder />
             </header>
             <CardFooter />
