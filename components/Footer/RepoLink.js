@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { repoURL } from '../../config';
+
 import FooterText from './FooterText';
 import RepoStats from './RepoStats';
 
@@ -26,12 +28,7 @@ const FooterInfoWrapper = styled.div`
 const RepoLink = () => {
     return (
         <FooterInfoWrapper>
-            <a
-                className="fade-link"
-                href="https://github.com/abhijithvijayan/abhijithvijayan.in"
-                target="_blank"
-                rel="nofollow noopener noreferrer"
-            >
+            <a className="fade-link" href={repoURL} target="_blank" rel="nofollow noopener noreferrer">
                 <FooterText />
                 <RepoStats />
             </a>

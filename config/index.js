@@ -13,37 +13,38 @@ module.exports = {
 
     GRID_LIMIT: 3,
 
+    repoURL: 'https://github.com/abhijithvijayan/abhijithvijayan.in',
     repoAPIendpoint: 'https://api.github.com/repos/abhijithvijayan/abhijithvijayan.in',
 
     socialMedia: [
         {
             name: 'Github',
-            icon: 'fab fa-github',
+            icon: 'github',
             url: 'https://github.com/abhijithvijayan/',
         },
         {
             name: 'LinkedIn',
-            icon: 'fab fa-linkedin-in',
+            icon: 'linkedin',
             url: 'https://in.linkedin.com/in/abhijith-vijayan/',
         },
         {
             name: 'Stack Overflow',
-            icon: 'fab fa-stack-overflow',
+            icon: 'stack-overflow',
             url: 'https://stackoverflow.com/users/9387542/abhijithvijayan?tab=profile',
         },
         {
             name: 'Behance',
-            icon: 'fab fa-behance-square',
+            icon: 'behance',
             url: 'https://www.behance.net/abhijithvijayan',
         },
         {
             name: 'Medium',
-            icon: 'fab fa-medium-m',
+            icon: 'medium',
             url: 'https://medium.com/@abhijithvijayan',
         },
         {
             name: 'Twitter',
-            icon: 'fab fa-twitter',
+            icon: 'twitter',
             url: 'https://twitter.com/_abhijithv',
         },
     ],
