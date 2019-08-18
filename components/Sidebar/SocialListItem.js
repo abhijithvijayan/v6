@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 
+import InsertIcon from '../Icons/InsertIcon';
+
 const SocialListItemWrapper = styled.li`
     position: relative;
 
@@ -29,7 +31,7 @@ const SocialListItem = props => {
         <SocialListItemWrapper>
             <OverlayTrigger placement="right" overlay={<Tooltip id="tooltip-right">{title}</Tooltip>}>
                 <a {...other} className="fade-link" target="_blank" rel="nofollow noopener noreferrer">
-                    <i className={icon}></i>
+                    <InsertIcon icon={icon} />
                 </a>
             </OverlayTrigger>
         </SocialListItemWrapper>

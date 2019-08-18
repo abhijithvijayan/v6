@@ -1,6 +1,8 @@
 import React from 'react';
 import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 
+import InsertIcon from '../Icons/InsertIcon';
+
 const HeaderLink = props => {
     const { url, title, icon } = props;
     return (
@@ -12,7 +14,7 @@ const HeaderLink = props => {
                 target="_blank"
                 rel="nofollow noopener noreferrer"
             >
-                <i className={icon}></i>
+                <InsertIcon icon={icon} />
             </a>
         </OverlayTrigger>
     );

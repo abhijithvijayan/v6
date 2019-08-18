@@ -1,11 +1,13 @@
 import React from 'react';
 
+import InsertIcon from '../Icons/InsertIcon';
+
 const ListIcon = props => {
-    const { title, url, icon } = props;
+    const { icon, ...other } = props;
     return (
         <li>
-            <a title={title} href={url} className="fade-link p-10" target="_blank" rel="nofollow noopener noreferrer">
-                <i className={icon}></i>
+            <a {...other} className="fade-link p-10" target="_blank" rel="nofollow noopener noreferrer">
+                <InsertIcon icon={icon} />
             </a>
         </li>
     );

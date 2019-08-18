@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import InsertIcon from '../Icons/InsertIcon';
+
 const IconWrapper = styled.div`
     color: ${({ theme }) => {
         return theme.whiteYellow;
@@ -11,7 +13,7 @@ const IconWrapper = styled.div`
 const HeaderIcon = () => {
     return (
         <IconWrapper>
-            <i className="far fa-folder-open"></i>
+            <InsertIcon icon="folder-open" />
         </IconWrapper>
     );
 };

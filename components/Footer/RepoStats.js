@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import axios from 'axios';
 
 import { repoAPIendpoint } from '../../config';
+import InsertIcon from '../Icons/InsertIcon';
 
 const RepoStatsWrapper = styled.div`
     margin-top: 10px;
@@ -13,7 +14,7 @@ const StatGroup = styled.span`
     display: inline-flex;
     align-items: center;
     margin: 0px 7px;
-    i {
+    svg {
         transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
         color: ${({ theme }) => {
             return theme.skyBlue;
@@ -44,11 +45,11 @@ class RepoStats extends Component {
         return (
             <RepoStatsWrapper>
                 <StatGroup>
-                    <i className="fas fa-star"></i>
+                    <InsertIcon icon="star" />
                     <span>{stargazersCount}</span>
                 </StatGroup>
                 <StatGroup>
-                    <i className="fas fa-code-branch"></i>
+                    <InsertIcon icon="fork" />
                     <span>{forksCount}</span>
                 </StatGroup>
             </RepoStatsWrapper>
