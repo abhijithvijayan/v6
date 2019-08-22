@@ -2,7 +2,7 @@ module.exports = {
     name: 'Abhijith Vijayan',
     email: 'iam@abhijithvijayan.in',
 
-    siteTitle: 'Abhijith Vijayan | Front-End Software Engineer',
+    siteTitle: 'Abhijith Vijayan | Full Stack Engineer',
     siteDescription: "I'm a Computer Enthusiast with experience in various software branches.",
     siteKeywords:
         'Abhijith-Vijayan, Abhijith-V, abhijith-v, abhijithvijayan, abhijith-vijayan, abhijithv, _abhijithvijayan, _abhijithv, Abhijith-V-CEA, Abhijith-Vijayan-CEA, Abhijith-V-pathanamthitta, Abhijith-Vijayan-pathanamthitta, Abhijith-V-IHRD, Abhijith-Vijayan-IHRD, Abhijith-Vijayan-theBlueDoor, Abhijith-Vijayan-dev, abhijith-vijayan-developer, Abhijith-V-rose-dale-senior-secondary-school-chandanappally, web-developer-in-pathanamthitta, abhijithvijayan-ceadoor, abhijith-vijayan-web-developer',
