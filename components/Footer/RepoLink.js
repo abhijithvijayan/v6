@@ -17,7 +17,7 @@ const FooterInfoWrapper = styled.div`
         font-family: ${({ theme }) => {
             return theme.sfmono;
         }};
-        &:hover span i {
+        &:hover span svg {
             color: ${({ theme }) => {
                 return theme.whiteYellow;
             }} !important;
