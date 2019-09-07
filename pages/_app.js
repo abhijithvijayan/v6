@@ -17,7 +17,7 @@ class MyApp extends App {
     render() {
         const { Component, pageProps } = this.props;
         return (
-            <Container>
+            <>
                 <Head>
                     <title>{siteTitle}</title>
                     <meta name="description" content={siteDescription} />
@@ -35,7 +35,7 @@ class MyApp extends App {
                 <ThemeProvider theme={theme}>
                     <Component {...pageProps} />
                 </ThemeProvider>
-            </Container>
+            </>
         );
     }
 }

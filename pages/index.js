@@ -16,14 +16,12 @@ import Footer from '../components/Footer';
 class HomePage extends Component {
     static async getInitialProps({ req }) {
         const homeContent = await importAll(require.context('../markdown/home/', true, /\.md$/))
-            .reverse()
             .map(frontMatter)
             .map(withParsedHtml)
             .map(trimKeys)
             .map(withNoBody);
 
         const aboutContent = await importAll(require.context('../markdown/about/', true, /\.md$/))
-            .reverse()
             .map(frontMatter)
             .map(withParsedHtml)
             .map(trimKeys)
@@ -31,7 +29,6 @@ class HomePage extends Component {
 
         // ToDo: Add sorting
         const experienceContent = await importAll(require.context('../markdown/experience/', true, /\.md$/))
-            .reverse()
             .map(frontMatter)
             .map(withParsedHtml)
             .map(trimKeys)
@@ -39,7 +36,6 @@ class HomePage extends Component {
 
         // ToDo: Add sorting
         const featuredContent = await importAll(require.context('../markdown/featured/', true, /\.md$/))
-            .reverse()
             .map(frontMatter)
             .map(withParsedHtml)
             .map(trimKeys)
@@ -47,14 +43,12 @@ class HomePage extends Component {
 
         // ToDo: Add sorting
         const projectsContent = await importAll(require.context('../markdown/projects/', true, /\.md$/))
-            .reverse()
             .map(frontMatter)
             .map(withParsedHtml)
             .map(trimKeys)
             .map(withNoBody);
 
         const contactContent = await importAll(require.context('../markdown/contact/', true, /\.md$/))
-            .reverse()
             .map(frontMatter)
             .map(withParsedHtml)
             .map(trimKeys)
