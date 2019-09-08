@@ -1,5 +1,5 @@
 ---
-date: "2017-12-06"
+date: "2018-12-28"
 title: "Budgetly"
 github: "https://github.com/abhijithvijayan/Budgetly"
 external: "https://abhijithvijayan.github.io/Budgetly/"

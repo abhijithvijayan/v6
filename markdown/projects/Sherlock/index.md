@@ -1,5 +1,5 @@
 ---
-date: "2019-08-02"
+date: "2019-01-22"
 title: "Sherlock"
 github: "https://github.com/abhijithvijayan/sherlock"
 external: "https://sherlock-finder.netlify.com/"

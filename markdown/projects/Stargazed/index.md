@@ -1,5 +1,5 @@
 ---
-date: "2019-08-27"
+date: "2019-08-25"
 title: "stargazed"
 github: "https://github.com/abhijithvijayan/stargazed"
 external: "https://www.npmjs.com/package/stargazed"

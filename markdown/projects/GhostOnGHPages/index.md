@@ -1,5 +1,5 @@
 ---
-date: "2019-08-03"
+date: "2018-12-30"
 title: "ghost-on-github-pages"
 github: "https://github.com/abhijithvijayan/ghost-on-github-pages"
 external: "https://abhijithvijayan.github.io/ghost-blog-demo/"
