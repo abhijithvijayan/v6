@@ -1,5 +1,6 @@
 /* eslint-disable global-require */
 import React, { Component } from 'react';
+
 import { frontMatter, importAll, withParsedHtml, withNoBody, trimKeys, sortByDate } from '../utils';
 
 import Layout from '../components/Layout';
@@ -27,7 +28,6 @@ class HomePage extends Component {
             .map(trimKeys)
             .map(withNoBody);
 
-        // ToDo: Add sorting
         const experienceContent = await importAll(require.context('../markdown/experience/', true, /\.md$/))
             .map(frontMatter)
             .map(withParsedHtml)
@@ -56,7 +56,7 @@ class HomePage extends Component {
             content: {
                 homeContent,
                 aboutContent,
-                experienceContent,
+                experienceContent: sortByDate(experienceContent),
                 featuredContent: sortByDate(featuredContent),
                 projectsContent: sortByDate(projectsContent),
                 contactContent,
