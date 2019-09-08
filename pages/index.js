@@ -1,6 +1,6 @@
 /* eslint-disable global-require */
 import React, { Component } from 'react';
-import { frontMatter, importAll, withParsedHtml, withNoBody, trimKeys } from '../utils';
+import { frontMatter, importAll, withParsedHtml, withNoBody, trimKeys, sortByDate } from '../utils';
 
 import Layout from '../components/Layout';
 import Header from '../components/Header';
@@ -34,14 +34,12 @@ class HomePage extends Component {
             .map(trimKeys)
             .map(withNoBody);
 
-        // ToDo: Add sorting
         const featuredContent = await importAll(require.context('../markdown/featured/', true, /\.md$/))
             .map(frontMatter)
             .map(withParsedHtml)
             .map(trimKeys)
             .map(withNoBody);
 
-        // ToDo: Add sorting
         const projectsContent = await importAll(require.context('../markdown/projects/', true, /\.md$/))
             .map(frontMatter)
             .map(withParsedHtml)
@@ -55,7 +53,14 @@ class HomePage extends Component {
             .map(withNoBody);
 
         return {
-            content: { homeContent, aboutContent, experienceContent, featuredContent, projectsContent, contactContent },
+            content: {
+                homeContent,
+                aboutContent,
+                experienceContent,
+                featuredContent: sortByDate(featuredContent),
+                projectsContent: sortByDate(projectsContent),
+                contactContent,
+            },
         };
     }
 

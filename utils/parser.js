@@ -23,3 +23,10 @@ export const trimKeys = data => {
     );
     return { ...data, attributes: newObj };
 };
+
+export const sortByDate = data => {
+    data.sort((a, b) => {
+        return new Date(b.attributes.date).getTime() - new Date(a.attributes.date).getTime();
+    });
+    return data;
+};
