@@ -63,9 +63,15 @@ const HomeMainContent = ({ data }) => {
     return (
         <MainContentWrapper>
             <Col md={12}>
-                <h2 className="intro__text">{title}</h2>
-                <h1 className="main__text">{name}</h1>
-                <h2 className="end__text">{subtitle}</h2>
+                <h2 className="intro__text animated fadeInUp" style={{ transitionDelay: '125ms' }}>
+                    {title}
+                </h2>
+                <h1 className="main__text animated fadeInUp" style={{ transitionDelay: '250ms' }}>
+                    {name}
+                </h1>
+                <h2 className="end__text animated fadeInUp" style={{ transitionDelay: '375ms' }}>
+                    {subtitle}
+                </h2>
             </Col>
         </MainContentWrapper>
     );
