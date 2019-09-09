@@ -29,7 +29,7 @@ const MainHeading = styled.h3`
 `;
 
 const ContactHeader = () => {
-    return <MainHeading>What's Next?</MainHeading>;
+    return <MainHeading className="wow fadeInUp">What's Next?</MainHeading>;
 };
 
 export default ContactHeader;
