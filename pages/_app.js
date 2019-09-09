@@ -1,12 +1,13 @@
 import React from 'react';
 import Head from 'next/head';
-import App, { Container } from 'next/app';
+import App from 'next/app';
 import { ThemeProvider } from 'styled-components';
 
 import { name, siteTitle, siteDescription, siteThumbnail, siteKeywords } from '../config';
 
 /* Common SASS styles */
 import 'normalize.css/normalize.css';
+import 'animate.css/animate.css';
 import '../styles/main.scss';
 
 // eslint-disable-next-line import/no-webpack-loader-syntax

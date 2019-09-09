@@ -64,6 +64,18 @@ class HomePage extends Component {
         };
     }
 
+    componentDidMount() {
+        // activate wow.js
+        if (typeof window !== 'undefined') {
+            const WOW = require('wowjs');
+
+            const wow = new WOW.WOW({
+                live: false,
+            });
+            wow.init();
+        }
+    }
+
     render() {
         const {
             content: { homeContent, aboutContent, experienceContent, featuredContent, projectsContent, contactContent },
