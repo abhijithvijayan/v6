@@ -45,7 +45,7 @@ const EmailWrapper = styled.div`
 
 const RightSidebar = () => {
     return (
-        <EmailWrapper className="d-md-block d-none">
+        <EmailWrapper className="d-md-block d-none animated fadeIn delay-1s">
             <div>
                 <OverlayTrigger placement="left" overlay={<Tooltip id="tooltip-right">Email</Tooltip>}>
                     <a className="fade-link" href={`mailto:${email}`}>

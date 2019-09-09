@@ -25,7 +25,7 @@ const SocialIconsWrapper = styled.div`
 
 const LeftSidebar = () => {
     return (
-        <SocialIconsWrapper className="d-md-block d-none">
+        <SocialIconsWrapper className="d-md-block d-none animated fadeIn delay-1s">
             <ul>
                 {socialMedia.map(item => {
                     const { icon, url, name } = item;
