@@ -11,7 +11,7 @@ const Wrapper = styled(Row)`
 `;
 
 const ProjectItemWrapper = ({ children }) => {
-    return <Wrapper>{children}</Wrapper>;
+    return <Wrapper className="wow fadeInUp">{children}</Wrapper>;
 };
 
 export default ProjectItemWrapper;
