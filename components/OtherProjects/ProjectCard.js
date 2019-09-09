@@ -59,11 +59,11 @@ const CardWrapper = styled.div`
     }
 `;
 
-const ProjectCard = ({ data: { attributes, html } }) => {
+const ProjectCard = ({ data: { attributes, html }, delay }) => {
     const { title, github, external, tech } = attributes;
     const links = { github: github !== '""' ? github : null, external: external !== '""' ? external : null };
     return (
-        <CardWrapper>
+        <CardWrapper className="wow fadeInUp" style={{ animationDelay: `${delay}ms` }}>
             <header>
                 <CardHeader>
                     <HeaderLinksHolder links={links} />
@@ -73,8 +73,8 @@ const ProjectCard = ({ data: { attributes, html } }) => {
             </header>
             <footer>
                 <ul>
-                    {tech.map((item, index) => {
-                        return <li key={index}>{item}</li>;
+                    {tech.map((item, i) => {
+                        return <li key={i}>{item}</li>;
                     })}
                 </ul>
             </footer>

@@ -23,7 +23,7 @@ const SubContentWrapper = styled(Row)`
 const HomeSubContent = ({ data }) => {
     return (
         <SubContentWrapper>
-            <Col md={6} className="animated fadeInUp" style={{ transitionDelay: '500ms' }}>
+            <Col md={6} className="animated fadeInUp" style={{ animationDelay: '500ms' }}>
                 {parse(data)}
             </Col>
         </SubContentWrapper>

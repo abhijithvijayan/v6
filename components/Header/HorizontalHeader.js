@@ -55,7 +55,7 @@ const HorizontalHeader = () => {
                 as="li"
                 key={name}
                 className="animated fadeInDown"
-                style={{ transitionDelay: `${(index + 1) * 125}ms` }}
+                style={{ animationDelay: `${(index + 1) * 125}ms` }}
             >
                 <Nav.Link href={url} className="fade-link">
                     {name}
@@ -71,7 +71,7 @@ const HorizontalHeader = () => {
                     return renderItem(item, index);
                 })}
             </Nav>
-            <div className="resume__link--holder animated fadeInDown" style={{ transitionDelay: '625ms' }}>
+            <div className="resume__link--holder animated fadeInDown" style={{ animationDelay: '625ms' }}>
                 <a href="/" className="button__main">
                     Resume
                 </a>

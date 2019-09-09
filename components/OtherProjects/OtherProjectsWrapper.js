@@ -1,5 +1,8 @@
+/* eslint-disable no-nested-ternary */
 import React from 'react';
 import styled from 'styled-components';
+
+import { GRID_LIMIT } from '../../config';
 
 import ProjectCard from './ProjectCard';
 
@@ -11,7 +14,8 @@ const ProjectsWrapper = styled.div`
 `;
 
 const OtherProjectsWrapper = props => {
-    const { projects } = props;
+    const { projects, itemsHidden } = props;
+    let count = 0;
     return (
         <div>
             <ProjectsWrapper>
@@ -21,7 +25,11 @@ const OtherProjectsWrapper = props => {
                     } = item;
 
                     if (show !== 'false') {
-                        return <ProjectCard data={item} key={title} />;
+                        count += 1;
+                        // For animationDelay (125,250,375,0,125,250...)
+                        const delay = itemsHidden ? count : count >= GRID_LIMIT + 1 ? count - (GRID_LIMIT + 1) : count;
+                        // ToDo: Fix expand delay issue
+                        return <ProjectCard data={item} key={title} delay={delay * 125} />;
                     }
                     return null;
                 })}
