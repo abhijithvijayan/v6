@@ -11,9 +11,6 @@ const ContactWrapper = styled.div`
 `;
 
 const Contact = ({ content }) => {
-    const {
-        attributes: { title },
-    } = content[0];
     return (
         <section id="contact">
             <ContactWrapper className="wrapper">

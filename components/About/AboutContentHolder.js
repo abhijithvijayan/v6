@@ -9,7 +9,7 @@ import ProfileHolder from './ProfileHolder';
 const AboutContentHolder = ({ data: { attributes, html } }) => {
     const { avatar, skills } = attributes;
     return (
-        <Row className="d-flex justify-content-between align-items-start">
+        <Row className="d-flex justify-content-between align-items-start wow fadeInUp">
             <TextContentWrapper>
                 <AboutTextContent data={html} />
                 <SkillSetHolder data={skills} />

@@ -48,9 +48,15 @@ const CollapsedNavbar = styled(Navbar.Collapse)`
 `;
 
 const HorizontalHeader = () => {
-    const renderItem = ({ name, url }) => {
+    const renderItem = (item, index) => {
+        const { name, url } = item;
         return (
-            <Nav.Item as="li" key={name}>
+            <Nav.Item
+                as="li"
+                key={name}
+                className="animated fadeInDown"
+                style={{ animationDelay: `${(index + 1) * 125}ms` }}
+            >
                 <Nav.Link href={url} className="fade-link">
                     {name}
                 </Nav.Link>
@@ -61,11 +67,11 @@ const HorizontalHeader = () => {
     return (
         <CollapsedNavbar>
             <Nav as="ul" className="ml-auto">
-                {navLinks.map(item => {
-                    return renderItem(item);
+                {navLinks.map((item, index) => {
+                    return renderItem(item, index);
                 })}
             </Nav>
-            <div className="resume__link--holder">
+            <div className="resume__link--holder animated fadeInDown" style={{ animationDelay: '625ms' }}>
                 <a href="/" className="button__main">
                     Resume
                 </a>

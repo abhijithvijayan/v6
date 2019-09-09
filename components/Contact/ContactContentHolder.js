@@ -38,13 +38,13 @@ const ContactContentHolder = ({ data: { attributes, html } }) => {
     const { title, mailText } = attributes;
     return (
         <ContentWrapper>
-            <h2>{title}</h2>
-            <div>{parse(html)}</div>
+            <h2 className="wow fadeInUp">{title}</h2>
+            <div className="wow fadeInUp">{parse(html)}</div>
             <a
                 href="mailto:iam@abhijithvijayan.in"
                 target="_blank"
                 rel="nofollow noopener noreferrer"
-                className="button__main"
+                className="button__main wow fadeInUp"
             >
                 {mailText}
             </a>

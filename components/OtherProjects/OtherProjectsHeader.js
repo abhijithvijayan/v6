@@ -24,7 +24,7 @@ const StyledHeading = styled.h2`
 const OtherProjectsHeader = () => {
     return (
         <Row>
-            <Col md={12}>
+            <Col md={12} className="wow fadeInUp">
                 <StyledHeading>Other Projects</StyledHeading>
             </Col>
         </Row>

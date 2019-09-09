@@ -26,7 +26,7 @@ class OtherProjects extends Component {
             <section id="otherProjects">
                 <div className="wrapper">
                     <OtherProjectsHeader />
-                    <OtherProjectsWrapper projects={projectsToShow} />
+                    <OtherProjectsWrapper projects={projectsToShow} itemsHidden={!hasOtherProjectsExpanded} />
                     <MoreProjectsButton expandProjects={this.expandProjects} hasExpanded={hasOtherProjectsExpanded} />
                 </div>
             </section>

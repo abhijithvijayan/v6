@@ -9,7 +9,7 @@ const ContentWrapper = styled(Row)`
 const ExperienceContentHolder = ({ children }) => {
     return (
         <Tab.Container id="exp" defaultActiveKey="1">
-            <ContentWrapper>{children}</ContentWrapper>
+            <ContentWrapper className="wow fadeInUp">{children}</ContentWrapper>
         </Tab.Container>
     );
 };
