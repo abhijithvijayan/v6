@@ -1,14 +1,10 @@
 /* eslint-disable camelcase */
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 
 import { repoAPIendpoint } from '../../config';
 import InsertIcon from '../Icons/InsertIcon';
-
-const RepoStatsWrapper = styled.div`
-    margin-top: 10px;
-`;
 
 const StatGroup = styled.span`
     display: inline-flex;
@@ -24,37 +20,38 @@ const StatGroup = styled.span`
     }
 `;
 
-class RepoStats extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { forksCount: 0, stargazersCount: 0 };
-    }
+const RepoStats = () => {
+    const [repoStats, updateRepoStats] = useState({ forksCount: 0, stargazersCount: 0 });
 
-    async componentDidMount() {
-        const {
-            data: { forks_count, stargazers_count },
-        } = await axios({
-            method: 'GET',
-            url: repoAPIendpoint,
-        });
-        this.setState({ forksCount: forks_count, stargazersCount: stargazers_count });
-    }
+    useEffect(() => {
+        const fetchRepoInfo = async () => {
+            const {
+                data: { forks_count, stargazers_count },
+            } = await axios({
+                method: 'GET',
+                url: repoAPIendpoint,
+            });
 
-    render() {
-        const { forksCount, stargazersCount } = this.state;
-        return (
-            <RepoStatsWrapper>
-                <StatGroup>
-                    <InsertIcon icon="star" />
-                    <span>{stargazersCount}</span>
-                </StatGroup>
-                <StatGroup>
-                    <InsertIcon icon="fork" />
-                    <span>{forksCount}</span>
-                </StatGroup>
-            </RepoStatsWrapper>
-        );
-    }
-}
+            updateRepoStats({ forksCount: forks_count, stargazersCount: stargazers_count });
+        };
+
+        fetchRepoInfo();
+    });
+
+    const { forksCount, stargazersCount } = repoStats;
+
+    return (
+        <div style={{ marginTop: '10px' }}>
+            <StatGroup>
+                <InsertIcon icon="star" />
+                <span>{stargazersCount}</span>
+            </StatGroup>
+            <StatGroup>
+                <InsertIcon icon="fork" />
+                <span>{forksCount}</span>
+            </StatGroup>
+        </div>
+    );
+};
 
 export default RepoStats;
