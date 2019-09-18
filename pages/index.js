@@ -14,39 +14,48 @@ import OtherProjects from '../components/OtherProjects';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
+const isServer = typeof window === 'undefined';
+
 class HomePage extends Component {
     static async getInitialProps({ req }) {
-        const homeContent = await importAll(require.context('../markdown/home/', true, /\.md$/))
+        // Ignore sample.md regex -> /^(?!sample)[^.]+\.(md)$/
+        const homeContent = await importAll(require.context('../markdown/home/', true, /^(?!sample)[^.]+\.(md)$/))
             .map(frontMatter)
             .map(withParsedHtml)
             .map(trimKeys)
             .map(withNoBody);
 
-        const aboutContent = await importAll(require.context('../markdown/about/', true, /\.md$/))
+        const aboutContent = await importAll(require.context('../markdown/about/', true, /^(?!sample)[^.]+\.(md)$/))
             .map(frontMatter)
             .map(withParsedHtml)
             .map(trimKeys)
             .map(withNoBody);
 
-        const experienceContent = await importAll(require.context('../markdown/experience/', true, /\.md$/))
+        const experienceContent = await importAll(
+            require.context('../markdown/experience/', true, /^(?!sample)[^.]+\.(md)$/)
+        )
             .map(frontMatter)
             .map(withParsedHtml)
             .map(trimKeys)
             .map(withNoBody);
 
-        const featuredContent = await importAll(require.context('../markdown/featured/', true, /\.md$/))
+        const featuredContent = await importAll(
+            require.context('../markdown/featured/', true, /^(?!sample)[^.]+\.(md)$/)
+        )
             .map(frontMatter)
             .map(withParsedHtml)
             .map(trimKeys)
             .map(withNoBody);
 
-        const projectsContent = await importAll(require.context('../markdown/projects/', true, /\.md$/))
+        const projectsContent = await importAll(
+            require.context('../markdown/projects/', true, /^(?!sample)[^.]+\.(md)$/)
+        )
             .map(frontMatter)
             .map(withParsedHtml)
             .map(trimKeys)
             .map(withNoBody);
 
-        const contactContent = await importAll(require.context('../markdown/contact/', true, /\.md$/))
+        const contactContent = await importAll(require.context('../markdown/contact/', true, /^(?!sample)[^.]+\.(md)$/))
             .map(frontMatter)
             .map(withParsedHtml)
             .map(trimKeys)
@@ -66,7 +75,7 @@ class HomePage extends Component {
 
     componentDidMount() {
         // activate wow.js
-        if (typeof window !== 'undefined') {
+        if (!isServer) {
             const WOW = require('wowjs');
 
             const wow = new WOW.WOW({
