@@ -16,6 +16,10 @@ const Projects = ({ content }) => {
         return <RightHighlightedProject item={item} key={key} />;
     };
 
+    if (!content.length) {
+        return null;
+    }
+
     return (
         <section id="projects">
             <div className="wrapper">

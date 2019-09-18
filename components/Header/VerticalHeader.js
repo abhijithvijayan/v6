@@ -4,13 +4,15 @@ import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 
 import SidebarContent from './SidebarContent';
 
+const isServer = typeof window === 'undefined';
+
 class VerticalHeader extends Component {
     toggleBodyScroll = status => {
         if (status) {
             document.body.classList.add('blur');
             disableBodyScroll(null);
         } else {
-            if (typeof window !== 'undefined') {
+            if (!isServer) {
                 document.body.classList.remove('blur');
             }
             clearAllBodyScrollLocks();

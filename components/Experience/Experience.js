@@ -15,6 +15,9 @@ const ExperienceWrapper = styled.div`
 `;
 
 const Experience = ({ content }) => {
+    if (!content.length) {
+        return null;
+    }
     return (
         <section id="experience">
             <ExperienceWrapper className="wrapper">

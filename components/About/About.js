@@ -4,6 +4,9 @@ import AboutHeader from './AboutHeader';
 import AboutContentHolder from './AboutContentHolder';
 
 const About = ({ content }) => {
+    if (!content.length) {
+        return null;
+    }
     const {
         attributes: { title },
     } = content[0];
