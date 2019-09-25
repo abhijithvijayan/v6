@@ -18,6 +18,9 @@ class OtherProjects extends Component {
 
     render() {
         const { content } = this.props;
+        if (!content.length) {
+            return null;
+        }
         const { hasOtherProjectsExpanded } = this.state;
         const shownGrid = content.slice(0, GRID_LIMIT);
         const projectsToShow = hasOtherProjectsExpanded ? content : shownGrid;

@@ -18,11 +18,29 @@
 - `yarn run dev` to start the development server.
 - `yarn run build` build the files for production.
 - `yarn run export` to use Next.js static exports.
-- `yarn run serve` runs `build` and `export` at once.
+- `yarn run serve` runs `build` and `export` commands at once.
+
+## 🚨 Forking this repo
+
+You can use this template to build your own portfolio site and deploy as static site to anywhere.
+
+So, feel free to fork this repo. If you do, please just give me proper credit by linking back to my website, https://abhijithvijayan.in
+
+##### 🌟 Updating metadata
+
+Edit `config/index.js` file with your custom information
+
+##### 🌟 Adding static contents
+
+Copy contents (images, documents, etc...) to `static/` directory
+
+##### 🌟 Adding other site-data
+
+Copy `sample.md` to `index.md` in the `markdown/SECTION_NAME` directory and update accordingly. See [how I did mine](https://github.com/abhijithvijayan/abhijithvijayan.in/tree/master/markdown)
 
 ## 🖤 Show your support
 
-Give a ⭐ if this you find this project helpful!
+Give a ⭐ if this you find this project useful!
 
 ## 🗞 Licence
 

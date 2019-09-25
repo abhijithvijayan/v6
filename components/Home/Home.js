@@ -21,6 +21,9 @@ const HomeWrapper = styled.div`
 `;
 
 const Home = ({ content }) => {
+    if (!content.length) {
+        return null;
+    }
     const { attributes, html } = content[0];
     return (
         <section id="home">

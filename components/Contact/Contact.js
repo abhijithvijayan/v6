@@ -11,6 +11,9 @@ const ContactWrapper = styled.div`
 `;
 
 const Contact = ({ content }) => {
+    if (!content.length) {
+        return null;
+    }
     return (
         <section id="contact">
             <ContactWrapper className="wrapper">

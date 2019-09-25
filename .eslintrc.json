@@ -1,0 +1,4 @@
+{
+  "extends": ["onepass"],
+  "plugins": ["markdown"]
+}
