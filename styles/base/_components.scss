@@ -89,12 +89,10 @@
 }
 
 .vertical__header {
-  position: fixed !important;
+  position: inherit !important;
   top: 0px;
   bottom: 0px;
   right: 0px;
-  width: 100%;
-  height: 100vh;
   z-index: 10;
   transform: translateX(0vw);
   visibility: visible;
