@@ -40,14 +40,19 @@ class VerticalHeader extends Component {
                 contentClassName="vertical__header--content"
                 overlayClassName="vertical__header--overlay"
                 styles={{
-                    root: {},
+                    root: {
+                        pointerEvents: 'none',
+                    },
                     sidebar: {
+                        pointerEvents: 'all',
                         background: 'white',
                         color: 'black',
                         width: '100%',
                     },
                     content: {},
-                    overlay: {},
+                    overlay: {
+                        pointerEvents: 'all',
+                    },
                 }}
             >
                 <div />
