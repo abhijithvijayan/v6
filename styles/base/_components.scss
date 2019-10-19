@@ -116,6 +116,7 @@
 
     @media screen and (max-width: 37.5em) {
       padding: 25px;
+      width: 100vw !important;
     }
     @media screen and (max-width: 30em) {
       width: 75vw !important;
@@ -123,6 +124,12 @@
     @media screen and (max-width: 20.625em) {
       padding: 10px;
     }
+  }
+
+  @media screen and (max-width: 37.5em) {
+    position: absolute !important;
+    overflow: initial !important;
+    height: 100vh !important;
   }
 }
 

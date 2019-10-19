@@ -45,6 +45,9 @@ const StyledHeader = styled.header`
 const NavbarWrapper = styled(Navbar)`
     flex-flow: row nowrap;
     justify-content: flex-start;
+    @media screen and (max-width: 48em) {
+        position: static;
+    }
 `;
 
 const DELTA = 5;
