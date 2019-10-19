@@ -43,6 +43,7 @@ const StyledHeader = styled.header`
 `;
 
 const NavbarWrapper = styled(Navbar)`
+    position: initial;
     flex-flow: row nowrap;
     justify-content: flex-start;
 `;
