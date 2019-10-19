@@ -89,15 +89,16 @@
 }
 
 .vertical__header {
-  position: inherit !important;
-  top: 0px;
   bottom: 0px;
-  right: 0px;
-  z-index: 10;
-  transform: translateX(0vw);
-  visibility: visible;
+  height: 100vh;
   outline: 0px;
+  right: 0px;
+  top: 0px;
+  transform: translateX(0vw);
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  visibility: visible;
+  width: 100vw;
+  z-index: 10;
 
   .vertical__header--menu {
     z-index: 10;
