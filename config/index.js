@@ -1,6 +1,7 @@
 module.exports = {
     name: 'Abhijith Vijayan',
     email: 'iam@abhijithvijayan.in',
+    username: '@abhijithvijayan',
 
     siteTitle: 'Abhijith Vijayan | Full Stack Engineer',
     siteDescription: "I'm a Computer Enthusiast with experience in various software branches.",
@@ -9,6 +10,9 @@ module.exports = {
     siteUrl: 'https://abhijithvijayan.in',
     siteLanguage: 'en-US',
     siteThumbnail: '/static/images/profile.jpg',
+    siteIcon192: '/static/icons/icon-192x192.png',
+    siteIcon72: '/static/icons/icon-72x72.png',
+    siteIcon96: '/static/icons/icon-96x96.png',
     siteFavicon: '/static/images/technologist.png',
 
     GRID_LIMIT: 3,
