@@ -82,7 +82,13 @@ const SidebarContent = props => {
                     return renderItem(item);
                 })}
             </Nav>
-            <a href={resume} target="_blank" rel="nofollow noopener noreferrer" className="button__main button__resume">
+            <a
+                href={resume}
+                onClick={handleClick}
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+                className="button__main button__resume"
+            >
                 Resume
             </a>
         </SidebarWrapper>
