@@ -7,6 +7,9 @@ import HeaderLinksHolder from './HeaderLinksHolder';
 import CardSubtitleHolder from './CardSubtitleHolder';
 
 const CardWrapper = styled.div`
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
