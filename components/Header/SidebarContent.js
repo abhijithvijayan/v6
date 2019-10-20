@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Nav } from 'react-bootstrap';
 import { clearAllBodyScrollLocks } from 'body-scroll-lock';
 
-import { navLinks } from '../../config';
+import { navLinks, resume } from '../../config';
 
 const SidebarWrapper = styled.nav`
     display: flex;
@@ -82,7 +82,7 @@ const SidebarContent = props => {
                     return renderItem(item);
                 })}
             </Nav>
-            <a href="/" className="button__main button__resume">
+            <a href={resume} target="_blank" rel="nofollow noopener noreferrer" className="button__main button__resume">
                 Resume
             </a>
         </SidebarWrapper>

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Nav, Navbar } from 'react-bootstrap';
 
-import { navLinks } from '../../config';
+import { navLinks, resume } from '../../config';
 
 const CollapsedNavbar = styled(Navbar.Collapse)`
     @media screen and (max-width: ${({ theme }) => {
@@ -72,7 +72,7 @@ const HorizontalHeader = () => {
                 })}
             </Nav>
             <div className="resume__link--holder animated fadeInDown" style={{ animationDelay: '625ms' }}>
-                <a href="/" className="button__main">
+                <a href={resume} target="_blank" rel="nofollow noopener noreferrer" className="button__main">
                     Resume
                 </a>
             </div>
