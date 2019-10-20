@@ -9,7 +9,7 @@ const TitlesWrapper = styled(Nav)`
         flex-wrap: nowrap;
         margin-bottom: 30px;
         width: 100%;
-        overflow-x: scroll;
+        overflow: hidden
     }
 
     #active__highlighter {
@@ -100,7 +100,7 @@ const TitlesWrapper = styled(Nav)`
 const TitlesHolder = ({ children }) => {
     return (
         <Col sm={3} className="pl-0">
-            <TitlesWrapper variant="tabs" className="flex-row flex-sm-column">
+            <TitlesWrapper variant="tabs" className="flex-column">
                 {children}
                 {/* <Nav.Item>
                     <Nav.Link onClick={this.handleClick} eventKey="1">
