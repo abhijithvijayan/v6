@@ -12,7 +12,9 @@
     "build": "next build",
     "start": "next start",
     "export": "next export",
-    "serve": "next build && next export"
+    "serve": "next build && next export",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
