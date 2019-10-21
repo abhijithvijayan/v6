@@ -5,10 +5,10 @@ import RightSidebar from './RightSidebar';
 
 const Sidebar = () => {
     return (
-        <React.Fragment>
+        <>
             <LeftSidebar />
             <RightSidebar />
-        </React.Fragment>
+        </>
     );
 };
 

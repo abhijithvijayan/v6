@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { Navbar } from 'react-bootstrap';
 
@@ -53,70 +53,65 @@ const NavbarWrapper = styled(Navbar)`
 
 const DELTA = 5;
 
-class Header extends Component {
-    constructor(props) {
-        super(props);
+const Header = () => {
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    const [isMounted, setIsMounted] = useState(false);
+    const [scrollDirection, setScrollDirection] = useState(0);
+    const [lastScrollTop, setLastScrollTop] = useState(0);
 
-        this.state = {
-            isMounted: false,
-            scrollDirection: 'none',
-            lastScrollTop: 0,
-            isSidebarOpen: false,
+    const toggleSidebar = toggle => {
+        setIsSidebarOpen(toggle);
+    };
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const fromTop = window.scrollY;
+
+            // Make sure they scroll more than DELTA
+            if (!isMounted || Math.abs(lastScrollTop - fromTop) <= DELTA) {
+                return;
+            }
+
+            if (fromTop < DELTA) {
+                setScrollDirection('none');
+            } else if (fromTop > lastScrollTop && fromTop > 100) {
+                if (scrollDirection !== 'down') {
+                    setScrollDirection('down');
+                }
+            } else if (fromTop + window.innerHeight < document.body.scrollHeight) {
+                if (scrollDirection !== 'up') {
+                    setScrollDirection('up');
+                }
+            }
+
+            setLastScrollTop(fromTop);
         };
-    }
 
-    componentDidMount() {
-        this.setState({ isMounted: true });
+        const onScroll = () => {
+            return throttle(handleScroll());
+        };
 
-        window.addEventListener('scroll', () => {
-            return throttle(this.handleScroll());
-        });
-    }
+        setIsMounted(true);
+        window.addEventListener('scroll', onScroll);
 
-    handleScroll = () => {
-        const { isMounted, scrollDirection, lastScrollTop } = this.state;
-        const fromTop = window.scrollY;
+        return () => {
+            setIsMounted(false);
+            window.removeEventListener('scroll', onScroll);
+        };
+    }, [isMounted, scrollDirection, lastScrollTop]);
 
-        // Make sure they scroll more than DELTA
-        if (!isMounted || Math.abs(lastScrollTop - fromTop) <= DELTA) {
-            return;
-        }
-
-        if (fromTop < DELTA) {
-            this.setState({ scrollDirection: 'none' });
-        } else if (fromTop > lastScrollTop && fromTop > 100) {
-            if (scrollDirection !== 'down') {
-                this.setState({ scrollDirection: 'down' });
-            }
-        } else if (fromTop + window.innerHeight < document.body.scrollHeight) {
-            if (scrollDirection !== 'up') {
-                this.setState({ scrollDirection: 'up' });
-            }
-        }
-
-        this.setState({ lastScrollTop: fromTop });
-    };
-
-    toggleSidebar = toggle => {
-        this.setState({ isSidebarOpen: toggle });
-    };
-
-    render() {
-        const { isSidebarOpen, scrollDirection } = this.state;
-
-        return (
-            <StyledHeader
-                className="d-flex justify-content-end pr-0 pr-sm-3 pr-md-4 pr-lg-5"
-                scrollDirection={scrollDirection}
-            >
-                <NavbarWrapper collapseOnSelect expand="sm">
-                    <HamburgerIcon toggleSidebar={this.toggleSidebar} isSidebarOpen={isSidebarOpen} />
-                    <HorizontalHeader />
-                    <VerticalHeader toggleSidebar={this.toggleSidebar} isSidebarOpen={isSidebarOpen} />
-                </NavbarWrapper>
-            </StyledHeader>
-        );
-    }
-}
+    return (
+        <StyledHeader
+            className="d-flex justify-content-end pr-0 pr-sm-3 pr-md-4 pr-lg-5"
+            scrollDirection={scrollDirection}
+        >
+            <NavbarWrapper collapseOnSelect expand="sm">
+                <HamburgerIcon toggleSidebar={toggleSidebar} isSidebarOpen={isSidebarOpen} />
+                <HorizontalHeader />
+                <VerticalHeader toggleSidebar={toggleSidebar} isSidebarOpen={isSidebarOpen} />
+            </NavbarWrapper>
+        </StyledHeader>
+    );
+};
 
 export default Header;

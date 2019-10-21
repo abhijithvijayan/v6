@@ -57,7 +57,7 @@ class HamburgerIcon extends Component {
                 type="button"
             >
                 <span className="hamburger-box">
-                    <span className={isSidebarOpen ? 'hamburger-inner' : 'hamburger-inner arrow'}></span>
+                    <span className={isSidebarOpen ? 'hamburger-inner' : 'hamburger-inner arrow'} />
                 </span>
             </IconButton>
         );

@@ -17,6 +17,10 @@ body {
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .btn:focus,
 .btn:active,
 button:focus {

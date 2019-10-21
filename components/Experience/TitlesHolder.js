@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Col, Nav } from 'react-bootstrap';
 
@@ -102,27 +102,7 @@ const TitlesHolder = ({ children }) => {
         <Col sm={3} className="pl-0">
             <TitlesWrapper variant="tabs" className="flex-column">
                 {children}
-                {/* <Nav.Item>
-                    <Nav.Link onClick={this.handleClick} eventKey="1">
-                        Full Stack Dev
-                    </Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                        <Nav.Link onClick={this.handleClick} eventKey="2">
-                            Front-end Dev
-                        </Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link onClick={this.handleClick} eventKey="3">
-                            Designer
-                        </Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link onClick={this.handleClick} eventKey="4">
-                            Tech Lead
-                        </Nav.Link>
-                    </Nav.Item> */}
-                <span id="active__highlighter" className="d-none d-sm-block"></span>
+                <span id="active__highlighter" className="d-none d-sm-block" />
             </TitlesWrapper>
         </Col>
     );
