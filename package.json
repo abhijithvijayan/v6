@@ -16,6 +16,17 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn run lint:fix",
+      "git add"
+    ]
+  },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
@@ -54,6 +65,8 @@
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^1.7.0",
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.2",
     "node-sass": "^4.12.0",
     "prettier": "^1.18.2",
     "raw-loader": "^3.1.0",
