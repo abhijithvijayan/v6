@@ -28,7 +28,6 @@ const OtherProjectsWrapper = props => {
                         count += 1;
                         // For animationDelay (125,250,375,0,125,250...)
                         const delay = itemsHidden ? count : count >= GRID_LIMIT + 1 ? count - (GRID_LIMIT + 1) : count;
-                        // ToDo: Fix expand delay issue
                         return <ProjectCard data={item} key={title} delay={delay * 125} />;
                     }
                     return null;
