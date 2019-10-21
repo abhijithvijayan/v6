@@ -93,13 +93,13 @@ const DetailItem = ({ data: { attributes, html }, id }) => {
 
     const renderTitleWithCompany = () => {
         return (
-            <React.Fragment>
+            <>
                 {renderTitle()}
                 <span className="company__at">
                     &nbsp;@&nbsp;
                     <InlineLink url={url} title={company} text="Visit" customClass="company__name" placement="top" />
                 </span>
-            </React.Fragment>
+            </>
         );
     };
 
