@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ProjectsWrapper = ({ children }) => {
-    return <React.Fragment>{children}</React.Fragment>;
+    return <>{children}</>;
 };
 
 export default ProjectsWrapper;
