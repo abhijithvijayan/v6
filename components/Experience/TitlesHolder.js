@@ -9,7 +9,7 @@ const TitlesWrapper = styled(Nav)`
         flex-wrap: nowrap;
         margin-bottom: 30px;
         width: 100%;
-        overflow-x: scroll
+        overflow-x: scroll;
     }
 
     #active__highlighter {
@@ -101,27 +101,7 @@ const TitlesHolder = ({ children }) => {
         <Col sm={3} className="pl-0">
             <TitlesWrapper variant="tabs" className="flex-row flex-sm-column">
                 {children}
-                {/* <Nav.Item>
-                    <Nav.Link onClick={this.handleClick} eventKey="1">
-                        Full Stack Dev
-                    </Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                        <Nav.Link onClick={this.handleClick} eventKey="2">
-                            Front-end Dev
-                        </Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link onClick={this.handleClick} eventKey="3">
-                            Designer
-                        </Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link onClick={this.handleClick} eventKey="4">
-                            Tech Lead
-                        </Nav.Link>
-                    </Nav.Item> */}
-                <span id="active__highlighter" className="d-sm-block"></span>
+                <span id="active__highlighter" className="d-sm-block" />
             </TitlesWrapper>
         </Col>
     );
