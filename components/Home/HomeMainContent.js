@@ -51,7 +51,7 @@ const MainContentWrapper = styled(Row)`
         }
 
         @media screen and (max-width: ${({ theme }) => {
-                return theme.screenXxsMin;
+                return theme.screenXxsMax;
             }}) {
             font-size: 43px;
         }
