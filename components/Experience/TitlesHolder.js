@@ -9,7 +9,7 @@ const TitlesWrapper = styled(Nav)`
         flex-wrap: nowrap;
         margin-bottom: 30px;
         width: 100%;
-        overflow-x: scroll;
+        overflow-x: scroll
     }
 
     #active__highlighter {
@@ -26,10 +26,9 @@ const TitlesWrapper = styled(Nav)`
 
         @media screen and (max-width: 37.5em) {
             width: 100%;
-            max-width: 120px;
+            max-width: 143px;
             height: 2px;
-            top: auto;
-            bottom: 0px;
+            top: 41px;
         }
     }
 
@@ -102,7 +101,27 @@ const TitlesHolder = ({ children }) => {
         <Col sm={3} className="pl-0">
             <TitlesWrapper variant="tabs" className="flex-row flex-sm-column">
                 {children}
-                <span id="active__highlighter" className="d-none d-sm-block" />
+                {/* <Nav.Item>
+                    <Nav.Link onClick={this.handleClick} eventKey="1">
+                        Full Stack Dev
+                    </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                        <Nav.Link onClick={this.handleClick} eventKey="2">
+                            Front-end Dev
+                        </Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link onClick={this.handleClick} eventKey="3">
+                            Designer
+                        </Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link onClick={this.handleClick} eventKey="4">
+                            Tech Lead
+                        </Nav.Link>
+                    </Nav.Item> */}
+                <span id="active__highlighter" className="d-sm-block"></span>
             </TitlesWrapper>
         </Col>
     );
