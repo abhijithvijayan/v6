@@ -4,32 +4,13 @@ import { Col, Nav } from 'react-bootstrap';
 
 const TitlesWrapper = styled(Nav)`
     border-bottom: 0 !important;
+    position: relative;
 
     @media screen and (max-width: 37.5em) {
         flex-wrap: nowrap;
         margin-bottom: 30px;
         width: 100%;
         overflow-x: scroll;
-    }
-
-    #active__highlighter {
-        display: block;
-        width: 2px;
-        height: 42px;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        z-index: 10;
-        background: rgb(100, 255, 218);
-        border-radius: 2px;
-        transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
-
-        @media screen and (max-width: 37.5em) {
-            width: 100%;
-            max-width: 143px;
-            height: 2px;
-            top: 41px;
-        }
     }
 
     .nav-link.active {
@@ -53,7 +34,7 @@ const TitlesWrapper = styled(Nav)`
         font-weight: ${({ theme }) => {
             return theme.medium;
         }};
-        letter-spacing: 0.5px;
+        letter-spacing: 0px;
         font-size: 13px;
         padding: 0px 18px 2px;
         transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
@@ -76,7 +57,8 @@ const TitlesWrapper = styled(Nav)`
                     return theme.blueLight;
                 }} !important;
             border-left: 0px !important;
-            min-width: 120px;
+            /* this varies with title head length */
+            min-width: 152px;
         }
 
         &:hover {
@@ -101,7 +83,6 @@ const TitlesHolder = ({ children }) => {
         <Col sm={3} className="pl-0">
             <TitlesWrapper variant="tabs" className="flex-row flex-sm-column">
                 {children}
-                <span id="active__highlighter" className="d-sm-block" />
             </TitlesWrapper>
         </Col>
     );
