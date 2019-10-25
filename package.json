@@ -45,7 +45,7 @@
     "normalize.css": "^8.0.1",
     "react": "^16.10.1",
     "react-bootstrap": "^1.0.0-beta.12",
-    "react-dom": "^16.10.1",
+    "react-dom": "^16.11.0",
     "react-sidebar": "^3.0.2",
     "styled-components": "^4.4.0",
     "tiny-frontmatter": "^1.0.0",
