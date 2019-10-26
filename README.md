@@ -5,10 +5,8 @@
   <a href="https://app.netlify.com/sites/abhijithvijayan/deploys">
     <img src="https://api.netlify.com/api/v1/badges/3df0faa6-696c-4738-8802-45cdceb85716/deploy-status" alt="Netlify Build" />
   </a>
-
 </div>
 
-<br>
 <p align="center">https://abhijithvijayan.in</p>
 <br>
 
@@ -20,11 +18,14 @@
 - `yarn run export` to use Next.js static exports.
 - `yarn run serve` runs `build` and `export` commands at once.
 
-## 🚨 Forking this repo
+## 🚨 Using the template with [CLI](https://github.com/abhijithvijayan/portfolio-cli)
 
-You can use this template to build your own portfolio site and deploy as static site to anywhere.
+Feel free to use this template to build your own portfolio site and deploy as static site to anywhere.
 
-So, feel free to fork this repo. If you do, please just give me proper credit by linking back to my website, https://abhijithvijayan.in
+Use the [`abhijithvijayan-portfolio CLI`](https://github.com/abhijithvijayan/portfolio-cli) to generate template for your use.
+
+If you do use the template, please just give me proper credit by linking back to my website, https://abhijithvijayan.in
+<br />
 
 ##### 🌟 Updating metadata
 
@@ -32,11 +33,11 @@ Edit `config/index.js` file with your custom information
 
 ##### 🌟 Adding static contents
 
-Copy contents (images, documents, etc...) to `static/` directory
+Copy contents (images, documents, etc...) to `public/` directory
 
 ##### 🌟 Adding other site-data
 
-Copy `sample.md` to `index.md` in the `markdown/SECTION_NAME` directory and update accordingly. See [how I did mine](https://github.com/abhijithvijayan/abhijithvijayan.in/tree/master/markdown)
+Copy `sample.md` to `index.md` in the `markdown/SECTION_NAME` directory and update accordingly. See [how I did](https://github.com/abhijithvijayan/abhijithvijayan.in/tree/master/markdown) mine
 
 ## 🖤 Show your support
 
