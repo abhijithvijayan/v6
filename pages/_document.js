@@ -13,7 +13,6 @@ import {
     siteKeywords,
     siteLanguage,
     siteThumbnail,
-    siteTitle,
     siteUrl,
     username,
 } from '../config';
@@ -40,7 +39,6 @@ class OnePassDocument extends Document {
             <html lang={siteLanguage}>
                 <Head>
                     <meta charSet="utf-8" />
-                    <title>{siteTitle}</title>
                     <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
                     <meta
                         name="viewport"

@@ -1,6 +1,9 @@
 import React from 'react';
 import App from 'next/app';
+import Head from 'next/head';
 import { ThemeProvider } from 'styled-components';
+
+import { siteTitle } from '../config';
 
 /* Common SASS styles */
 import 'normalize.css/normalize.css';
@@ -16,6 +19,9 @@ class MyApp extends App {
         const { Component, pageProps } = this.props;
         return (
             <>
+                <Head>
+                    <title>{siteTitle}</title>
+                </Head>
                 <ThemeProvider theme={theme}>
                     <Component {...pageProps} />
                 </ThemeProvider>
