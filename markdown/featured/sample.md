@@ -1,7 +1,7 @@
 ---
 date: "2019-01-01"
 title: "Project A"
-cover: "/static/images/sample.jpg"
+cover: "/images/sample.jpg"
 github: ""
 external: "https://sample.site"
 tech: [Tech-1, Tech-2, Tech-3, Tech-4]

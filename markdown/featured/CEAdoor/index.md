@@ -1,7 +1,7 @@
 ---
 date: "2018-09-08"
 title: "CEA Website"
-cover: "/static/images/cea.jpg"
+cover: "/images/cea.jpg"
 github: "https://github.com/ceadoor/cea.ac.in/"
 external: "https://ceadoor.netlify.com/"
 tech: [HTML5, SASS, Bootstrap4, JavaScript, JQuery]

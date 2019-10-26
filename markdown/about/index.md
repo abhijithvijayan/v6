@@ -1,6 +1,6 @@
 ---
 title: "About Me"
-avatar: "/static/images/profile.jpg"
+avatar: "/images/profile.jpg"
 skills: [ Node.js, Express, React, Redux, Next.js, JavaScript (ES6+), (S)CSS, Java / C / C++
 ]
 ---

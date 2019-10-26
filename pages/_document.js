@@ -82,7 +82,7 @@ class OnePassDocument extends Document {
                     <link rel="apple-touch-icon" sizes="192x192" href={siteIcon192} />
                     <link rel="icon" type="image/png" sizes="72x72" href={siteIcon72} />
                     <link rel="icon" type="image/png" sizes="96x96" href={siteIcon96} />
-                    <link rel="manifest" href="/static/manifest.json" />
+                    <link rel="manifest" href="/manifest.json" />
                     <link rel="mask-icon" href={siteFavicon} color="#5bbad5" />
                     <link rel="shortcut icon" href={siteFavicon} />
 

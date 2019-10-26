@@ -9,11 +9,11 @@ module.exports = {
         'Abhijith-Vijayan, Abhijith-V, abhijith-v, abhijithvijayan, abhijith-vijayan, abhijithv, _abhijithvijayan, _abhijithv, Abhijith-V-CEA, Abhijith-Vijayan-CEA, Abhijith-V-pathanamthitta, Abhijith-Vijayan-pathanamthitta, Abhijith-V-IHRD, Abhijith-Vijayan-IHRD, Abhijith-Vijayan-theBlueDoor, Abhijith-Vijayan-dev, abhijith-vijayan-developer, Abhijith-V-rose-dale-senior-secondary-school-chandanappally, web-developer-in-pathanamthitta, abhijithvijayan-ceadoor, abhijith-vijayan-web-developer',
     siteUrl: 'https://abhijithvijayan.in',
     siteLanguage: 'en-US',
-    siteThumbnail: '/static/images/profile.jpg',
-    siteIcon192: '/static/icons/icon-192x192.png',
-    siteIcon72: '/static/icons/icon-72x72.png',
-    siteIcon96: '/static/icons/icon-96x96.png',
-    siteFavicon: '/static/images/technologist.png',
+    siteThumbnail: '/images/profile.jpg',
+    siteIcon192: '/icons/icon-192x192.png',
+    siteIcon72: '/icons/icon-72x72.png',
+    siteIcon96: '/icons/icon-96x96.png',
+    siteFavicon: '/images/technologist.png',
 
     GRID_LIMIT: 3,
 
@@ -71,7 +71,7 @@ module.exports = {
             url: '#contact',
         },
     ],
-    resume: '/static/resume.pdf',
+    resume: '/resume.pdf',
 
     navyColor: '#0a192f',
 };

@@ -1,7 +1,7 @@
 ---
 date: "2019-01-04"
 title: "Kutt-Extension"
-cover: "/static/images/kutt.png"
+cover: "/images/kutt.png"
 github: "https://github.com/abhijithvijayan/kutt-extension"
 external: "https://github.com/abhijithvijayan/kutt-extension/blob/master/README.md#how-to-use"
 tech: [JavaScript, Web-Extension, Chrome, FireFox, Opera]

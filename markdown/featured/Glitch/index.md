@@ -1,7 +1,7 @@
 ---
 date: "2019-03-04"
 title: "Glitch 2.0"
-cover: "/static/images/glitch.jpg"
+cover: "/images/glitch.jpg"
 github: "https://github.com/abhijithvijayan/glitch-2.0"
 external: "https://aaroh-glitch.herokuapp.com/"
 tech: [Node.JS, Express, Passport, MongoDB, SASS, Pug]
