@@ -31,7 +31,7 @@ If you do use the template, please just give me proper credit by linking back to
 
 ##### 🌟 Updating metadata
 
-Edit `config/index.js` file with your custom information
+Copy `sample.js` to `index.js` in the `config/` directory and update `config/index.js` with your custom information
 
 ##### 🌟 Adding static contents
 
@@ -40,6 +40,10 @@ Copy contents (images, documents, etc...) to `public/` directory
 ##### 🌟 Adding other site-data
 
 Copy `sample.md` to `index.md` in the `markdown/SECTION_NAME` directory and update accordingly. See [how I did](https://github.com/abhijithvijayan/abhijithvijayan.in/tree/master/markdown) mine
+
+##### 🌟 PWA Support
+
+Add `icons for PWA` to `public/icons/` and update `manifest.json` in `public/` directory
 
 ## 🖤 Show your support
 
