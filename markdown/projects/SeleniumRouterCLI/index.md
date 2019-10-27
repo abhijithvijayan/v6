@@ -3,7 +3,7 @@ date: "2019-09-08"
 title: "selenium-router-cli"
 github: "https://github.com/abhijithvijayan/selenium-router-cli"
 external: "https://www.npmjs.com/package/selenium-router-cli"
-tech: [CLI, JavaScript, NPM, Selenium, DLink]
+tech: [CLI, Node.js, NPM, Selenium, DLink]
 show: "true"
 ---
 
