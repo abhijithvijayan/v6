@@ -9,6 +9,7 @@ module.exports = {
         'Abhijith-Vijayan, Abhijith-V, abhijith-v, abhijithvijayan, abhijith-vijayan, abhijithv, _abhijithvijayan, _abhijithv, Abhijith-V-CEA, Abhijith-Vijayan-CEA, Abhijith-V-pathanamthitta, Abhijith-Vijayan-pathanamthitta, Abhijith-V-IHRD, Abhijith-Vijayan-IHRD, Abhijith-Vijayan-theBlueDoor, Abhijith-Vijayan-dev, abhijith-vijayan-developer, Abhijith-V-rose-dale-senior-secondary-school-chandanappally, web-developer-in-pathanamthitta, abhijithvijayan-ceadoor, abhijith-vijayan-web-developer',
     siteUrl: 'https://abhijithvijayan.in',
     siteLanguage: 'en-US',
+
     siteThumbnail: '/images/profile.jpg',
     siteIcon192: '/icons/icon-192x192.png',
     siteIcon72: '/icons/icon-72x72.png',
@@ -17,8 +18,7 @@ module.exports = {
 
     GRID_LIMIT: 3,
 
-    repoURL: 'https://github.com/abhijithvijayan/abhijithvijayan.in',
-    repoAPIendpoint: 'https://api.github.com/repos/abhijithvijayan/abhijithvijayan.in',
+    resume: '/resume.pdf',
 
     socialMedia: [
         {
@@ -71,7 +71,9 @@ module.exports = {
             url: '#contact',
         },
     ],
-    resume: '/resume.pdf',
 
     navyColor: '#0a192f',
+
+    repoURL: 'https://github.com/abhijithvijayan/abhijithvijayan.in',
+    repoAPIendpoint: 'https://api.github.com/repos/abhijithvijayan/abhijithvijayan.in',
 };
