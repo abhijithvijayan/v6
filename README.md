@@ -10,7 +10,7 @@
 <p align="center">https://abhijithvijayan.in</p>
 <br>
 
-![demo](https://raw.githubusercontent.com/abhijithvijayan/abhijithvijayan.in/master/public/images/demo.png)
+![demo](https://raw.githubusercontent.com/abhijithvijayan/abhijithvijayan.in/master/public/images/screenshot.png)
 
 ## 🚀 Quick Start
 
