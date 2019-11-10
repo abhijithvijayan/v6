@@ -36,7 +36,7 @@ const RepoStats = () => {
         };
 
         fetchRepoInfo();
-    });
+    }, []);
 
     const { forksCount, stargazersCount } = repoStats;
 
