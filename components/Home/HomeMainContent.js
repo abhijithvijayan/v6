@@ -16,7 +16,7 @@ const MainContentWrapper = styled(Row)`
     }
 
     .main__text {
-        font-size: 70px;
+        font-size: 6p8x;
         line-height: 1.1;
         margin: 0px;
         color: ${({ theme }) => {
@@ -28,7 +28,7 @@ const MainContentWrapper = styled(Row)`
     }
 
     .end__text {
-        font-size: 70px;
+        font-size: 68px;
         line-height: 1.1;
         color: ${({ theme }) => {
             return theme.skyBlue;
@@ -40,20 +40,37 @@ const MainContentWrapper = styled(Row)`
 
     .main__text,
     .end__text {
+        // 1000
         @media screen and (max-width: 62.5em) {
-            font-size: 63px;
+            font-size: 62px;
         }
 
+        /* // 768
         @media screen and (max-width: ${({ theme }) => {
-                return theme.screenSmMin;
-            }}) {
-            font-size: 53px;
+            return theme.screenSmMin;
+        }}) {
+            font-size: 52px;
+        } */
+
+        // 481 - 768
+        @media screen and (min-width: $${({ theme }) => {
+            return theme.screenXsMin;
+        }}) and (max-width: ${({ theme }) => {
+    return theme.screenSmMin;
+}}) {
+            font-size: 52px;
+        }
+        
+        // 480 
+        @media screen and (max-width: ${({ theme }) => {
+            return theme.screenXxsMax;
+        }}) {
+            font-size: 42px;
         }
 
-        @media screen and (max-width: ${({ theme }) => {
-                return theme.screenXxsMax;
-            }}) {
-            font-size: 43px;
+        // 376
+        @media screen and (max-width: 23.5em) {
+            font-size: 39px;
         }
     }
 `;

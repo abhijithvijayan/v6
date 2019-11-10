@@ -1,7 +1,7 @@
 ---
 title: "Hi, I am"
 name: "Abhijith Vijayan."
-subtitle: "an Engineer in the making."
+subtitle: "I build things that aren't evil."
 contactText: "Get In Touch"
 ---
 
