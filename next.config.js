@@ -16,6 +16,9 @@ module.exports = withPlugins([withCSS, withSass, withImages, withFonts, withOffl
         return config;
     },
 
+    // relative path for assets
+    assetPrefix: './',
+
     exportPathMap() {
         return {
             '/': { page: '/' },
