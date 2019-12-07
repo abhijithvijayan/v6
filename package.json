@@ -9,10 +9,11 @@
   "license": "MIT",
   "scripts": {
     "dev": "next",
-    "build": "next build",
     "start": "next start",
+    "build": "next build",
     "export": "next export",
     "serve": "next build && next export",
+    "release": "yarn serve && touch out/.nojekyll",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
