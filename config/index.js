@@ -4,9 +4,9 @@ module.exports = {
     username: '@abhijithvijayan',
 
     siteTitle: 'Abhijith Vijayan | Full Stack Engineer',
-    siteDescription: "I'm a Computer Enthusiast with experience in various software branches.",
+    siteDescription: "I build things that aren't evil.",
     siteKeywords:
-        'Abhijith-Vijayan, Abhijith-V, abhijith-v, abhijithvijayan, abhijith-vijayan, abhijithv, _abhijithvijayan, _abhijithv, Abhijith-V-CEA, Abhijith-Vijayan-CEA, Abhijith-V-pathanamthitta, Abhijith-Vijayan-pathanamthitta, Abhijith-V-IHRD, Abhijith-Vijayan-IHRD, Abhijith-Vijayan-theBlueDoor, Abhijith-Vijayan-dev, abhijith-vijayan-developer, Abhijith-V-rose-dale-senior-secondary-school-chandanappally, web-developer-in-pathanamthitta, abhijithvijayan-ceadoor, abhijith-vijayan-web-developer',
+        'Abhijith-Vijayan, Abhijith-V, abhijith-v, abhijithvijayan, abhijith-vijayan, abhijithv, _abhijithvijayan, _abhijithv, Abhijith-V-CEA, Abhijith-Vijayan-CEA, Abhijith-V-pathanamthitta, Abhijith-Vijayan-pathanamthitta, Abhijith-V-IHRD, Abhijith-Vijayan-IHRD, Abhijith-Vijayan-theBlueDoor, Abhijith-Vijayan-dev, abhijith-vijayan-developer, Abhijith-V-rose-dale-senior-secondary-school-chandanappally, web-developer-in-pathanamthitta, abhijithvijayan-ceadoor, abhijith-vijayan-web-developer, full-stack, software-engineer',
     siteUrl: 'https://abhijithvijayan.in',
     siteLanguage: 'en-US',
 
