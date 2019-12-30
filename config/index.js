@@ -5,10 +5,10 @@ module.exports = {
 
     siteTitle: 'Abhijith Vijayan | Full Stack Engineer',
     siteDescription: "I build things that aren't evil.",
-    siteKeywords:
-        'Abhijith-Vijayan, Abhijith-V, abhijith-v, abhijithvijayan, abhijith-vijayan, abhijithv, _abhijithvijayan, _abhijithv, Abhijith-V-CEA, Abhijith-Vijayan-CEA, Abhijith-V-pathanamthitta, Abhijith-Vijayan-pathanamthitta, Abhijith-V-IHRD, Abhijith-Vijayan-IHRD, Abhijith-Vijayan-theBlueDoor, Abhijith-Vijayan-dev, abhijith-vijayan-developer, Abhijith-V-rose-dale-senior-secondary-school-chandanappally, web-developer-in-pathanamthitta, abhijithvijayan-ceadoor, abhijith-vijayan-web-developer, full-stack, software-engineer',
     siteUrl: 'https://abhijithvijayan.in',
     siteLanguage: 'en-US',
+    siteKeywords:
+        'Abhijith-Vijayan, Abhijith-V, abhijith-v, abhijithvijayan, abhijith-vijayan, abhijithv, _abhijithvijayan, _abhijithv, Abhijith-V-CEA, Abhijith-Vijayan-CEA, Abhijith-V-pathanamthitta, Abhijith-Vijayan-pathanamthitta, Abhijith-V-IHRD, Abhijith-Vijayan-IHRD, Abhijith-Vijayan-theBlueDoor, Abhijith-Vijayan-dev, abhijith-vijayan-developer, Abhijith-V-rose-dale-senior-secondary-school-chandanappally, web-developer-in-pathanamthitta, abhijithvijayan-ceadoor, abhijith-vijayan-web-developer, full-stack, software-engineer',
 
     siteThumbnail: '/images/profile.jpg',
     siteIcon192: '/icons/icon-192x192.png',
@@ -21,6 +21,11 @@ module.exports = {
     resume: '/resume.pdf',
 
     socialMedia: [
+        {
+            name: 'Twitter',
+            icon: 'twitter',
+            url: 'https://twitter.com/_abhijithv',
+        },
         {
             name: 'Github',
             icon: 'github',
@@ -37,20 +42,15 @@ module.exports = {
             url: 'https://stackoverflow.com/users/9387542/abhijithvijayan?tab=profile',
         },
         {
-            name: 'Behance',
-            icon: 'behance',
-            url: 'https://www.behance.net/abhijithvijayan',
-        },
-        {
             name: 'Medium',
             icon: 'medium',
             url: 'https://medium.com/@abhijithvijayan',
         },
-        {
-            name: 'Twitter',
-            icon: 'twitter',
-            url: 'https://twitter.com/_abhijithv',
-        },
+        // {
+        //     name: 'Behance',
+        //     icon: 'behance',
+        //     url: 'https://www.behance.net/abhijithvijayan',
+        // },
     ],
 
     navLinks: [

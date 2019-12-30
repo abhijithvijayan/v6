@@ -1,11 +1,10 @@
 ---
 title: "About Me"
 avatar: "/images/profile.jpg"
-skills: [ Node.js, Express, React, Redux, Next.js, JavaScript (ES6+), (S)CSS, Java / C / C++
-]
+skills: [ Node.js, Express, React, Redux, Flask, JavaScript (ES6+), (S)CSS, Python / C++]
 ---
 
-I'm a Computer enthusiast who loves coding and aspires to build things for good. I love developing awesome and efficient applications / tools.
+I code and build things for good. Pretty much into computers, internet and tv shows these days.
 
 I also do share my thoughts and knowledge with others coz that helps me question my knowledge as well.
 

@@ -3,7 +3,7 @@ date: "2019-06-16"
 title: "OnePass Password Manager"
 cover: "/images/onepass.png"
 github: "https://github.com/onepassapp/onepass"
-external: "https://onepass.abhijithvijayan.in/"
+external: ""
 tech: [React, Redux, Express, Next.js, Web-Extension, Styled Components, Neo4j]
 show: "true"
 ---

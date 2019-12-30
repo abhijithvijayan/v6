@@ -16,7 +16,7 @@ const MainContentWrapper = styled(Row)`
     }
 
     .main__text {
-        font-size: 6p8x;
+        font-size: 68px;
         line-height: 1.1;
         margin: 0px;
         color: ${({ theme }) => {
