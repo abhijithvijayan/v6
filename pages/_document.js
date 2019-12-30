@@ -17,11 +17,6 @@ import {
     username,
 } from '../config';
 
-const style = {
-    fontFamily: '"Nunito", sans-serif',
-    backgroundColor: '#f3f3f3',
-};
-
 class OnePassDocument extends Document {
     static getInitialProps({ renderPage }) {
         const sheet = new ServerStyleSheet();
@@ -91,7 +86,7 @@ class OnePassDocument extends Document {
                     {/* for styled-components */}
                     {this.props.styleTags}
                 </Head>
-                <body style={style}>
+                <body>
                     <Main />
                     <NextScript />
                 </body>
