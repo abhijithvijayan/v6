@@ -6,8 +6,8 @@ import ContactHeader from './ContactHeader';
 import ContactContentHolder from './ContactContentHolder';
 
 const ContactWrapper = styled.div`
-    max-width: 600px;
-    margin: 0px auto 100px;
+    max-width: 600px !important;
+    margin: 0px auto 100px !important;
 `;
 
 const Contact = ({ content }) => {

@@ -20,8 +20,8 @@ const ContentWrapper = styled.span`
     div {
         p {
             margin: 0px 0px 15px;
-            font-size: 17px;
-            line-height: 1.5;
+            font-size: 20px;
+            line-height: 1.3;
             font-weight: medium;
             color: ${({ theme }) => {
                 return theme.skyBlue;

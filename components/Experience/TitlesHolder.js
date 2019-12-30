@@ -15,7 +15,7 @@ const TitlesWrapper = styled(Nav)`
 
     .nav-link.active {
         background-color: ${({ theme }) => {
-            return theme.lightPurple;
+            return theme.darkPurple;
         }} !important;
         color: ${({ theme }) => {
             return theme.whiteYellow;
@@ -63,7 +63,7 @@ const TitlesWrapper = styled(Nav)`
 
         &:hover {
             background-color: ${({ theme }) => {
-                return theme.lightPurple;
+                return theme.darkPurple;
             }} !important;
             color: ${({ theme }) => {
                 return theme.whiteYellow;

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledHeader = styled.h2`
-    font-size: 14px;
+    font-size: 13px;
     font-weight: normal;
     font-family: ${({ theme }) => {
         return theme.sfmono;

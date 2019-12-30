@@ -27,13 +27,17 @@ const Projects = ({ content }) => {
                 <ProjectsWrapper>
                     {content.map(item => {
                         const { show } = item.attributes;
+
                         if (show === 'true') {
                             id += 1;
+
                             if (id % 2 === 0) {
                                 return renderLeftHighlighted(item, id);
                             }
+
                             return renderRightHighlighted(item, id);
                         }
+
                         return null;
                     })}
                 </ProjectsWrapper>

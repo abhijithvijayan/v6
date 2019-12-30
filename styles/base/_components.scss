@@ -18,7 +18,7 @@
 .button__main {
   color: $whiteYellow !important;
   background-color: transparent;
-  font-size: 14px;
+  font-size: 13px;
   font-family: $sfmono;
   line-height: 1;
   border: 1px solid $whiteYellow;
@@ -34,7 +34,7 @@
 
 .line__title {
   position: relative;
-  font-size: 30px;
+  font-size: 32px;
   font-weight: $semibold;
   color: $headWhite;
   margin: 10px 0px 40px;
@@ -149,13 +149,3 @@
     transform: none;
   }
 }
-
-// unused
-
-// .bl-line {
-//     border-left: 2px solid $blueLight;
-// }
-// .bb-line {
-//     border-bottom: 2px solid $blueLight;
-//     border-left: 0px;
-// }

@@ -2,7 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledItem = styled.li`
-    font-size: 14px;
+    color: ${({ theme }) => {
+        return theme.skyBlue;
+    }};
+    font-size: 13px;
     font-weight: normal;
     font-family: ${({ theme }) => {
         return theme.sfmono;

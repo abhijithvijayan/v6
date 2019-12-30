@@ -24,7 +24,7 @@ class MoreProjectsButton extends Component {
                         type="button"
                         className="button__main"
                     >
-                        {hasExpanded ? 'Fewer Projects' : 'More Projects'}
+                        {hasExpanded ? 'Show Less' : 'Show More'}
                     </Button>
                 </Col>
             </Row>

@@ -7,12 +7,12 @@ import InlineLink from './InlineLink';
 
 const StyledItemWrapper = styled(Tab.Pane)`
     h2 {
-        font-size: 20px;
+        font-size: 22px;
         color: ${({ theme }) => {
             return theme.blueWhite;
         }};
         font-weight: ${({ theme }) => {
-            return theme.semibold;
+            return theme.medium;
         }};
 
         .company__at {
@@ -37,7 +37,7 @@ const StyledItemWrapper = styled(Tab.Pane)`
     }
 
     h5 {
-        font-size: 14px;
+        font-size: 13px;
         margin-bottom: 30px;
         font-weight: normal;
         letter-spacing: 0.5px;
@@ -47,7 +47,7 @@ const StyledItemWrapper = styled(Tab.Pane)`
     }
 
     ul {
-        font-size: 16px;
+        font-size: 18px;
 
         li {
             position: relative;

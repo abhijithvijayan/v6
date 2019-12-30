@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledHeader = styled.h2`
-    font-size: 22px;
+    font-size: 23px;
     margin: 0px 0px 10px;
     color: ${({ theme }) => {
         return theme.blueWhite;

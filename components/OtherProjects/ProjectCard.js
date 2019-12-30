@@ -52,7 +52,7 @@ const CardWrapper = styled.div`
                 line-height: 1.75;
                 margin-right: 15px;
                 color: ${({ theme }) => {
-                    return theme.lightBlue;
+                    return theme.skyBlue;
                 }};
                 font-family: ${({ theme }) => {
                     return theme.sfmono;

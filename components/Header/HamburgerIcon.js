@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const IconButton = styled.button`
     padding: 0;
     z-index: 12;
+
     @media screen and (max-width: 575px) {
         display: flex !important;
     }

@@ -7,6 +7,7 @@ const SubtitleWrapper = styled.div`
         color: ${({ theme }) => {
             return theme.skyBlue;
         }};
+        font-size: 17px;
         margin: 0px 0px 15px;
 
         a {

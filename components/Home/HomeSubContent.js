@@ -9,7 +9,7 @@ const SubContentWrapper = styled(Row)`
         color: ${({ theme }) => {
             return theme.skyBlue;
         }};
-        font-size: 17px;
+        font-size: 20px;
         line-height: 1.4;
         margin: 0px 0px 15px;
         strong {
