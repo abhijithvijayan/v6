@@ -10,7 +10,7 @@ module.exports = {
     siteKeywords:
         'Abhijith-Vijayan, Abhijith-V, abhijith-v, abhijithvijayan, abhijith-vijayan, abhijithv, _abhijithvijayan, _abhijithv, Abhijith-V-CEA, Abhijith-Vijayan-CEA, Abhijith-V-pathanamthitta, Abhijith-Vijayan-pathanamthitta, Abhijith-V-IHRD, Abhijith-Vijayan-IHRD, Abhijith-Vijayan-theBlueDoor, Abhijith-Vijayan-dev, abhijith-vijayan-developer, Abhijith-V-rose-dale-senior-secondary-school-chandanappally, web-developer-in-pathanamthitta, abhijithvijayan-ceadoor, abhijith-vijayan-web-developer, full-stack, software-engineer',
 
-    siteThumbnail: '/images/profile.jpg',
+    siteThumbnail: '/images/unicorn.png',
     siteIcon192: '/icons/icon-192x192.png',
     siteIcon72: '/icons/icon-72x72.png',
     siteIcon96: '/icons/icon-96x96.png',
