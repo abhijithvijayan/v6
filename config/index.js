@@ -34,7 +34,7 @@ module.exports = {
         {
             name: 'LinkedIn',
             icon: 'linkedin',
-            url: 'https://in.linkedin.com/in/abhijith-vijayan/',
+            url: 'https://in.linkedin.com/in/iamabhijithvijayan/',
         },
         {
             name: 'Stack Overflow',
