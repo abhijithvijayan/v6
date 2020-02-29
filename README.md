@@ -49,6 +49,8 @@ Copy `sample.js` to `index.js` in the `config/` directory and update `config/ind
 
 Copy contents (images, documents, etc...) to `public/` directory
 
+Use https://app-manifest.firebaseapp.com/ to generate Web Manifest
+
 ##### 🌟 Adding other site-data
 
 Copy `sample.md` to `index.md` in the `markdown/SECTION_NAME` directory and update accordingly. See [how I did](https://github.com/abhijithvijayan/abhijithvijayan.in/tree/master/markdown) mine
