@@ -36,7 +36,7 @@
 
 Feel free to use this template to build your own portfolio site and deploy as static site to anywhere.
 
-Use the [`abhijithvijayan-portfolio CLI`](https://github.com/abhijithvijayan/portfolio-cli) to generate template for your use.
+Use the [`@abhijithvijayan/portfolio CLI`](https://github.com/abhijithvijayan/portfolio-cli) to generate template for your use.
 
 If you do use the template, please just give me proper credit by linking back to my website, https://abhijithvijayan.in
 <br />
