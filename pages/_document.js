@@ -17,7 +17,7 @@ import {
     username,
 } from '../config';
 
-class OnePassDocument extends Document {
+class AppDocument extends Document {
     static getInitialProps({ renderPage }) {
         const sheet = new ServerStyleSheet();
         const page = renderPage(App => {
@@ -95,4 +95,4 @@ class OnePassDocument extends Document {
     }
 }
 
-export default OnePassDocument;
+export default AppDocument;
