@@ -5,7 +5,7 @@
   "private": true,
   "author": "abhijithvijayan",
   "description": "Website of abhijithvijayan",
-  "repository": "https://github.com/abhijithvijayan/abhijithvijayan.in.git",
+  "repository": "https://github.com/abhijithvijayan/v6.git",
   "license": "MIT",
   "scripts": {
     "dev": "next",

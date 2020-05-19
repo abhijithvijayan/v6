@@ -7,15 +7,15 @@ series [How to Contribute to an Open Source Project on GitHub](https://egghead.i
 
 ## Project setup
 
-1.  Fork and clone the repo
-2.  Run `yarn install` to install dependencies and run validation
-3.  Create a branch for your PR with `git checkout -b pr/your-branch-name`
+1. Fork and clone the repo
+2. Run `yarn install` to install dependencies and run validation
+3. Create a branch for your PR with `git checkout -b pr/your-branch-name`
 
 > Tip: Keep your `master` branch pointing at the original repository and make
 > pull requests from branches on your fork. To do this, run:
 >
 > ```
-> git remote add upstream https://github.com/abhijithvijayan/abhijithvijayan.in.git
+> git remote add upstream https://github.com/abhijithvijayan/v6.git
 > git fetch upstream
 > git branch --set-upstream-to=upstream/master master
 > ```
@@ -33,7 +33,7 @@ Please make sure to run the lint check before you commit your changes. You can r
 
 ## Help needed
 
-Please checkout the [the open issues](https://github.com/abhijithvijayan/abhijithvijayan.in/issues)
+Please checkout the [the open issues](https://github.com/abhijithvijayan/v6/issues)
 
 Also, please watch the repo and respond to questions/bug reports/feature
 requests! Thanks!

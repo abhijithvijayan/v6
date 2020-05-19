@@ -1,5 +1,5 @@
-<h1 align="center">⚡️  abhijithvijayan.in</h1>
-<p align="center">The latest iteration of my personal site built with <a target="_blank" rel="nofollow noopener noreferrer" href="https://nextjs.org/">Next.js</a> and hosted with <a href="https://www.netlify.com/" rel="nofollow noopener noreferrer">Netlify</a>.</p>
+<h1 align="center">⚡️ v6</h1>
+<p align="center">The 6th iteration of my personal site built with <a target="_blank" rel="nofollow noopener noreferrer" href="https://nextjs.org/">Next.js</a> and hosted with <a href="https://www.netlify.com/" rel="nofollow noopener noreferrer">Netlify</a>.</p>
 
 <div align="center">
   <a href="https://app.netlify.com/sites/abhijithvijayan/deploys">
@@ -7,7 +7,7 @@
   </a>
 </div>
 
-<p align="center">https://abhijithvijayan.in</p>
+<p align="center">https://v6.netlify.app</p>
 <h3 align="center">🙋‍♂️ Made by <a href="https://twitter.com/_abhijithv">@abhijithvijayan</a></h3>
 <p align="center">
   Donate:
@@ -22,7 +22,7 @@
 
 <hr />
 
-![demo](https://raw.githubusercontent.com/abhijithvijayan/abhijithvijayan.in/master/public/images/screenshot.png)
+![demo](https://raw.githubusercontent.com/abhijithvijayan/v6/master/public/images/screenshot.png)
 
 ## 🚀 Quick Start
 
@@ -36,9 +36,9 @@
 
 Feel free to use this template to build your own portfolio site and deploy as static site to anywhere.
 
-Use the [`@abhijithvijayan/portfolio CLI`](https://github.com/abhijithvijayan/portfolio-cli) to generate template for your use.
+Use the [`@abhijithvijayan/portfolio`](https://github.com/abhijithvijayan/portfolio-cli) **CLI** to generate template for your use.
 
-If you do use the template, please just give me proper credit by linking back to my website, https://abhijithvijayan.in
+If you do use the template, please just give me proper credit by linking back to my website, <https://abhijithvijayan.in>
 <br />
 
 ##### 🌟 Updating metadata
@@ -49,11 +49,11 @@ Copy `sample.js` to `index.js` in the `config/` directory and update `config/ind
 
 Copy contents (images, documents, etc...) to `public/` directory
 
-Use https://app-manifest.firebaseapp.com/ to generate Web Manifest
+Use <https://app-manifest.firebaseapp.com/> to generate Web Manifest
 
 ##### 🌟 Adding other site-data
 
-Copy `sample.md` to `index.md` in the `markdown/SECTION_NAME` directory and update accordingly. See [how I did](https://github.com/abhijithvijayan/abhijithvijayan.in/tree/master/markdown) mine
+Copy `sample.md` to `index.md` in the `markdown/SECTION_NAME` directory and update accordingly. See [how I did](https://github.com/abhijithvijayan/v6/tree/master/markdown) mine
 
 ##### 🌟 PWA Support
 

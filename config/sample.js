@@ -84,6 +84,6 @@ module.exports = {
 
     navyColor: '#0a192f',
 
-    repoURL: 'https://github.com/abhijithvijayan/abhijithvijayan.in',
-    repoAPIendpoint: 'https://api.github.com/repos/abhijithvijayan/abhijithvijayan.in',
+    repoURL: 'https://github.com/abhijithvijayan/v6',
+    repoAPIendpoint: 'https://api.github.com/repos/abhijithvijayan/v6',
 };

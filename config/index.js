@@ -5,7 +5,7 @@ module.exports = {
 
     siteTitle: 'Abhijith Vijayan | Full Stack Engineer',
     siteDescription: "I build things that aren't evil.",
-    siteUrl: 'https://abhijithvijayan.in',
+    siteUrl: 'https://v6.netlify.app',
     siteLanguage: 'en-US',
     siteKeywords:
         'Abhijith-Vijayan, Abhijith-V, abhijith-v, abhijithvijayan, abhijith-vijayan, abhijithv, _abhijithvijayan, _abhijithv, Abhijith-V-CEA, Abhijith-Vijayan-CEA, Abhijith-V-pathanamthitta, Abhijith-Vijayan-pathanamthitta, Abhijith-V-IHRD, Abhijith-Vijayan-IHRD, Abhijith-Vijayan-dev, abhijith-vijayan-developer, web-developer-in-pathanamthitta, abhijithvijayan-ceadoor, abhijith-vijayan-web-developer, full-stack, software-engineer',
@@ -74,6 +74,6 @@ module.exports = {
 
     navyColor: '#0a192f',
 
-    repoURL: 'https://github.com/abhijithvijayan/abhijithvijayan.in',
-    repoAPIendpoint: 'https://api.github.com/repos/abhijithvijayan/abhijithvijayan.in',
+    repoURL: 'https://github.com/abhijithvijayan/v6',
+    repoAPIendpoint: 'https://api.github.com/repos/abhijithvijayan/v6',
 };

@@ -1,7 +1,7 @@
 ---
 date: "2019-07-29"
-title: "abhijithvijayan.in"
-github: "https://github.com/abhijithvijayan/abhijithvijayan.in"
+title: "v6"
+github: "https://github.com/abhijithvijayan/v6"
 external: ""
 tech: [Next.js, Styled Components, SCSS, Netlify]
 show: "false"
