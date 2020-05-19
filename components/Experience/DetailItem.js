@@ -1,115 +1,121 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Tab } from 'react-bootstrap';
+import {Tab} from 'react-bootstrap';
 import parse from 'html-react-parser';
 
 import InlineLink from './InlineLink';
 
 const StyledItemWrapper = styled(Tab.Pane)`
-    h2 {
-        font-size: 22px;
-        color: ${({ theme }) => {
-            return theme.blueWhite;
+  h2 {
+    font-size: 22px;
+    color: ${({theme}) => {
+      return theme.blueWhite;
+    }};
+    font-weight: ${({theme}) => {
+      return theme.medium;
+    }};
+
+    .company__at {
+      color: ${({theme}) => {
+        return theme.whiteYellow;
+      }};
+
+      .company__name {
+        color: ${({theme}) => {
+          return theme.whiteYellow;
         }};
-        font-weight: ${({ theme }) => {
-            return theme.medium;
-        }};
+        position: relative;
+        display: inline-block;
 
-        .company__at {
-            color: ${({ theme }) => {
-                return theme.whiteYellow;
-            }};
-
-            .company__name {
-                color: ${({ theme }) => {
-                    return theme.whiteYellow;
-                }};
-                position: relative;
-                display: inline-block;
-
-                &:hover {
-                    color: ${({ theme }) => {
-                        return theme.whiteYellow;
-                    }};
-                }
-            }
+        &:hover {
+          color: ${({theme}) => {
+            return theme.whiteYellow;
+          }};
         }
+      }
     }
+  }
 
-    h5 {
-        font-size: 13px;
-        margin-bottom: 30px;
-        font-weight: normal;
-        letter-spacing: 0.5px;
-        font-family: ${({ theme }) => {
-            return theme.sfmono;
+  h5 {
+    font-size: 13px;
+    margin-bottom: 30px;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+    font-family: ${({theme}) => {
+      return theme.sfmono;
+    }};
+  }
+
+  ul {
+    font-size: 18px;
+
+    li {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 10px;
+      color: ${({theme}) => {
+        return theme.lightBlue;
+      }};
+
+      &::before {
+        content: '▹';
+        position: absolute;
+        left: 0px;
+        color: ${({theme}) => {
+          return theme.whiteYellow;
         }};
-    }
+        line-height: 20px;
+      }
 
-    ul {
-        font-size: 18px;
+      a {
+        color: ${({theme}) => {
+          return theme.whiteYellow;
+        }};
 
-        li {
-            position: relative;
-            padding-left: 30px;
-            margin-bottom: 10px;
-            color: ${({ theme }) => {
-                return theme.lightBlue;
-            }};
-
-            &::before {
-                content: '▹';
-                position: absolute;
-                left: 0px;
-                color: ${({ theme }) => {
-                    return theme.whiteYellow;
-                }};
-                line-height: 20px;
-            }
-
-            a {
-                color: ${({ theme }) => {
-                    return theme.whiteYellow;
-                }};
-
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
+        &:hover {
+          text-decoration: underline;
         }
+      }
     }
+  }
 
-    .disabled {
-        pointer-events: none !important;
-    }
+  .disabled {
+    pointer-events: none !important;
+  }
 `;
 
-const DetailItem = ({ data: { attributes, html }, id }) => {
-    const { company, range, title, url } = attributes;
+const DetailItem = ({data: {attributes, html}, id}) => {
+  const {company, range, title, url} = attributes;
 
-    const renderTitle = () => {
-        return title;
-    };
+  const renderTitle = () => {
+    return title;
+  };
 
-    const renderTitleWithCompany = () => {
-        return (
-            <>
-                {renderTitle()}
-                <span className="company__at">
-                    &nbsp;@&nbsp;
-                    <InlineLink url={url} title={company} text="Visit" customClass="company__name" placement="top" />
-                </span>
-            </>
-        );
-    };
-
+  const renderTitleWithCompany = () => {
     return (
-        <StyledItemWrapper eventKey={id}>
-            <h2>{company ? renderTitleWithCompany() : renderTitle()}</h2>
-            <h5>{range}</h5>
-            {parse(html)}
-        </StyledItemWrapper>
+      <>
+        {renderTitle()}
+        <span className="company__at">
+          &nbsp;@&nbsp;
+          <InlineLink
+            url={url}
+            title={company}
+            text="Visit"
+            customClass="company__name"
+            placement="top"
+          />
+        </span>
+      </>
     );
+  };
+
+  return (
+    <StyledItemWrapper eventKey={id}>
+      <h2>{company ? renderTitleWithCompany() : renderTitle()}</h2>
+      <h5>{range}</h5>
+      {parse(html)}
+    </StyledItemWrapper>
+  );
 };
 
 export default DetailItem;

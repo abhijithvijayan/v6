@@ -10,14 +10,14 @@ import IconExternalLink from './ExternalLink';
 import IconFolderOpen from './FolderOpen';
 
 export {
-    IconBehance,
-    IconGithub,
-    IconLinkedIn,
-    IconMedium,
-    IconTwitter,
-    IconStackOverflow,
-    IconStar,
-    IconFork,
-    IconExternalLink,
-    IconFolderOpen,
+  IconBehance,
+  IconGithub,
+  IconLinkedIn,
+  IconMedium,
+  IconTwitter,
+  IconStackOverflow,
+  IconStar,
+  IconFork,
+  IconExternalLink,
+  IconFolderOpen,
 };

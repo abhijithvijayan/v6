@@ -1,17 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Col, Row } from 'react-bootstrap';
+import {Col, Row} from 'react-bootstrap';
 
 const MainContentWrapper = styled(Row)`
     .intro__text {
         font-size: 16px;
         font-weight: normal;
         margin: 0px 0px 15px 3px;
-        font-family: ${({ theme }) => {
-            return theme.sfmono;
+        font-family: ${({theme}) => {
+          return theme.sfmono;
         }};
-        color: ${({ theme }) => {
-            return theme.whiteYellow;
+        color: ${({theme}) => {
+          return theme.whiteYellow;
         }};
     }
 
@@ -19,22 +19,22 @@ const MainContentWrapper = styled(Row)`
         font-size: 80px;
         line-height: 1.1;
         margin: 0px;
-        color: ${({ theme }) => {
-            return theme.headWhite;
+        color: ${({theme}) => {
+          return theme.headWhite;
         }};
-        font-weight: ${({ theme }) => {
-            return theme.semibold;
+        font-weight: ${({theme}) => {
+          return theme.semibold;
         }};
     }
 
     .end__text {
         font-size: 80px;
         line-height: 1.1;
-        color: ${({ theme }) => {
-            return theme.skyBlue;
+        color: ${({theme}) => {
+          return theme.skyBlue;
         }};
-        font-weight: ${({ theme }) => {
-            return theme.semibold;
+        font-weight: ${({theme}) => {
+          return theme.semibold;
         }};
     }
 
@@ -46,17 +46,17 @@ const MainContentWrapper = styled(Row)`
         }
 
         // 481 - 768
-        @media screen and (min-width: $${({ theme }) => {
-            return theme.screenXsMin;
-        }}) and (max-width: ${({ theme }) => {
-    return theme.screenSmMin;
+        @media screen and (min-width: $${({theme}) => {
+          return theme.screenXsMin;
+        }}) and (max-width: ${({theme}) => {
+  return theme.screenSmMin;
 }}) {
             font-size: 60px;
         }
 
         // 480
-        @media screen and (max-width: ${({ theme }) => {
-            return theme.screenXxsMax;
+        @media screen and (max-width: ${({theme}) => {
+          return theme.screenXxsMax;
         }}) {
             font-size: 50px;
         }
@@ -68,23 +68,32 @@ const MainContentWrapper = styled(Row)`
     }
 `;
 
-const HomeMainContent = ({ data }) => {
-    const { title, name, subtitle } = data;
-    return (
-        <MainContentWrapper>
-            <Col md={12}>
-                <h2 className="intro__text animated fadeInUp" style={{ animationDelay: '125ms' }}>
-                    {title}
-                </h2>
-                <h1 className="main__text animated fadeInUp" style={{ animationDelay: '250ms' }}>
-                    {name}
-                </h1>
-                <h2 className="end__text animated fadeInUp" style={{ animationDelay: '375ms' }}>
-                    {subtitle}
-                </h2>
-            </Col>
-        </MainContentWrapper>
-    );
+const HomeMainContent = ({data}) => {
+  const {title, name, subtitle} = data;
+  return (
+    <MainContentWrapper>
+      <Col md={12}>
+        <h2
+          className="intro__text animated fadeInUp"
+          style={{animationDelay: '125ms'}}
+        >
+          {title}
+        </h2>
+        <h1
+          className="main__text animated fadeInUp"
+          style={{animationDelay: '250ms'}}
+        >
+          {name}
+        </h1>
+        <h2
+          className="end__text animated fadeInUp"
+          style={{animationDelay: '375ms'}}
+        >
+          {subtitle}
+        </h2>
+      </Col>
+    </MainContentWrapper>
+  );
 };
 
 export default HomeMainContent;

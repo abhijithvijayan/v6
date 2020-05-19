@@ -1,9 +1,9 @@
 import React from 'react';
 import App from 'next/app';
 import Head from 'next/head';
-import { ThemeProvider } from 'styled-components';
+import {ThemeProvider} from 'styled-components';
 
-import { siteTitle } from '../config';
+import {siteTitle} from '../config';
 
 /* Common SASS styles */
 import 'normalize.css/normalize.css';
@@ -15,19 +15,19 @@ const theme = require('sass-extract-loader?{"plugins": ["sass-extract-js"]}!../s
 // Require sass variables using sass-extract-loader and specify the plugin
 
 class MyApp extends App {
-    render() {
-        const { Component, pageProps } = this.props;
-        return (
-            <>
-                <Head>
-                    <title>{siteTitle}</title>
-                </Head>
-                <ThemeProvider theme={theme}>
-                    <Component {...pageProps} />
-                </ThemeProvider>
-            </>
-        );
-    }
+  render() {
+    const {Component, pageProps} = this.props;
+    return (
+      <>
+        <Head>
+          <title>{siteTitle}</title>
+        </Head>
+        <ThemeProvider theme={theme}>
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </>
+    );
+  }
 }
 
 export default MyApp;

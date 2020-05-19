@@ -4,12 +4,12 @@ import LeftSidebar from './LeftSidebar';
 import RightSidebar from './RightSidebar';
 
 const Sidebar = () => {
-    return (
-        <>
-            <LeftSidebar />
-            <RightSidebar />
-        </>
-    );
+  return (
+    <>
+      <LeftSidebar />
+      <RightSidebar />
+    </>
+  );
 };
 
 export default Sidebar;
